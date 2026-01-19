@@ -42,11 +42,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -66,86 +66,119 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">GenAI Workshop</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../ecosystem.html" rel="" target="">
- <span class="menu-text">The GenAI Ecosystem</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fundamentals-of-genai" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">Fundamentals of GenAI</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-fundamentals-of-genai">    
-        <li>
-    <a class="dropdown-item" href="../fundamentals/index.html" rel="" target="">
- <span class="dropdown-text">Overview</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../fundamentals/how-llms-work.html" rel="" target="">
- <span class="dropdown-text">How LLMs Work</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../fundamentals/key-capabilities.html" rel="" target="">
- <span class="dropdown-text">Key GenAI Capabilities</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../fundamentals/choosing-tools.html" rel="" target="">
- <span class="dropdown-text">Choosing the Right Tool</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="../resources.html" rel="" target="">
- <span class="menu-text">Resources</span></a>
-  </li>  
-</ul>
-            <div class="quarto-navbar-tools ms-auto">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
-          </div> <!-- /navcollapse -->
-      </div> <!-- /container-fluid -->
-    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../fundamentals/how-llms-work.html">Fundamentals of GenAI</a></li><li class="breadcrumb-item"><a href="../fundamentals/how-llms-work.html">How LLMs Work</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">GenAI Workshop</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ecosystem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The GenAI Ecosystem</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Fundamentals of GenAI</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/how-llms-work.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">How LLMs Work</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/key-capabilities.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Key GenAI Capabilities</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/choosing-tools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Choosing the Right Tool</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-big-picture" id="toc-the-big-picture" class="nav-link active" data-scroll-target="#the-big-picture">The Big Picture</a></li>
-  <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link" data-scroll-target="#key-concepts">Key Concepts</a>
+  <li><a href="#the-big-picture" id="toc-the-big-picture" class="nav-link active" data-scroll-target="#the-big-picture"><span class="header-section-number">1</span> The Big Picture</a>
   <ul class="collapse">
-  <li><a href="#tokens" id="toc-tokens" class="nav-link" data-scroll-target="#tokens">Tokens</a></li>
-  <li><a href="#the-transformer-architecture" id="toc-the-transformer-architecture" class="nav-link" data-scroll-target="#the-transformer-architecture">The Transformer Architecture</a></li>
-  <li><a href="#attention-the-key-innovation" id="toc-attention-the-key-innovation" class="nav-link" data-scroll-target="#attention-the-key-innovation">Attention: The Key Innovation</a></li>
-  <li><a href="#training-process" id="toc-training-process" class="nav-link" data-scroll-target="#training-process">Training Process</a></li>
+  <li><a href="#what-happens-when-you-prompt-a-model-whats-actually-occurring" id="toc-what-happens-when-you-prompt-a-model-whats-actually-occurring" class="nav-link" data-scroll-target="#what-happens-when-you-prompt-a-model-whats-actually-occurring"><span class="header-section-number">1.1</span> What happens when you “prompt” a model (what’s actually occurring)</a></li>
   </ul></li>
-  <li><a href="#context-windows" id="toc-context-windows" class="nav-link" data-scroll-target="#context-windows">Context Windows</a></li>
-  <li><a href="#what-llms-actually-do" id="toc-what-llms-actually-do" class="nav-link" data-scroll-target="#what-llms-actually-do">What LLMs Actually Do</a></li>
-  <li><a href="#implications-for-users" id="toc-implications-for-users" class="nav-link" data-scroll-target="#implications-for-users">Implications for Users</a></li>
+  <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link" data-scroll-target="#key-concepts"><span class="header-section-number">2</span> Key Concepts</a>
+  <ul class="collapse">
+  <li><a href="#tokens" id="toc-tokens" class="nav-link" data-scroll-target="#tokens"><span class="header-section-number">2.1</span> Tokens</a></li>
+  <li><a href="#the-transformer-architecture" id="toc-the-transformer-architecture" class="nav-link" data-scroll-target="#the-transformer-architecture"><span class="header-section-number">2.2</span> The Transformer Architecture</a></li>
+  <li><a href="#attention-the-key-innovation" id="toc-attention-the-key-innovation" class="nav-link" data-scroll-target="#attention-the-key-innovation"><span class="header-section-number">2.3</span> Attention: The Key Innovation</a></li>
+  <li><a href="#what-does-training-a-model-actually-mean" id="toc-what-does-training-a-model-actually-mean" class="nav-link" data-scroll-target="#what-does-training-a-model-actually-mean"><span class="header-section-number">2.4</span> What does “training” a model actually mean?</a></li>
+  </ul></li>
+  <li><a href="#context-windows" id="toc-context-windows" class="nav-link" data-scroll-target="#context-windows"><span class="header-section-number">3</span> Context windows</a>
+  <ul class="collapse">
+  <li><a href="#what-is-a-context-window" id="toc-what-is-a-context-window" class="nav-link" data-scroll-target="#what-is-a-context-window"><span class="header-section-number">3.1</span> What is a context window?</a></li>
+  <li><a href="#what-providers-may-include-automatically-even-if-you-dont-see-it" id="toc-what-providers-may-include-automatically-even-if-you-dont-see-it" class="nav-link" data-scroll-target="#what-providers-may-include-automatically-even-if-you-dont-see-it"><span class="header-section-number">3.2</span> What providers may include automatically (even if you don’t see it)</a></li>
+  <li><a href="#uploading-files-why-i-uploaded-it-the-model-read-it" id="toc-uploading-files-why-i-uploaded-it-the-model-read-it" class="nav-link" data-scroll-target="#uploading-files-why-i-uploaded-it-the-model-read-it"><span class="header-section-number">3.3</span> Uploading files: why “I uploaded it” ≠ “the model read it”</a></li>
+  <li><a href="#what-happens-near-the-limit" id="toc-what-happens-near-the-limit" class="nav-link" data-scroll-target="#what-happens-near-the-limit"><span class="header-section-number">3.4</span> What happens near the limit</a></li>
+  <li><a href="#output-limits" id="toc-output-limits" class="nav-link" data-scroll-target="#output-limits"><span class="header-section-number">3.5</span> Output limits</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -169,14 +202,28 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="the-big-picture" class="level2">
-<h2 class="anchored" data-anchor-id="the-big-picture">The Big Picture</h2>
+<section id="the-big-picture" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="the-big-picture"><span class="header-section-number">1</span> The Big Picture</h2>
 <p>Large Language Models (LLMs) are neural networks trained to predict the next token in a sequence. Despite this simple objective, this training process produces systems with remarkable capabilities.</p>
+<section id="what-happens-when-you-prompt-a-model-whats-actually-occurring" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="what-happens-when-you-prompt-a-model-whats-actually-occurring"><span class="header-section-number">1.1</span> What happens when you “prompt” a model (what’s actually occurring)</h3>
+<p>When you type into ChatGPT (or an API), the system does roughly this:</p>
+<ol type="1">
+<li>Your text is converted into tokens (numbers).</li>
+<li>Tokens are turned into vectors (“embeddings”).</li>
+<li>The model runs a forward pass (a lot of matrix multiplication / attention).</li>
+<li>It produces probabilities for the next token.</li>
+<li>A decoding method picks the next token (sampling / temperature / etc.).</li>
+<li>Repeat until it hits a stop condition or an output limit.</li>
+</ol>
+<p><strong>Key implication:</strong><br>
+The model is not retrieving a “stored answer.” It is <strong>generating</strong> a continuation that fits the prompt and its training patterns.</p>
 </section>
-<section id="key-concepts" class="level2">
-<h2 class="anchored" data-anchor-id="key-concepts">Key Concepts</h2>
-<section id="tokens" class="level3">
-<h3 class="anchored" data-anchor-id="tokens">Tokens</h3>
+</section>
+<section id="key-concepts" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="key-concepts"><span class="header-section-number">2</span> Key Concepts</h2>
+<section id="tokens" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="tokens"><span class="header-section-number">2.1</span> Tokens</h3>
 <p>LLMs don’t process text character by character — they use <strong>tokens</strong>.</p>
 <ul>
 <li>A token might be a word, part of a word, or punctuation</li>
@@ -198,8 +245,8 @@ Rule of Thumb
 </div>
 </div>
 </section>
-<section id="the-transformer-architecture" class="level3">
-<h3 class="anchored" data-anchor-id="the-transformer-architecture">The Transformer Architecture</h3>
+<section id="the-transformer-architecture" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="the-transformer-architecture"><span class="header-section-number">2.2</span> The Transformer Architecture</h3>
 <p>The transformer is the neural network architecture powering modern LLMs. Key components:</p>
 <ol type="1">
 <li><strong>Embeddings</strong> — Convert tokens to numerical vectors</li>
@@ -208,87 +255,108 @@ Rule of Thumb
 <li><strong>Output layer</strong> — Predict next token probabilities</li>
 </ol>
 </section>
-<section id="attention-the-key-innovation" class="level3">
-<h3 class="anchored" data-anchor-id="attention-the-key-innovation">Attention: The Key Innovation</h3>
+<section id="attention-the-key-innovation" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="attention-the-key-innovation"><span class="header-section-number">2.3</span> Attention: The Key Innovation</h3>
 <p>Attention mechanisms allow the model to focus on relevant parts of the input:</p>
 <pre><code>"The cat sat on the mat because it was tired"
-                                   ↑
-                          What does "it" refer to?</code></pre>
+                                ↑
+                    What does "it" refer to?</code></pre>
 <p>The attention mechanism helps the model understand that “it” refers to “cat” by learning patterns from training data.</p>
 </section>
-<section id="training-process" class="level3">
-<h3 class="anchored" data-anchor-id="training-process">Training Process</h3>
+<section id="what-does-training-a-model-actually-mean" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="what-does-training-a-model-actually-mean"><span class="header-section-number">2.4</span> What does “training” a model actually mean?</h3>
 <ol type="1">
-<li><strong>Pre-training</strong>: Learn language patterns from massive text datasets</li>
-<li><strong>Fine-tuning</strong>: Specialize for specific tasks or formats</li>
-<li><strong>RLHF</strong>: Reinforce outputs that humans prefer</li>
-</ol>
-</section>
-</section>
-<section id="context-windows" class="level2">
-<h2 class="anchored" data-anchor-id="context-windows">Context Windows</h2>
-<p>The <strong>context window</strong> is how much text the model can “see” at once:</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Model</th>
-<th>Context Window</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>GPT-4o</td>
-<td>128K tokens</td>
-</tr>
-<tr class="even">
-<td>Claude 3.5</td>
-<td>200K tokens</td>
-</tr>
-<tr class="odd">
-<td>Gemini 1.5</td>
-<td>1M+ tokens</td>
-</tr>
-</tbody>
-</table>
-<p>Longer context windows enable:</p>
+<li><strong>Pre-training</strong> (self-supervised)
 <ul>
-<li>Processing entire documents</li>
-<li>Longer conversations</li>
-<li>More examples in prompts</li>
+<li>The model reads huge corpora and learns to predict the next token.</li>
+<li>Outcome: broad language competence + lots of embedded world knowledge.</li>
+</ul></li>
+<li><strong>Mid-training / continued training</strong> (optional, but common)
+<ul>
+<li>Additional training on domain data, long-context data, code, or multimodal data.</li>
+<li>Outcome: “specialization,” better long-document handling, better domain patterns.</li>
+</ul></li>
+<li><strong>Post-training</strong> (instruction following + alignment)
+<ul>
+<li><strong>SFT</strong> (supervised fine-tuning on instruction data),</li>
+<li><strong>RLHF / RLAIF</strong> (reinforcement learning from human/AI feedback),</li>
+<li><strong>DPO</strong> (direct preference optimization),</li>
+<li>safety tuning and refusal training.</li>
+</ul></li>
+</ol>
+<p>Outcome: the model becomes better at following user intent, formatting outputs, and refusing unsafe requests.</p>
+<hr>
+</section>
+</section>
+<section id="context-windows" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="context-windows"><span class="header-section-number">3</span> Context windows</h2>
+<section id="what-is-a-context-window" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="what-is-a-context-window"><span class="header-section-number">3.1</span> What is a context window?</h3>
+<p>The <strong>context window</strong> is the maximum amount of text (and other inputs) the model can consider at once:<br>
+<strong>(system instructions + your prompt + chat history + retrieved snippets + tool outputs + file excerpts) + the model’s output.</strong></p>
+<p>If the total exceeds the limit:</p>
+<ul>
+<li>the system must drop, summarize, or “compact” something,</li>
+<li>or it returns an error (depending on provider).</li>
 </ul>
 </section>
-<section id="what-llms-actually-do" class="level2">
-<h2 class="anchored" data-anchor-id="what-llms-actually-do">What LLMs Actually Do</h2>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Key Insight
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>LLMs predict <strong>statistically likely continuations</strong> based on patterns learned during training. They don’t “know” facts — they’ve learned patterns that often produce factually correct outputs.</p>
-</div>
-</div>
-<p>This explains both their capabilities and limitations:</p>
+<section id="what-providers-may-include-automatically-even-if-you-dont-see-it" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="what-providers-may-include-automatically-even-if-you-dont-see-it"><span class="header-section-number">3.2</span> What providers may include automatically (even if you don’t see it)</h3>
+<p>Many modern assistants can add extra context such as:</p>
 <ul>
-<li><strong>Strength</strong>: Excellent at tasks where patterns in training data apply</li>
-<li><strong>Limitation</strong>: Can confidently produce incorrect information (hallucination)</li>
+<li>system safety instructions,</li>
+<li>your custom instructions,</li>
+<li>project instructions,</li>
+<li>“memory” items (facts it saved about your preferences),</li>
+<li>snippets retrieved from uploaded files or connected tools.</li>
+</ul>
+<p>This is why two people can ask the “same prompt” and get slightly different results.</p>
+</section>
+<section id="uploading-files-why-i-uploaded-it-the-model-read-it" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="uploading-files-why-i-uploaded-it-the-model-read-it"><span class="header-section-number">3.3</span> Uploading files: why “I uploaded it” ≠ “the model read it”</h3>
+<p>In most systems, uploading a file does <strong>not</strong> mean the entire file is placed into the context window verbatim.</p>
+<p>A common approach is retrieval:</p>
+<ul>
+<li>the file is chunked,</li>
+<li>the system builds embeddings (a searchable representation),</li>
+<li>and only relevant chunks are pulled into the context window when needed.</li>
+</ul>
+<p>OpenAI explicitly describes this chunking/embedding behavior for “Knowledge” files in custom GPTs.[^openai-knowledge-files]</p>
+<p><strong>Faculty implication:</strong><br>
+To get reliable file-based answers, you often need to ask for:</p>
+<ul>
+<li>citations / quotes with page numbers,</li>
+<li>explicit references to the provided document,</li>
+<li>and “show your work” audits (e.g., “quote the exact line you used”).</li>
 </ul>
 </section>
-<section id="implications-for-users" class="level2">
-<h2 class="anchored" data-anchor-id="implications-for-users">Implications for Users</h2>
-<p>Understanding these mechanics helps you:</p>
+<section id="what-happens-near-the-limit" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="what-happens-near-the-limit"><span class="header-section-number">3.4</span> What happens near the limit</h3>
+<p>Different providers handle this differently:</p>
+<ul>
+<li>Some UIs summarize older messages.</li>
+<li>Some drop the earliest conversation turns (“truncation”).</li>
+<li>Some run a compaction step to preserve key details.</li>
+</ul>
+<p>OpenAI notes a <code>/compact</code> approach (in its ecosystem) for extending effective context windows in tool-heavy workflows.[^openai-gpt52] Anthropic documents that their API returns errors if input + output exceeds the context window rather than silently truncating.[^anthropic-context]</p>
+</section>
+<section id="output-limits" class="level3" data-number="3.5">
+<h3 data-number="3.5" class="anchored" data-anchor-id="output-limits"><span class="header-section-number">3.5</span> Output limits</h3>
+<p>Even with a huge input window, models have <strong>output caps</strong>. When you ask for “write 30 pages,” you usually get:</p>
+<ul>
+<li>a truncated response,</li>
+<li>or a refusal,</li>
+<li>or “here is an outline; ask me to expand section by section.”</li>
+</ul>
+<p><strong>Faculty-friendly move:</strong><br>
+For long outputs, ask for:</p>
 <ol type="1">
-<li><strong>Write better prompts</strong> — Provide clear context and examples</li>
-<li><strong>Anticipate failures</strong> — Know when the model might hallucinate</li>
-<li><strong>Use appropriate techniques</strong> — Like retrieval augmentation for factual tasks</li>
-<li><strong>Interpret outputs wisely</strong> — Verify critical information</li>
+<li>outline, 2) draft section 1, 3) draft section 2…</li>
 </ol>
+<p>This yields better control and fewer errors.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

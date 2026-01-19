@@ -42,11 +42,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -66,87 +66,101 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">GenAI Workshop</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./ecosystem.html" rel="" target="" aria-current="page">
- <span class="menu-text">The GenAI Ecosystem</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fundamentals-of-genai" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">Fundamentals of GenAI</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-fundamentals-of-genai">    
-        <li>
-    <a class="dropdown-item" href="./fundamentals/index.html" rel="" target="">
- <span class="dropdown-text">Overview</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./fundamentals/how-llms-work.html" rel="" target="">
- <span class="dropdown-text">How LLMs Work</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./fundamentals/key-capabilities.html" rel="" target="">
- <span class="dropdown-text">Key GenAI Capabilities</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./fundamentals/choosing-tools.html" rel="" target="">
- <span class="dropdown-text">Choosing the Right Tool</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="./resources.html" rel="" target="">
- <span class="menu-text">Resources</span></a>
-  </li>  
-</ul>
-            <div class="quarto-navbar-tools ms-auto">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
-          </div> <!-- /navcollapse -->
-      </div> <!-- /container-fluid -->
-    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ecosystem.html">The GenAI Ecosystem</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">GenAI Workshop</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ecosystem.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">The GenAI Ecosystem</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Fundamentals of GenAI</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fundamentals/how-llms-work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How LLMs Work</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fundamentals/key-capabilities.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Key GenAI Capabilities</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fundamentals/choosing-tools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Choosing the Right Tool</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#major-players" id="toc-major-players" class="nav-link" data-scroll-target="#major-players">Major Players</a>
-  <ul class="collapse">
-  <li><a href="#foundation-model-providers" id="toc-foundation-model-providers" class="nav-link" data-scroll-target="#foundation-model-providers">Foundation Model Providers</a></li>
-  <li><a href="#platforms-interfaces" id="toc-platforms-interfaces" class="nav-link" data-scroll-target="#platforms-interfaces">Platforms &amp; Interfaces</a></li>
-  </ul></li>
-  <li><a href="#the-open-vs.-closed-debate" id="toc-the-open-vs.-closed-debate" class="nav-link" data-scroll-target="#the-open-vs.-closed-debate">The Open vs.&nbsp;Closed Debate</a>
-  <ul class="collapse">
-  <li><a href="#considerations" id="toc-considerations" class="nav-link" data-scroll-target="#considerations">Considerations</a></li>
-  </ul></li>
-  <li><a href="#emerging-trends" id="toc-emerging-trends" class="nav-link" data-scroll-target="#emerging-trends">Emerging Trends</a></li>
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key Takeaways</a></li>
+  <li><a href="#quick-framing-what-i-mean-by-genai" id="toc-quick-framing-what-i-mean-by-genai" class="nav-link active" data-scroll-target="#quick-framing-what-i-mean-by-genai"><span class="header-section-number">1</span> Quick framing: what I mean by “GenAI”</a></li>
   </ul>
 </nav>
     </div>
@@ -170,108 +184,17 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>The generative AI ecosystem has rapidly evolved into a complex landscape of models, platforms, and applications. Understanding this ecosystem is essential for making informed decisions about which tools to use and how to leverage them effectively.</p>
-</section>
-<section id="major-players" class="level2">
-<h2 class="anchored" data-anchor-id="major-players">Major Players</h2>
-<section id="foundation-model-providers" class="level3">
-<h3 class="anchored" data-anchor-id="foundation-model-providers">Foundation Model Providers</h3>
-<table class="table">
-<colgroup>
-<col style="width: 31%">
-<col style="width: 34%">
-<col style="width: 34%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Provider</th>
-<th>Key Models</th>
-<th>Strengths</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>OpenAI</td>
-<td>GPT-4, GPT-4o, o1</td>
-<td>Broad capabilities, strong reasoning</td>
-</tr>
-<tr class="even">
-<td>Anthropic</td>
-<td>Claude 3.5, Claude 3 Opus</td>
-<td>Safety-focused, long context</td>
-</tr>
-<tr class="odd">
-<td>Google</td>
-<td>Gemini Pro, Gemini Ultra</td>
-<td>Multimodal, integration with Google services</td>
-</tr>
-<tr class="even">
-<td>Meta</td>
-<td>Llama 3</td>
-<td>Open weights, customizable</td>
-</tr>
-<tr class="odd">
-<td>Mistral</td>
-<td>Mistral Large, Mixtral</td>
-<td>European, efficient architecture</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="platforms-interfaces" class="level3">
-<h3 class="anchored" data-anchor-id="platforms-interfaces">Platforms &amp; Interfaces</h3>
-<ul>
-<li><strong>ChatGPT</strong> — OpenAI’s conversational interface</li>
-<li><strong>Claude.ai</strong> — Anthropic’s web interface</li>
-<li><strong>Copilot</strong> — Microsoft’s AI assistant integrated across products</li>
-<li><strong>Gemini</strong> — Google’s AI assistant</li>
-<li><strong>Perplexity</strong> — AI-powered search engine</li>
-</ul>
-</section>
-</section>
-<section id="the-open-vs.-closed-debate" class="level2">
-<h2 class="anchored" data-anchor-id="the-open-vs.-closed-debate">The Open vs.&nbsp;Closed Debate</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Open vs.&nbsp;Closed Models
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Closed models</strong> (like GPT-4, Claude) are accessed via APIs with weights kept private. <strong>Open models</strong> (like Llama) release weights publicly, allowing local deployment and fine-tuning.</p>
-</div>
-</div>
-<section id="considerations" class="level3">
-<h3 class="anchored" data-anchor-id="considerations">Considerations</h3>
-<ul>
-<li><strong>Closed models</strong>: Generally more capable, easier to use, but require API access and have usage costs</li>
-<li><strong>Open models</strong>: More control, privacy benefits, but require infrastructure and expertise</li>
-</ul>
-</section>
-</section>
-<section id="emerging-trends" class="level2">
-<h2 class="anchored" data-anchor-id="emerging-trends">Emerging Trends</h2>
+<section id="quick-framing-what-i-mean-by-genai" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="quick-framing-what-i-mean-by-genai"><span class="header-section-number">1</span> Quick framing: what I mean by “GenAI”</h2>
+<p>When people say “GenAI,” they often mean “ChatGPT.” For faculty purposes, it’s more useful to think in layers:</p>
 <ol type="1">
-<li><strong>Multimodality</strong> — Models that can process text, images, audio, and video</li>
-<li><strong>Agents</strong> — AI systems that can take actions and use tools</li>
-<li><strong>Specialized models</strong> — Domain-specific models for code, science, etc.</li>
-<li><strong>Edge deployment</strong> — Running smaller models locally on devices</li>
-<li><strong>RAG systems</strong> — Combining LLMs with retrieval for up-to-date information</li>
+<li><strong>Models</strong> (the “brains”): GPT‑5.2, Claude Sonnet 4.5, Gemini 2.5 Pro, etc.<br>
+</li>
+<li><strong>Tools</strong> (capabilities around the model): web search, file analysis, data analysis (Python), image analysis, spreadsheet/slides generation, connectors to Drive/Notion, etc.</li>
+<li><strong>Agents</strong> (orchestrated workflows): the system plans steps, uses tools, and iterates until it produces an output.</li>
+<li><strong>Products</strong> (interfaces): ChatGPT, Claude, Gemini, Copilot, NotebookLM, Perplexity, etc.</li>
 </ol>
-</section>
-<section id="key-takeaways" class="level2">
-<h2 class="anchored" data-anchor-id="key-takeaways">Key Takeaways</h2>
-<ul>
-<li>The ecosystem is rapidly evolving with new models and capabilities emerging regularly</li>
-<li>No single tool is best for all use cases</li>
-<li>Understanding the landscape helps in selecting appropriate tools</li>
-<li>Consider factors like cost, privacy, capabilities, and integration needs</li>
-</ul>
+<p><strong>Why this matters:</strong> most “wow moments” in 2025–2026 are not just bigger models, but <strong>models + tools + agentic workflows</strong>.</p>
 
 
 </section>

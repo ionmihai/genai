@@ -42,11 +42,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -66,84 +66,111 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">GenAI Workshop</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../ecosystem.html" rel="" target="">
- <span class="menu-text">The GenAI Ecosystem</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fundamentals-of-genai" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">Fundamentals of GenAI</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-fundamentals-of-genai">    
-        <li>
-    <a class="dropdown-item" href="../fundamentals/index.html" rel="" target="">
- <span class="dropdown-text">Overview</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../fundamentals/how-llms-work.html" rel="" target="">
- <span class="dropdown-text">How LLMs Work</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../fundamentals/key-capabilities.html" rel="" target="">
- <span class="dropdown-text">Key GenAI Capabilities</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../fundamentals/choosing-tools.html" rel="" target="">
- <span class="dropdown-text">Choosing the Right Tool</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="../resources.html" rel="" target="">
- <span class="menu-text">Resources</span></a>
-  </li>  
-</ul>
-            <div class="quarto-navbar-tools ms-auto">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
-          </div> <!-- /navcollapse -->
-      </div> <!-- /container-fluid -->
-    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      GenAI Workshop
+      </li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">GenAI Workshop</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ecosystem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The GenAI Ecosystem</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Fundamentals of GenAI</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/how-llms-work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How LLMs Work</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/key-capabilities.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Key GenAI Capabilities</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/choosing-tools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Choosing the Right Tool</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#topics" id="toc-topics" class="nav-link" data-scroll-target="#topics">Topics</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#topics" id="toc-topics" class="nav-link" data-scroll-target="#topics"><span class="header-section-number">2</span> Topics</a>
   <ul class="collapse">
-  <li><a href="#how-llms-work" id="toc-how-llms-work" class="nav-link" data-scroll-target="#how-llms-work">How LLMs Work</a></li>
-  <li><a href="#key-genai-capabilities" id="toc-key-genai-capabilities" class="nav-link" data-scroll-target="#key-genai-capabilities">Key GenAI Capabilities</a></li>
-  <li><a href="#choosing-the-right-tool" id="toc-choosing-the-right-tool" class="nav-link" data-scroll-target="#choosing-the-right-tool">Choosing the Right Tool</a></li>
+  <li><a href="#how-llms-work" id="toc-how-llms-work" class="nav-link" data-scroll-target="#how-llms-work"><span class="header-section-number">2.1</span> How LLMs Work</a></li>
+  <li><a href="#key-genai-capabilities" id="toc-key-genai-capabilities" class="nav-link" data-scroll-target="#key-genai-capabilities"><span class="header-section-number">2.2</span> Key GenAI Capabilities</a></li>
+  <li><a href="#choosing-the-right-tool" id="toc-choosing-the-right-tool" class="nav-link" data-scroll-target="#choosing-the-right-tool"><span class="header-section-number">2.3</span> Choosing the Right Tool</a></li>
   </ul></li>
-  <li><a href="#why-fundamentals-matter" id="toc-why-fundamentals-matter" class="nav-link" data-scroll-target="#why-fundamentals-matter">Why Fundamentals Matter</a></li>
-  <li><a href="#recommended-path" id="toc-recommended-path" class="nav-link" data-scroll-target="#recommended-path">Recommended Path</a></li>
+  <li><a href="#why-fundamentals-matter" id="toc-why-fundamentals-matter" class="nav-link" data-scroll-target="#why-fundamentals-matter"><span class="header-section-number">3</span> Why Fundamentals Matter</a></li>
+  <li><a href="#recommended-path" id="toc-recommended-path" class="nav-link" data-scroll-target="#recommended-path"><span class="header-section-number">4</span> Recommended Path</a></li>
   </ul>
 </nav>
     </div>
@@ -167,14 +194,14 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<section id="introduction" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
 <p>This section covers the foundational concepts you need to understand how generative AI works and how to use it effectively.</p>
 </section>
-<section id="topics" class="level2">
-<h2 class="anchored" data-anchor-id="topics">Topics</h2>
-<section id="how-llms-work" class="level3">
-<h3 class="anchored" data-anchor-id="how-llms-work"><a href="../fundamentals/how-llms-work.html">How LLMs Work</a></h3>
+<section id="topics" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="topics"><span class="header-section-number">2</span> Topics</h2>
+<section id="how-llms-work" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="how-llms-work"><span class="header-section-number">2.1</span> <a href="../fundamentals/how-llms-work.html">How LLMs Work</a></h3>
 <p>Understand the core mechanics behind Large Language Models:</p>
 <ul>
 <li>Transformer architecture basics</li>
@@ -183,8 +210,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Context windows and attention</li>
 </ul>
 </section>
-<section id="key-genai-capabilities" class="level3">
-<h3 class="anchored" data-anchor-id="key-genai-capabilities"><a href="../fundamentals/key-capabilities.html">Key GenAI Capabilities</a></h3>
+<section id="key-genai-capabilities" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="key-genai-capabilities"><span class="header-section-number">2.2</span> <a href="../fundamentals/key-capabilities.html">Key GenAI Capabilities</a></h3>
 <p>Explore what modern GenAI systems can do:</p>
 <ul>
 <li>Text generation and summarization</li>
@@ -194,8 +221,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Multimodal capabilities</li>
 </ul>
 </section>
-<section id="choosing-the-right-tool" class="level3">
-<h3 class="anchored" data-anchor-id="choosing-the-right-tool"><a href="../fundamentals/choosing-tools.html">Choosing the Right Tool</a></h3>
+<section id="choosing-the-right-tool" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="choosing-the-right-tool"><span class="header-section-number">2.3</span> <a href="../fundamentals/choosing-tools.html">Choosing the Right Tool</a></h3>
 <p>Learn to evaluate and select appropriate tools:</p>
 <ul>
 <li>Matching capabilities to use cases</li>
@@ -205,8 +232,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="why-fundamentals-matter" class="level2">
-<h2 class="anchored" data-anchor-id="why-fundamentals-matter">Why Fundamentals Matter</h2>
+<section id="why-fundamentals-matter" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="why-fundamentals-matter"><span class="header-section-number">3</span> Why Fundamentals Matter</h2>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -227,8 +254,8 @@ Building Strong Foundations
 </div>
 </div>
 </section>
-<section id="recommended-path" class="level2">
-<h2 class="anchored" data-anchor-id="recommended-path">Recommended Path</h2>
+<section id="recommended-path" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="recommended-path"><span class="header-section-number">4</span> Recommended Path</h2>
 <ol type="1">
 <li>Start with <strong>How LLMs Work</strong> to build foundational understanding</li>
 <li>Move to <strong>Key Capabilities</strong> to see what’s possible</li>

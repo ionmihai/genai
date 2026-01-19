@@ -42,11 +42,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -66,94 +66,109 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">GenAI Workshop</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../ecosystem.html" rel="" target="">
- <span class="menu-text">The GenAI Ecosystem</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fundamentals-of-genai" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">Fundamentals of GenAI</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-fundamentals-of-genai">    
-        <li>
-    <a class="dropdown-item" href="../fundamentals/index.html" rel="" target="">
- <span class="dropdown-text">Overview</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../fundamentals/how-llms-work.html" rel="" target="">
- <span class="dropdown-text">How LLMs Work</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../fundamentals/key-capabilities.html" rel="" target="">
- <span class="dropdown-text">Key GenAI Capabilities</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../fundamentals/choosing-tools.html" rel="" target="">
- <span class="dropdown-text">Choosing the Right Tool</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="../resources.html" rel="" target="">
- <span class="menu-text">Resources</span></a>
-  </li>  
-</ul>
-            <div class="quarto-navbar-tools ms-auto">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
-          </div> <!-- /navcollapse -->
-      </div> <!-- /container-fluid -->
-    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../fundamentals/how-llms-work.html">Fundamentals of GenAI</a></li><li class="breadcrumb-item"><a href="../fundamentals/key-capabilities.html">Key GenAI Capabilities</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">GenAI Workshop</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ecosystem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The GenAI Ecosystem</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Fundamentals of GenAI</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/how-llms-work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How LLMs Work</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/key-capabilities.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Key GenAI Capabilities</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/choosing-tools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Choosing the Right Tool</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#core-text-capabilities" id="toc-core-text-capabilities" class="nav-link" data-scroll-target="#core-text-capabilities">Core Text Capabilities</a>
+  <li><a href="#key-ways-models-differ-what-to-pay-attention-to" id="toc-key-ways-models-differ-what-to-pay-attention-to" class="nav-link active" data-scroll-target="#key-ways-models-differ-what-to-pay-attention-to"><span class="header-section-number">1</span> Key ways models differ (what to pay attention to)</a>
   <ul class="collapse">
-  <li><a href="#generation-composition" id="toc-generation-composition" class="nav-link" data-scroll-target="#generation-composition">Generation &amp; Composition</a></li>
-  <li><a href="#analysis-understanding" id="toc-analysis-understanding" class="nav-link" data-scroll-target="#analysis-understanding">Analysis &amp; Understanding</a></li>
-  <li><a href="#reasoning-problem-solving" id="toc-reasoning-problem-solving" class="nav-link" data-scroll-target="#reasoning-problem-solving">Reasoning &amp; Problem-Solving</a></li>
+  <li><a href="#context-window-size" id="toc-context-window-size" class="nav-link" data-scroll-target="#context-window-size"><span class="header-section-number">1.1</span> Context window size</a></li>
+  <li><a href="#multimodality-text-image-audio-video" id="toc-multimodality-text-image-audio-video" class="nav-link" data-scroll-target="#multimodality-text-image-audio-video"><span class="header-section-number">1.2</span> Multimodality (text + image + audio + video)</a></li>
+  <li><a href="#thinking-reasoning-mode-vs-instant-mode" id="toc-thinking-reasoning-mode-vs-instant-mode" class="nav-link" data-scroll-target="#thinking-reasoning-mode-vs-instant-mode"><span class="header-section-number">1.3</span> “Thinking” / reasoning mode vs “instant” mode</a></li>
+  <li><a href="#tool-access-this-matters-more-than-people-realize" id="toc-tool-access-this-matters-more-than-people-realize" class="nav-link" data-scroll-target="#tool-access-this-matters-more-than-people-realize"><span class="header-section-number">1.4</span> Tool access (this matters more than people realize)</a></li>
+  <li><a href="#deep-research-vs-normal-chat" id="toc-deep-research-vs-normal-chat" class="nav-link" data-scroll-target="#deep-research-vs-normal-chat"><span class="header-section-number">1.5</span> Deep research vs “normal chat”</a></li>
+  <li><a href="#coding-agents-and-ide-copilots" id="toc-coding-agents-and-ide-copilots" class="nav-link" data-scroll-target="#coding-agents-and-ide-copilots"><span class="header-section-number">1.6</span> Coding agents and IDE copilots</a></li>
   </ul></li>
-  <li><a href="#code-capabilities" id="toc-code-capabilities" class="nav-link" data-scroll-target="#code-capabilities">Code Capabilities</a>
-  <ul class="collapse">
-  <li><a href="#common-use-cases" id="toc-common-use-cases" class="nav-link" data-scroll-target="#common-use-cases">Common Use Cases</a></li>
-  </ul></li>
-  <li><a href="#multimodal-capabilities" id="toc-multimodal-capabilities" class="nav-link" data-scroll-target="#multimodal-capabilities">Multimodal Capabilities</a>
-  <ul class="collapse">
-  <li><a href="#vision" id="toc-vision" class="nav-link" data-scroll-target="#vision">Vision</a></li>
-  <li><a href="#audio-emerging" id="toc-audio-emerging" class="nav-link" data-scroll-target="#audio-emerging">Audio (emerging)</a></li>
-  </ul></li>
-  <li><a href="#what-genai-does-well" id="toc-what-genai-does-well" class="nav-link" data-scroll-target="#what-genai-does-well">What GenAI Does Well</a></li>
-  <li><a href="#current-limitations" id="toc-current-limitations" class="nav-link" data-scroll-target="#current-limitations">Current Limitations</a></li>
-  <li><a href="#maximizing-effectiveness" id="toc-maximizing-effectiveness" class="nav-link" data-scroll-target="#maximizing-effectiveness">Maximizing Effectiveness</a></li>
   </ul>
 </nav>
     </div>
@@ -177,160 +192,91 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>Modern generative AI systems offer a wide range of capabilities. Understanding what these systems can (and cannot) do is essential for effective utilization.</p>
-</section>
-<section id="core-text-capabilities" class="level2">
-<h2 class="anchored" data-anchor-id="core-text-capabilities">Core Text Capabilities</h2>
-<section id="generation-composition" class="level3">
-<h3 class="anchored" data-anchor-id="generation-composition">Generation &amp; Composition</h3>
+<section id="key-ways-models-differ-what-to-pay-attention-to" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="key-ways-models-differ-what-to-pay-attention-to"><span class="header-section-number">1</span> Key ways models differ (what to pay attention to)</h2>
+<section id="context-window-size" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="context-window-size"><span class="header-section-number">1.1</span> Context window size</h3>
 <ul>
-<li><strong>Writing assistance</strong>: Drafts, emails, reports, creative writing</li>
-<li><strong>Summarization</strong>: Condense long documents into key points</li>
-<li><strong>Translation</strong>: Convert between languages with nuance</li>
-<li><strong>Reformatting</strong>: Change tone, style, or structure</li>
+<li>Bigger windows help with long syllabi, papers, transcripts, cases, and multi-file projects.</li>
+<li>But bigger windows <strong>do not guarantee</strong> accurate long-document reasoning.</li>
+</ul>
+<p>Examples of publicly stated context sizes (as of late 2025):</p>
+<ul>
+<li>OpenAI’s GPT‑5.2 Pro API model: <strong>400k context window</strong>, <strong>128k max output</strong> (API docs).[^openai-gpt52pro-api]<br>
+</li>
+<li>ChatGPT UI (GPT‑5.2): context varies by tier/model (e.g., “Thinking” has a much larger window than “Instant”).[^openai-gpt52-chatgpt]<br>
+</li>
+<li>Google Gemini 2.5 Pro: announced <strong>1M token</strong> context.[^google-gemini-25pro]<br>
+</li>
+<li>Anthropic Claude long-context tiers include models with up to <strong>1M tokens</strong>.[^anthropic-context]</li>
 </ul>
 </section>
-<section id="analysis-understanding" class="level3">
-<h3 class="anchored" data-anchor-id="analysis-understanding">Analysis &amp; Understanding</h3>
+<section id="multimodality-text-image-audio-video" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="multimodality-text-image-audio-video"><span class="header-section-number">1.2</span> Multimodality (text + image + audio + video)</h3>
+<p>Ask:</p>
 <ul>
-<li><strong>Text analysis</strong>: Extract themes, sentiment, key information</li>
-<li><strong>Question answering</strong>: Respond to queries about provided content</li>
-<li><strong>Comparison</strong>: Analyze similarities and differences</li>
-<li><strong>Classification</strong>: Categorize content by topic, type, or criteria</li>
+<li>Can it read charts, tables, and screenshots?</li>
+<li>Can it <em>generate</em> images or just analyze them?</li>
+<li>Is multimodality native (one model) or stitched (separate encoders + LLM)?</li>
+</ul>
+<p>For finance, multimodality matters for:</p>
+<ul>
+<li>reading charts in papers,</li>
+<li>interpreting slide decks,</li>
+<li>extracting data from PDFs and tables,</li>
+<li>understanding UI screenshots from trading or analytics tools.</li>
 </ul>
 </section>
-<section id="reasoning-problem-solving" class="level3">
-<h3 class="anchored" data-anchor-id="reasoning-problem-solving">Reasoning &amp; Problem-Solving</h3>
+<section id="thinking-reasoning-mode-vs-instant-mode" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="thinking-reasoning-mode-vs-instant-mode"><span class="header-section-number">1.3</span> “Thinking” / reasoning mode vs “instant” mode</h3>
+<p>Many providers now offer a mode that:</p>
 <ul>
-<li><strong>Logical reasoning</strong>: Work through multi-step problems</li>
-<li><strong>Mathematical computation</strong>: Solve equations, statistical analysis</li>
-<li><strong>Planning</strong>: Break down complex tasks into steps</li>
-<li><strong>Evaluation</strong>: Assess arguments, identify weaknesses</li>
+<li>spends more compute to deliberate,</li>
+<li>performs better on multi-step tasks,</li>
+<li>is slower and more expensive.</li>
+</ul>
+<p>OpenAI’s GPT‑5.2 “Auto” can switch between Instant and Thinking; the UI can show a “slimmed-down” view of chain-of-thought, with an “Answer now” option.[^openai-gpt52-chatgpt]</p>
+</section>
+<section id="tool-access-this-matters-more-than-people-realize" class="level3" data-number="1.4">
+<h3 data-number="1.4" class="anchored" data-anchor-id="tool-access-this-matters-more-than-people-realize"><span class="header-section-number">1.4</span> Tool access (this matters more than people realize)</h3>
+<p>A model with tool access can:</p>
+<ul>
+<li>browse the web (and cite sources),</li>
+<li>use a Python environment for calculations,</li>
+<li>analyze files,</li>
+<li>generate spreadsheets / slide decks,</li>
+<li>call external tools through connectors or “actions.”</li>
+</ul>
+<p>Without tools, models are limited to:</p>
+<ul>
+<li>their training data,</li>
+<li>and whatever you provide in the prompt.</li>
 </ul>
 </section>
-</section>
-<section id="code-capabilities" class="level2">
-<h2 class="anchored" data-anchor-id="code-capabilities">Code Capabilities</h2>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Code Generation
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Modern LLMs are remarkably capable code assistants, able to:</p>
+<section id="deep-research-vs-normal-chat" class="level3" data-number="1.5">
+<h3 data-number="1.5" class="anchored" data-anchor-id="deep-research-vs-normal-chat"><span class="header-section-number">1.5</span> Deep research vs “normal chat”</h3>
+<p>“Deep research” typically means an <strong>agentic workflow</strong>:</p>
 <ul>
-<li>Write code from natural language descriptions</li>
-<li>Explain existing code</li>
-<li>Debug and fix errors</li>
-<li>Translate between programming languages</li>
-<li>Write tests and documentation</li>
+<li>it searches,</li>
+<li>collects sources,</li>
+<li>synthesizes,</li>
+<li>and returns citations and an organized report.[^openai-deep-research]</li>
 </ul>
-</div>
-</div>
-<section id="common-use-cases" class="level3">
-<h3 class="anchored" data-anchor-id="common-use-cases">Common Use Cases</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Task</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Code generation</td>
-<td>“Write a Python function to parse CSV files”</td>
-</tr>
-<tr class="even">
-<td>Debugging</td>
-<td>“Why does this code throw a TypeError?”</td>
-</tr>
-<tr class="odd">
-<td>Refactoring</td>
-<td>“Improve this code’s readability”</td>
-</tr>
-<tr class="even">
-<td>Documentation</td>
-<td>“Add docstrings to these functions”</td>
-</tr>
-</tbody>
-</table>
+<p>This is usually not a separate “brain”; it’s an <strong>agent layer</strong> on top of a strong model + tools.</p>
 </section>
-</section>
-<section id="multimodal-capabilities" class="level2">
-<h2 class="anchored" data-anchor-id="multimodal-capabilities">Multimodal Capabilities</h2>
-<p>Modern models increasingly work across modalities:</p>
-<section id="vision" class="level3">
-<h3 class="anchored" data-anchor-id="vision">Vision</h3>
+<section id="coding-agents-and-ide-copilots" class="level3" data-number="1.6">
+<h3 data-number="1.6" class="anchored" data-anchor-id="coding-agents-and-ide-copilots"><span class="header-section-number">1.6</span> Coding agents and IDE copilots</h3>
+<p>Coding assistants aren’t only for programmers. Even if you don’t write software, they can:</p>
 <ul>
-<li><strong>Image analysis</strong>: Describe, analyze, extract text from images</li>
-<li><strong>Document processing</strong>: Read charts, tables, handwriting</li>
-<li><strong>Visual reasoning</strong>: Answer questions about image content</li>
+<li>translate between Stata/R/Python,</li>
+<li>write reproducible scripts,</li>
+<li>generate data cleaning code,</li>
+<li>and explain unfamiliar code you inherited.</li>
 </ul>
-</section>
-<section id="audio-emerging" class="level3">
-<h3 class="anchored" data-anchor-id="audio-emerging">Audio (emerging)</h3>
-<ul>
-<li><strong>Transcription</strong>: Convert speech to text</li>
-<li><strong>Voice interaction</strong>: Real-time conversation</li>
-<li><strong>Music understanding</strong>: Analyze and describe audio</li>
-</ul>
-</section>
-</section>
-<section id="what-genai-does-well" class="level2">
-<h2 class="anchored" data-anchor-id="what-genai-does-well">What GenAI Does Well</h2>
-<p>✅ Pattern-based tasks with clear examples<br>
-✅ Creative brainstorming and ideation<br>
-✅ Drafting and iteration on content<br>
-✅ Explanation and education<br>
-✅ Code assistance and debugging<br>
-✅ Summarization and synthesis</p>
-</section>
-<section id="current-limitations" class="level2">
-<h2 class="anchored" data-anchor-id="current-limitations">Current Limitations</h2>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important Limitations
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Be aware of these common limitations:</p>
-<ul>
-<li><strong>Hallucination</strong>: Can generate plausible but false information</li>
-<li><strong>Knowledge cutoff</strong>: Training data has a cutoff date</li>
-<li><strong>Math reliability</strong>: Can make arithmetic errors</li>
-<li><strong>Citation accuracy</strong>: Often fabricates sources</li>
-<li><strong>Consistency</strong>: May give different answers to same question</li>
-</ul>
-</div>
-</div>
-<p>❌ Guaranteed factual accuracy<br>
-❌ Real-time information (without tools)<br>
-❌ Reliable mathematical computation<br>
-❌ Genuine understanding or consciousness<br>
-❌ Perfect memory across sessions</p>
-</section>
-<section id="maximizing-effectiveness" class="level2">
-<h2 class="anchored" data-anchor-id="maximizing-effectiveness">Maximizing Effectiveness</h2>
-<ol type="1">
-<li><strong>Play to strengths</strong>: Use GenAI for tasks it excels at</li>
-<li><strong>Verify outputs</strong>: Especially for factual claims</li>
-<li><strong>Iterate</strong>: Use conversation to refine outputs</li>
-<li><strong>Provide context</strong>: Better input yields better output</li>
-<li><strong>Combine with tools</strong>: Use retrieval, calculators, etc.</li>
-</ol>
+<p>OpenAI’s Codex ecosystem is one example (web/CLI/IDE integrations).[^openai-codex]</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

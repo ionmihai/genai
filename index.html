@@ -42,11 +42,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -66,79 +66,104 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">GenAI Workshop</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
- <span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./ecosystem.html" rel="" target="">
- <span class="menu-text">The GenAI Ecosystem</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fundamentals-of-genai" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">Fundamentals of GenAI</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-fundamentals-of-genai">    
-        <li>
-    <a class="dropdown-item" href="./fundamentals/index.html" rel="" target="">
- <span class="dropdown-text">Overview</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./fundamentals/how-llms-work.html" rel="" target="">
- <span class="dropdown-text">How LLMs Work</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./fundamentals/key-capabilities.html" rel="" target="">
- <span class="dropdown-text">Key GenAI Capabilities</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./fundamentals/choosing-tools.html" rel="" target="">
- <span class="dropdown-text">Choosing the Right Tool</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="./resources.html" rel="" target="">
- <span class="menu-text">Resources</span></a>
-  </li>  
-</ul>
-            <div class="quarto-navbar-tools ms-auto">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
-          </div> <!-- /navcollapse -->
-      </div> <!-- /container-fluid -->
-    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">GenAI Workshop</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ecosystem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The GenAI Ecosystem</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Fundamentals of GenAI</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fundamentals/how-llms-work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How LLMs Work</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fundamentals/key-capabilities.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Key GenAI Capabilities</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fundamentals/choosing-tools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Choosing the Right Tool</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#genai-workshop" id="toc-genai-workshop" class="nav-link active" data-scroll-target="#genai-workshop">GenAI Workshop</a></li>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link" data-scroll-target="#welcome">Welcome</a></li>
-  <li><a href="#workshop-objectives" id="toc-workshop-objectives" class="nav-link" data-scroll-target="#workshop-objectives">Workshop Objectives</a></li>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
+  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome"><span class="header-section-number">1</span> Welcome</a></li>
+  <li><a href="#house-rules" id="toc-house-rules" class="nav-link" data-scroll-target="#house-rules"><span class="header-section-number">2</span> House rules</a></li>
+  <li><a href="#workshop-objectives" id="toc-workshop-objectives" class="nav-link" data-scroll-target="#workshop-objectives"><span class="header-section-number">3</span> Workshop Objectives</a></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started"><span class="header-section-number">4</span> Getting Started</a></li>
   </ul>
 </nav>
     </div>
@@ -162,34 +187,31 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="genai-workshop" class="level1 hero-banner">
-<h1>GenAI Workshop</h1>
-<p>Explore the world of Generative AI — from foundational concepts to practical applications</p>
+<section id="welcome" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="welcome"><span class="header-section-number">1</span> Welcome</h2>
+<p>This workshop is designed to provide an introduction to Generative AI (GenAI) technologies, with a focus on practical understanding and effective utilization of these tools for teaching and research.</p>
 </section>
-<section id="welcome" class="level2">
-<h2 class="anchored" data-anchor-id="welcome">Welcome</h2>
-<p>This workshop is designed to provide a comprehensive introduction to Generative AI (GenAI) technologies, with a focus on practical understanding and effective utilization of these powerful tools.</p>
-<div class="card-grid">
-<section id="the-genai-ecosystem" class="level3 feature-card">
-<h3 class="anchored" data-anchor-id="the-genai-ecosystem">🌐 The GenAI Ecosystem</h3>
-<p>Understand the landscape of generative AI tools, platforms, and providers shaping the industry today.</p>
+<section id="house-rules" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="house-rules"><span class="header-section-number">2</span> House rules</h2>
+<p>Before we talk capabilities, we need shared norms. The biggest risks in education and research are not “the models are too powerful,” but rather <strong>misplaced trust</strong> and <strong>unsafe data handling</strong>.</p>
+<ul>
+<li><strong>Don’t upload sensitive data</strong> into consumer tools unless your institution has an approved, protected environment (usually <code>Enterprise</code> level subscriptions offer this).
+<ul>
+<li>Examples of sensitive data: identifiable student info (FERPA), unpublished manuscripts, reviewer comments, proprietary datasets, IRB-protected data, confidential employer partner data.</li>
+</ul></li>
+<li><strong>Verification is a skill, not an afterthought.</strong>
+<ul>
+<li>Treat the model like a smart research/teaching assistant: helpful, fast, and occasionally wrong.</li>
+</ul></li>
+<li><strong>We will not debate whether students “should” use AI.</strong> They already are. The more productive conversation revolves around questions like:
+<ul>
+<li>What learning outcomes do we want, in a world where GenAI can perform many of the <strong>tasks</strong> we traditionally teach our students?</li>
+<li>How do we design assessments that reward thinking/understanding?</li>
+</ul></li>
+</ul>
 </section>
-<section id="how-llms-work" class="level3 feature-card">
-<h3 class="anchored" data-anchor-id="how-llms-work">🧠 How LLMs Work</h3>
-<p>Dive into the mechanics of Large Language Models and understand what makes them tick.</p>
-</section>
-<section id="key-capabilities" class="level3 feature-card">
-<h3 class="anchored" data-anchor-id="key-capabilities">⚡ Key Capabilities</h3>
-<p>Explore what generative AI can do — from text generation to code assistance and beyond.</p>
-</section>
-<section id="choosing-tools" class="level3 feature-card">
-<h3 class="anchored" data-anchor-id="choosing-tools">🎯 Choosing Tools</h3>
-<p>Learn how to evaluate and select the right GenAI tools for your specific needs.</p>
-</section>
-</div>
-</section>
-<section id="workshop-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="workshop-objectives">Workshop Objectives</h2>
+<section id="workshop-objectives" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="workshop-objectives"><span class="header-section-number">3</span> Workshop Objectives</h2>
 <p>By the end of this workshop, participants will be able to:</p>
 <ol type="1">
 <li><strong>Understand</strong> the fundamental concepts behind generative AI and large language models</li>
@@ -199,9 +221,9 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Apply</strong> best practices for effective GenAI utilization</li>
 </ol>
 </section>
-<section id="getting-started" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
-<p>Use the navigation menu above to explore the workshop content. We recommend starting with <a href="./ecosystem.html">The GenAI Ecosystem</a> to get an overview of the field before diving into the <a href="./fundamentals/index.html">Fundamentals</a>.</p>
+<section id="getting-started" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="getting-started"><span class="header-section-number">4</span> Getting Started</h2>
+<p>Use the navigation menu on the left to explore the workshop content. We recommend starting with <a href="./ecosystem.html">The GenAI Ecosystem</a> to get an overview of the field before diving into the <a href="./fundamentals/index.html">Fundamentals</a>.</p>
 
 
 </section>

@@ -42,11 +42,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -66,94 +66,119 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">GenAI Workshop</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../ecosystem.html" rel="" target="">
- <span class="menu-text">The GenAI Ecosystem</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fundamentals-of-genai" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text">Fundamentals of GenAI</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-fundamentals-of-genai">    
-        <li>
-    <a class="dropdown-item" href="../fundamentals/index.html" rel="" target="">
- <span class="dropdown-text">Overview</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../fundamentals/how-llms-work.html" rel="" target="">
- <span class="dropdown-text">How LLMs Work</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../fundamentals/key-capabilities.html" rel="" target="">
- <span class="dropdown-text">Key GenAI Capabilities</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../fundamentals/choosing-tools.html" rel="" target="">
- <span class="dropdown-text">Choosing the Right Tool</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="../resources.html" rel="" target="">
- <span class="menu-text">Resources</span></a>
-  </li>  
-</ul>
-            <div class="quarto-navbar-tools ms-auto">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
-          </div> <!-- /navcollapse -->
-      </div> <!-- /container-fluid -->
-    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../fundamentals/how-llms-work.html">Fundamentals of GenAI</a></li><li class="breadcrumb-item"><a href="../fundamentals/choosing-tools.html">Choosing the Right Tool</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">GenAI Workshop</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ecosystem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The GenAI Ecosystem</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Fundamentals of GenAI</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/how-llms-work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How LLMs Work</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/key-capabilities.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Key GenAI Capabilities</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/choosing-tools.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Choosing the Right Tool</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#decision-framework" id="toc-decision-framework" class="nav-link" data-scroll-target="#decision-framework">Decision Framework</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#decision-framework" id="toc-decision-framework" class="nav-link" data-scroll-target="#decision-framework"><span class="header-section-number">2</span> Decision Framework</a>
   <ul class="collapse">
-  <li><a href="#define-your-use-case" id="toc-define-your-use-case" class="nav-link" data-scroll-target="#define-your-use-case">1. Define Your Use Case</a></li>
-  <li><a href="#evaluate-key-factors" id="toc-evaluate-key-factors" class="nav-link" data-scroll-target="#evaluate-key-factors">2. Evaluate Key Factors</a></li>
-  <li><a href="#practical-considerations" id="toc-practical-considerations" class="nav-link" data-scroll-target="#practical-considerations">3. Practical Considerations</a></li>
+  <li><a href="#define-your-use-case" id="toc-define-your-use-case" class="nav-link" data-scroll-target="#define-your-use-case"><span class="header-section-number">2.1</span> 1. Define Your Use Case</a></li>
+  <li><a href="#evaluate-key-factors" id="toc-evaluate-key-factors" class="nav-link" data-scroll-target="#evaluate-key-factors"><span class="header-section-number">2.2</span> 2. Evaluate Key Factors</a></li>
+  <li><a href="#practical-considerations" id="toc-practical-considerations" class="nav-link" data-scroll-target="#practical-considerations"><span class="header-section-number">2.3</span> 3. Practical Considerations</a></li>
   </ul></li>
-  <li><a href="#tool-categories" id="toc-tool-categories" class="nav-link" data-scroll-target="#tool-categories">Tool Categories</a>
+  <li><a href="#tool-categories" id="toc-tool-categories" class="nav-link" data-scroll-target="#tool-categories"><span class="header-section-number">3</span> Tool Categories</a>
   <ul class="collapse">
-  <li><a href="#conversational-assistants" id="toc-conversational-assistants" class="nav-link" data-scroll-target="#conversational-assistants">Conversational Assistants</a></li>
-  <li><a href="#code-assistants" id="toc-code-assistants" class="nav-link" data-scroll-target="#code-assistants">Code Assistants</a></li>
-  <li><a href="#search-research" id="toc-search-research" class="nav-link" data-scroll-target="#search-research">Search &amp; Research</a></li>
-  <li><a href="#specialized-tools" id="toc-specialized-tools" class="nav-link" data-scroll-target="#specialized-tools">Specialized Tools</a></li>
+  <li><a href="#conversational-assistants" id="toc-conversational-assistants" class="nav-link" data-scroll-target="#conversational-assistants"><span class="header-section-number">3.1</span> Conversational Assistants</a></li>
+  <li><a href="#code-assistants" id="toc-code-assistants" class="nav-link" data-scroll-target="#code-assistants"><span class="header-section-number">3.2</span> Code Assistants</a></li>
+  <li><a href="#search-research" id="toc-search-research" class="nav-link" data-scroll-target="#search-research"><span class="header-section-number">3.3</span> Search &amp; Research</a></li>
+  <li><a href="#specialized-tools" id="toc-specialized-tools" class="nav-link" data-scroll-target="#specialized-tools"><span class="header-section-number">3.4</span> Specialized Tools</a></li>
   </ul></li>
-  <li><a href="#making-the-choice" id="toc-making-the-choice" class="nav-link" data-scroll-target="#making-the-choice">Making the Choice</a>
+  <li><a href="#making-the-choice" id="toc-making-the-choice" class="nav-link" data-scroll-target="#making-the-choice"><span class="header-section-number">4</span> Making the Choice</a>
   <ul class="collapse">
-  <li><a href="#quick-selection-guide" id="toc-quick-selection-guide" class="nav-link" data-scroll-target="#quick-selection-guide">Quick Selection Guide</a></li>
+  <li><a href="#quick-selection-guide" id="toc-quick-selection-guide" class="nav-link" data-scroll-target="#quick-selection-guide"><span class="header-section-number">4.1</span> Quick Selection Guide</a></li>
   </ul></li>
-  <li><a href="#evaluation-checklist" id="toc-evaluation-checklist" class="nav-link" data-scroll-target="#evaluation-checklist">Evaluation Checklist</a></li>
+  <li><a href="#evaluation-checklist" id="toc-evaluation-checklist" class="nav-link" data-scroll-target="#evaluation-checklist"><span class="header-section-number">5</span> Evaluation Checklist</a></li>
   </ul>
 </nav>
     </div>
@@ -177,14 +202,14 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<section id="introduction" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
 <p>With dozens of GenAI tools available, selecting the right one for your needs can be overwhelming. This guide provides a framework for making informed choices.</p>
 </section>
-<section id="decision-framework" class="level2">
-<h2 class="anchored" data-anchor-id="decision-framework">Decision Framework</h2>
-<section id="define-your-use-case" class="level3">
-<h3 class="anchored" data-anchor-id="define-your-use-case">1. Define Your Use Case</h3>
+<section id="decision-framework" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="decision-framework"><span class="header-section-number">2</span> Decision Framework</h2>
+<section id="define-your-use-case" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="define-your-use-case"><span class="header-section-number">2.1</span> 1. Define Your Use Case</h3>
 <p>Start by clearly identifying what you need:</p>
 <ul>
 <li><strong>Task type</strong>: Writing, coding, analysis, research?</li>
@@ -193,10 +218,10 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Integration</strong>: Standalone or part of a workflow?</li>
 </ul>
 </section>
-<section id="evaluate-key-factors" class="level3">
-<h3 class="anchored" data-anchor-id="evaluate-key-factors">2. Evaluate Key Factors</h3>
-<section id="capability-match" class="level4">
-<h4 class="anchored" data-anchor-id="capability-match">Capability Match</h4>
+<section id="evaluate-key-factors" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="evaluate-key-factors"><span class="header-section-number">2.2</span> 2. Evaluate Key Factors</h3>
+<section id="capability-match" class="level4" data-number="2.2.1">
+<h4 data-number="2.2.1" class="anchored" data-anchor-id="capability-match"><span class="header-section-number">2.2.1</span> Capability Match</h4>
 <table class="table">
 <thead>
 <tr class="header">
@@ -228,8 +253,8 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
-<section id="cost-considerations" class="level4">
-<h4 class="anchored" data-anchor-id="cost-considerations">Cost Considerations</h4>
+<section id="cost-considerations" class="level4" data-number="2.2.2">
+<h4 data-number="2.2.2" class="anchored" data-anchor-id="cost-considerations"><span class="header-section-number">2.2.2</span> Cost Considerations</h4>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -249,8 +274,8 @@ Pricing Models
 </div>
 </div>
 </section>
-<section id="privacy-security" class="level4">
-<h4 class="anchored" data-anchor-id="privacy-security">Privacy &amp; Security</h4>
+<section id="privacy-security" class="level4" data-number="2.2.3">
+<h4 data-number="2.2.3" class="anchored" data-anchor-id="privacy-security"><span class="header-section-number">2.2.3</span> Privacy &amp; Security</h4>
 <p>Consider data handling requirements:</p>
 <ul>
 <li><strong>Sensitive data</strong>: May require local/on-premise solutions</li>
@@ -260,26 +285,26 @@ Pricing Models
 </ul>
 </section>
 </section>
-<section id="practical-considerations" class="level3">
-<h3 class="anchored" data-anchor-id="practical-considerations">3. Practical Considerations</h3>
-<section id="ease-of-use" class="level4">
-<h4 class="anchored" data-anchor-id="ease-of-use">Ease of Use</h4>
+<section id="practical-considerations" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="practical-considerations"><span class="header-section-number">2.3</span> 3. Practical Considerations</h3>
+<section id="ease-of-use" class="level4" data-number="2.3.1">
+<h4 data-number="2.3.1" class="anchored" data-anchor-id="ease-of-use"><span class="header-section-number">2.3.1</span> Ease of Use</h4>
 <ul>
 <li>Web interface vs.&nbsp;API vs.&nbsp;integrated tool</li>
 <li>Learning curve and documentation quality</li>
 <li>Team collaboration features</li>
 </ul>
 </section>
-<section id="reliability" class="level4">
-<h4 class="anchored" data-anchor-id="reliability">Reliability</h4>
+<section id="reliability" class="level4" data-number="2.3.2">
+<h4 data-number="2.3.2" class="anchored" data-anchor-id="reliability"><span class="header-section-number">2.3.2</span> Reliability</h4>
 <ul>
 <li>Uptime and availability</li>
 <li>Rate limits and quotas</li>
 <li>Response consistency</li>
 </ul>
 </section>
-<section id="ecosystem" class="level4">
-<h4 class="anchored" data-anchor-id="ecosystem">Ecosystem</h4>
+<section id="ecosystem" class="level4" data-number="2.3.3">
+<h4 data-number="2.3.3" class="anchored" data-anchor-id="ecosystem"><span class="header-section-number">2.3.3</span> Ecosystem</h4>
 <ul>
 <li>Plugins and extensions</li>
 <li>Integration with existing tools</li>
@@ -288,10 +313,10 @@ Pricing Models
 </section>
 </section>
 </section>
-<section id="tool-categories" class="level2">
-<h2 class="anchored" data-anchor-id="tool-categories">Tool Categories</h2>
-<section id="conversational-assistants" class="level3">
-<h3 class="anchored" data-anchor-id="conversational-assistants">Conversational Assistants</h3>
+<section id="tool-categories" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="tool-categories"><span class="header-section-number">3</span> Tool Categories</h2>
+<section id="conversational-assistants" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="conversational-assistants"><span class="header-section-number">3.1</span> Conversational Assistants</h3>
 <p><strong>Best for</strong>: General tasks, brainstorming, Q&amp;A</p>
 <ul>
 <li>ChatGPT (OpenAI)</li>
@@ -299,8 +324,8 @@ Pricing Models
 <li>Gemini (Google)</li>
 </ul>
 </section>
-<section id="code-assistants" class="level3">
-<h3 class="anchored" data-anchor-id="code-assistants">Code Assistants</h3>
+<section id="code-assistants" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="code-assistants"><span class="header-section-number">3.2</span> Code Assistants</h3>
 <p><strong>Best for</strong>: Development workflows</p>
 <ul>
 <li>GitHub Copilot — IDE integration</li>
@@ -308,8 +333,8 @@ Pricing Models
 <li>Codeium — Free alternative</li>
 </ul>
 </section>
-<section id="search-research" class="level3">
-<h3 class="anchored" data-anchor-id="search-research">Search &amp; Research</h3>
+<section id="search-research" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="search-research"><span class="header-section-number">3.3</span> Search &amp; Research</h3>
 <p><strong>Best for</strong>: Information retrieval, citations</p>
 <ul>
 <li>Perplexity — AI search with sources</li>
@@ -317,8 +342,8 @@ Pricing Models
 <li>Consensus — Academic research</li>
 </ul>
 </section>
-<section id="specialized-tools" class="level3">
-<h3 class="anchored" data-anchor-id="specialized-tools">Specialized Tools</h3>
+<section id="specialized-tools" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="specialized-tools"><span class="header-section-number">3.4</span> Specialized Tools</h3>
 <p><strong>Best for</strong>: Specific domains</p>
 <ul>
 <li>Grammarly — Writing assistance</li>
@@ -327,8 +352,8 @@ Pricing Models
 </ul>
 </section>
 </section>
-<section id="making-the-choice" class="level2">
-<h2 class="anchored" data-anchor-id="making-the-choice">Making the Choice</h2>
+<section id="making-the-choice" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="making-the-choice"><span class="header-section-number">4</span> Making the Choice</h2>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -342,8 +367,8 @@ Recommendation
 <p>Start with a general-purpose tool (ChatGPT or Claude) to understand your needs, then specialize if necessary. Most users find 2-3 tools cover their needs.</p>
 </div>
 </div>
-<section id="quick-selection-guide" class="level3">
-<h3 class="anchored" data-anchor-id="quick-selection-guide">Quick Selection Guide</h3>
+<section id="quick-selection-guide" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="quick-selection-guide"><span class="header-section-number">4.1</span> Quick Selection Guide</h3>
 <pre><code>Need general assistance? → ChatGPT or Claude
 Need to search/research? → Perplexity
 Need code help in IDE? → GitHub Copilot or Cursor
@@ -352,8 +377,8 @@ Need document analysis? → Claude (long context)
 Need privacy/local? → Llama-based solutions</code></pre>
 </section>
 </section>
-<section id="evaluation-checklist" class="level2">
-<h2 class="anchored" data-anchor-id="evaluation-checklist">Evaluation Checklist</h2>
+<section id="evaluation-checklist" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="evaluation-checklist"><span class="header-section-number">5</span> Evaluation Checklist</h2>
 <p>Before committing to a tool:</p>
 <ul class="task-list">
 <li><input type="checkbox">Test with your actual use cases</li>
