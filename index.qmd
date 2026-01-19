@@ -2,39 +2,22 @@
 title: "GenAI Workshop"
 ---
 
-::: {.hero-banner}
-# GenAI Workshop
-
-Explore the world of Generative AI — from foundational concepts to practical applications
-:::
-
 ## Welcome
 
-This workshop is designed to provide a comprehensive introduction to Generative AI (GenAI) technologies, with a focus on practical understanding and effective utilization of these powerful tools.
+This workshop is designed to provide an introduction to Generative AI (GenAI) technologies, with a focus on practical understanding and effective utilization of these tools for teaching and research.
 
-::: {.card-grid}
+## House rules
 
-::: {.feature-card}
-### 🌐 The GenAI Ecosystem
-Understand the landscape of generative AI tools, platforms, and providers shaping the industry today.
-:::
+Before we talk capabilities, we need shared norms. The biggest risks in education and research are not “the models are too powerful,” but rather **misplaced trust** and **unsafe data handling**.
 
-::: {.feature-card}
-### 🧠 How LLMs Work
-Dive into the mechanics of Large Language Models and understand what makes them tick.
-:::
+- **Don’t upload sensitive data** into consumer tools unless your institution has an approved, protected environment (usually ``Enterprise`` level subscriptions offer this).
+  - Examples of sensitive data: identifiable student info (FERPA), unpublished manuscripts, reviewer comments, proprietary datasets, IRB-protected data, confidential employer partner data.
+- **Verification is a skill, not an afterthought.** 
+    - Treat the model like a smart research/teaching assistant: helpful, fast, and occasionally wrong.
+- **We will not debate whether students “should” use AI.** They already are. The more productive conversation revolves around questions like:
+  - What learning outcomes do we want, in a world where GenAI can perform many of the **tasks** we traditionally teach our students?
+  - How do we design assessments that reward thinking/understanding?
 
-::: {.feature-card}
-### ⚡ Key Capabilities
-Explore what generative AI can do — from text generation to code assistance and beyond.
-:::
-
-::: {.feature-card}
-### 🎯 Choosing Tools
-Learn how to evaluate and select the right GenAI tools for your specific needs.
-:::
-
-:::
 
 ## Workshop Objectives
 
@@ -48,4 +31,4 @@ By the end of this workshop, participants will be able to:
 
 ## Getting Started
 
-Use the navigation menu above to explore the workshop content. We recommend starting with [The GenAI Ecosystem](ecosystem.qmd) to get an overview of the field before diving into the [Fundamentals](fundamentals/index.qmd).
+Use the navigation menu on the left to explore the workshop content. We recommend starting with [The GenAI Ecosystem](ecosystem.qmd) to get an overview of the field before diving into the [Fundamentals](fundamentals/index.qmd).

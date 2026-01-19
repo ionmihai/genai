@@ -2,103 +2,78 @@
 title: "Key GenAI Capabilities"
 ---
 
-## Overview
+## Key ways models differ (what to pay attention to)
 
-Modern generative AI systems offer a wide range of capabilities. Understanding what these systems can (and cannot) do is essential for effective utilization.
+### Context window size
 
-## Core Text Capabilities
+- Bigger windows help with long syllabi, papers, transcripts, cases, and multi-file projects.
+- But bigger windows **do not guarantee** accurate long-document reasoning.
 
-### Generation & Composition
+Examples of publicly stated context sizes (as of late 2025):
 
-- **Writing assistance**: Drafts, emails, reports, creative writing
-- **Summarization**: Condense long documents into key points
-- **Translation**: Convert between languages with nuance
-- **Reformatting**: Change tone, style, or structure
+- OpenAI’s GPT‑5.2 Pro API model: **400k context window**, **128k max output** (API docs).[^openai-gpt52pro-api]  
+- ChatGPT UI (GPT‑5.2): context varies by tier/model (e.g., “Thinking” has a much larger window than “Instant”).[^openai-gpt52-chatgpt]  
+- Google Gemini 2.5 Pro: announced **1M token** context.[^google-gemini-25pro]  
+- Anthropic Claude long-context tiers include models with up to **1M tokens**.[^anthropic-context]
 
-### Analysis & Understanding
+### Multimodality (text + image + audio + video)
 
-- **Text analysis**: Extract themes, sentiment, key information
-- **Question answering**: Respond to queries about provided content
-- **Comparison**: Analyze similarities and differences
-- **Classification**: Categorize content by topic, type, or criteria
+Ask:
 
-### Reasoning & Problem-Solving
+- Can it read charts, tables, and screenshots?
+- Can it *generate* images or just analyze them?
+- Is multimodality native (one model) or stitched (separate encoders + LLM)?
 
-- **Logical reasoning**: Work through multi-step problems
-- **Mathematical computation**: Solve equations, statistical analysis
-- **Planning**: Break down complex tasks into steps
-- **Evaluation**: Assess arguments, identify weaknesses
+For finance, multimodality matters for:
 
-## Code Capabilities
+- reading charts in papers,
+- interpreting slide decks,
+- extracting data from PDFs and tables,
+- understanding UI screenshots from trading or analytics tools.
 
-::: {.callout-tip}
-## Code Generation
-Modern LLMs are remarkably capable code assistants, able to:
+### “Thinking” / reasoning mode vs “instant” mode
 
-- Write code from natural language descriptions
-- Explain existing code
-- Debug and fix errors
-- Translate between programming languages
-- Write tests and documentation
-:::
+Many providers now offer a mode that:
 
-### Common Use Cases
+- spends more compute to deliberate,
+- performs better on multi-step tasks,
+- is slower and more expensive.
 
-| Task | Example |
-|------|---------|
-| Code generation | "Write a Python function to parse CSV files" |
-| Debugging | "Why does this code throw a TypeError?" |
-| Refactoring | "Improve this code's readability" |
-| Documentation | "Add docstrings to these functions" |
+OpenAI’s GPT‑5.2 “Auto” can switch between Instant and Thinking; the UI can show a “slimmed-down” view of chain-of-thought, with an “Answer now” option.[^openai-gpt52-chatgpt]
 
-## Multimodal Capabilities
+### Tool access (this matters more than people realize)
 
-Modern models increasingly work across modalities:
+A model with tool access can:
 
-### Vision
+- browse the web (and cite sources),
+- use a Python environment for calculations,
+- analyze files,
+- generate spreadsheets / slide decks,
+- call external tools through connectors or “actions.”
 
-- **Image analysis**: Describe, analyze, extract text from images
-- **Document processing**: Read charts, tables, handwriting
-- **Visual reasoning**: Answer questions about image content
+Without tools, models are limited to:
 
-### Audio (emerging)
+- their training data,
+- and whatever you provide in the prompt.
 
-- **Transcription**: Convert speech to text
-- **Voice interaction**: Real-time conversation
-- **Music understanding**: Analyze and describe audio
+### Deep research vs “normal chat”
 
-## What GenAI Does Well
+“Deep research” typically means an **agentic workflow**:
 
-✅ Pattern-based tasks with clear examples  
-✅ Creative brainstorming and ideation  
-✅ Drafting and iteration on content  
-✅ Explanation and education  
-✅ Code assistance and debugging  
-✅ Summarization and synthesis  
+- it searches,
+- collects sources,
+- synthesizes,
+- and returns citations and an organized report.[^openai-deep-research]
 
-## Current Limitations
+This is usually not a separate “brain”; it’s an **agent layer** on top of a strong model + tools.
 
-::: {.callout-warning}
-## Important Limitations
-Be aware of these common limitations:
+### Coding agents and IDE copilots
 
-- **Hallucination**: Can generate plausible but false information
-- **Knowledge cutoff**: Training data has a cutoff date
-- **Math reliability**: Can make arithmetic errors
-- **Citation accuracy**: Often fabricates sources
-- **Consistency**: May give different answers to same question
-:::
+Coding assistants aren’t only for programmers. Even if you don’t write software, they can:
 
-❌ Guaranteed factual accuracy  
-❌ Real-time information (without tools)  
-❌ Reliable mathematical computation  
-❌ Genuine understanding or consciousness  
-❌ Perfect memory across sessions  
+- translate between Stata/R/Python,
+- write reproducible scripts,
+- generate data cleaning code,
+- and explain unfamiliar code you inherited.
 
-## Maximizing Effectiveness
-
-1. **Play to strengths**: Use GenAI for tasks it excels at
-2. **Verify outputs**: Especially for factual claims
-3. **Iterate**: Use conversation to refine outputs
-4. **Provide context**: Better input yields better output
-5. **Combine with tools**: Use retrieval, calculators, etc.
+OpenAI’s Codex ecosystem is one example (web/CLI/IDE integrations).[^openai-codex]

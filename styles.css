@@ -26,22 +26,33 @@
   margin: 2rem 0;
 }
 
-.feature-card {
+a.feature-card {
+  display: block;
   background: var(--bs-body-bg);
   border: 1px solid var(--bs-border-color);
   border-radius: 8px;
   padding: 1.5rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.feature-card:hover {
+a.feature-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-color: #e94560;
+  text-decoration: none;
 }
 
-.feature-card h3 {
+a.feature-card h3 {
   color: #e94560;
   margin-bottom: 0.75rem;
+  margin-top: 0;
+}
+
+a.feature-card p {
+  color: var(--bs-body-color);
+  margin-bottom: 0;
 }
 
 .callout-tip {

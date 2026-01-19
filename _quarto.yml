@@ -3,16 +3,16 @@ project:
 
 website:
   title: "GenAI Workshop"
-  navbar:
-    left:
+  sidebar:
+    style: docked
+    collapse-level: 2
+    contents:
       - href: index.qmd
         text: Home
       - href: ecosystem.qmd
         text: The GenAI Ecosystem
-      - text: Fundamentals of GenAI
-        menu:
-          - href: fundamentals/index.qmd
-            text: Overview
+      - section: "Fundamentals of GenAI"
+        contents:
           - href: fundamentals/how-llms-work.qmd
             text: How LLMs Work
           - href: fundamentals/key-capabilities.qmd
@@ -31,3 +31,4 @@ format:
       dark: darkly
     css: styles.css
     toc: true
+    number-sections: true

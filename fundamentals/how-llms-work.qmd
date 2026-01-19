@@ -6,6 +6,21 @@ title: "How LLMs Work"
 
 Large Language Models (LLMs) are neural networks trained to predict the next token in a sequence. Despite this simple objective, this training process produces systems with remarkable capabilities.
 
+### What happens when you “prompt” a model (what’s actually occurring)
+
+When you type into ChatGPT (or an API), the system does roughly this:
+
+1. Your text is converted into tokens (numbers).
+2. Tokens are turned into vectors (“embeddings”).
+3. The model runs a forward pass (a lot of matrix multiplication / attention).
+4. It produces probabilities for the next token.
+5. A decoding method picks the next token (sampling / temperature / etc.).
+6. Repeat until it hits a stop condition or an output limit.
+
+**Key implication:**  
+The model is not retrieving a “stored answer.” It is **generating** a continuation that fits the prompt and its training patterns.
+
+
 ## Key Concepts
 
 ### Tokens
@@ -37,51 +52,92 @@ Attention mechanisms allow the model to focus on relevant parts of the input:
 
 ```
 "The cat sat on the mat because it was tired"
-                                   ↑
-                          What does "it" refer to?
+                                ↑
+                    What does "it" refer to?
 ```
 
 The attention mechanism helps the model understand that "it" refers to "cat" by learning patterns from training data.
 
-### Training Process
+### What does "training" a model actually mean?
 
-1. **Pre-training**: Learn language patterns from massive text datasets
-2. **Fine-tuning**: Specialize for specific tasks or formats
-3. **RLHF**: Reinforce outputs that humans prefer
+1. **Pre-training** (self-supervised)
+    - The model reads huge corpora and learns to predict the next token.
+    - Outcome: broad language competence + lots of embedded world knowledge.
 
-## Context Windows
+2. **Mid-training / continued training** (optional, but common)
+    - Additional training on domain data, long-context data, code, or multimodal data.
+    - Outcome: “specialization,” better long-document handling, better domain patterns.
 
-The **context window** is how much text the model can "see" at once:
+3. **Post-training** (instruction following + alignment)
+    - **SFT** (supervised fine-tuning on instruction data),
+    - **RLHF / RLAIF** (reinforcement learning from human/AI feedback),
+    - **DPO** (direct preference optimization),
+    - safety tuning and refusal training.
 
-| Model | Context Window |
-|-------|----------------|
-| GPT-4o | 128K tokens |
-| Claude 3.5 | 200K tokens |
-| Gemini 1.5 | 1M+ tokens |
+Outcome: the model becomes better at following user intent, formatting outputs, and refusing unsafe requests.
 
-Longer context windows enable:
 
-- Processing entire documents
-- Longer conversations
-- More examples in prompts
+---
 
-## What LLMs Actually Do
+## Context windows
 
-::: {.callout-important}
-## Key Insight
-LLMs predict **statistically likely continuations** based on patterns learned during training. They don't "know" facts — they've learned patterns that often produce factually correct outputs.
-:::
+### What is a context window?
+The **context window** is the maximum amount of text (and other inputs) the model can consider at once:  
+**(system instructions + your prompt + chat history + retrieved snippets + tool outputs + file excerpts) + the model’s output.**
 
-This explains both their capabilities and limitations:
+If the total exceeds the limit:
 
-- **Strength**: Excellent at tasks where patterns in training data apply
-- **Limitation**: Can confidently produce incorrect information (hallucination)
+- the system must drop, summarize, or “compact” something,
+- or it returns an error (depending on provider).
 
-## Implications for Users
+### What providers may include automatically (even if you don’t see it)
+Many modern assistants can add extra context such as:
 
-Understanding these mechanics helps you:
+- system safety instructions,
+- your custom instructions,
+- project instructions,
+- “memory” items (facts it saved about your preferences),
+- snippets retrieved from uploaded files or connected tools.
 
-1. **Write better prompts** — Provide clear context and examples
-2. **Anticipate failures** — Know when the model might hallucinate
-3. **Use appropriate techniques** — Like retrieval augmentation for factual tasks
-4. **Interpret outputs wisely** — Verify critical information
+This is why two people can ask the “same prompt” and get slightly different results.
+
+### Uploading files: why “I uploaded it” ≠ “the model read it”
+In most systems, uploading a file does **not** mean the entire file is placed into the context window verbatim.
+
+A common approach is retrieval:
+
+- the file is chunked,
+- the system builds embeddings (a searchable representation),
+- and only relevant chunks are pulled into the context window when needed.
+
+OpenAI explicitly describes this chunking/embedding behavior for “Knowledge” files in custom GPTs.[^openai-knowledge-files]
+
+**Faculty implication:**  
+To get reliable file-based answers, you often need to ask for:
+
+- citations / quotes with page numbers,
+- explicit references to the provided document,
+- and “show your work” audits (e.g., “quote the exact line you used”).
+
+### What happens near the limit
+Different providers handle this differently:
+
+- Some UIs summarize older messages.
+- Some drop the earliest conversation turns (“truncation”).
+- Some run a compaction step to preserve key details.
+
+OpenAI notes a `/compact` approach (in its ecosystem) for extending effective context windows in tool-heavy workflows.[^openai-gpt52] Anthropic documents that their API returns errors if input + output exceeds the context window rather than silently truncating.[^anthropic-context]
+
+### Output limits
+Even with a huge input window, models have **output caps**. When you ask for “write 30 pages,” you usually get:
+
+- a truncated response,
+- or a refusal,
+- or “here is an outline; ask me to expand section by section.”
+
+**Faculty-friendly move:**  
+For long outputs, ask for:
+
+1) outline, 2) draft section 1, 3) draft section 2…  
+
+This yields better control and fewer errors.
