@@ -1,0 +1,51 @@
+---
+title: "GenAI Workshop"
+---
+
+::: {.hero-banner}
+# GenAI Workshop
+
+Explore the world of Generative AI — from foundational concepts to practical applications
+:::
+
+## Welcome
+
+This workshop is designed to provide a comprehensive introduction to Generative AI (GenAI) technologies, with a focus on practical understanding and effective utilization of these powerful tools.
+
+::: {.card-grid}
+
+::: {.feature-card}
+### 🌐 The GenAI Ecosystem
+Understand the landscape of generative AI tools, platforms, and providers shaping the industry today.
+:::
+
+::: {.feature-card}
+### 🧠 How LLMs Work
+Dive into the mechanics of Large Language Models and understand what makes them tick.
+:::
+
+::: {.feature-card}
+### ⚡ Key Capabilities
+Explore what generative AI can do — from text generation to code assistance and beyond.
+:::
+
+::: {.feature-card}
+### 🎯 Choosing Tools
+Learn how to evaluate and select the right GenAI tools for your specific needs.
+:::
+
+:::
+
+## Workshop Objectives
+
+By the end of this workshop, participants will be able to:
+
+1. **Understand** the fundamental concepts behind generative AI and large language models
+2. **Navigate** the current landscape of GenAI tools and platforms
+3. **Identify** key capabilities and limitations of different GenAI systems
+4. **Select** appropriate tools for various use cases
+5. **Apply** best practices for effective GenAI utilization
+
+## Getting Started
+
+Use the navigation menu above to explore the workshop content. We recommend starting with [The GenAI Ecosystem](ecosystem.qmd) to get an overview of the field before diving into the [Fundamentals](fundamentals/index.qmd).

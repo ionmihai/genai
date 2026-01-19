@@ -1,0 +1,6 @@
+/.quarto/
+/_site/
+/docs/
+*.html
+!_quarto.yml
+.DS_Store

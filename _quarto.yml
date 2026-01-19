@@ -1,0 +1,34 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "GenAI Workshop"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: ecosystem.qmd
+        text: The GenAI Ecosystem
+      - text: Fundamentals of GenAI
+        menu:
+          - href: fundamentals/index.qmd
+            text: Overview
+          - href: fundamentals/how-llms-work.qmd
+            text: How LLMs Work
+          - href: fundamentals/key-capabilities.qmd
+            text: Key GenAI Capabilities
+          - href: fundamentals/choosing-tools.qmd
+            text: Choosing the Right Tool
+      - href: resources.qmd
+        text: Resources
+  page-footer:
+    center: "GenAI Workshop | 2026"
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    css: styles.css
+    toc: true

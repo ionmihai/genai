@@ -1,0 +1,87 @@
+---
+title: "How LLMs Work"
+---
+
+## The Big Picture
+
+Large Language Models (LLMs) are neural networks trained to predict the next token in a sequence. Despite this simple objective, this training process produces systems with remarkable capabilities.
+
+## Key Concepts
+
+### Tokens
+
+LLMs don't process text character by character — they use **tokens**.
+
+- A token might be a word, part of a word, or punctuation
+- "Understanding" might be split into "Under" + "standing"
+- Most models use ~50,000 different tokens
+- Token count affects cost and context limits
+
+::: {.callout-note}
+## Rule of Thumb
+In English, 1 token ≈ 4 characters or ¾ of a word. A 1,000 word document is roughly 1,300-1,500 tokens.
+:::
+
+### The Transformer Architecture
+
+The transformer is the neural network architecture powering modern LLMs. Key components:
+
+1. **Embeddings** — Convert tokens to numerical vectors
+2. **Attention** — Allow tokens to "look at" other tokens
+3. **Feed-forward layers** — Process information
+4. **Output layer** — Predict next token probabilities
+
+### Attention: The Key Innovation
+
+Attention mechanisms allow the model to focus on relevant parts of the input:
+
+```
+"The cat sat on the mat because it was tired"
+                                   ↑
+                          What does "it" refer to?
+```
+
+The attention mechanism helps the model understand that "it" refers to "cat" by learning patterns from training data.
+
+### Training Process
+
+1. **Pre-training**: Learn language patterns from massive text datasets
+2. **Fine-tuning**: Specialize for specific tasks or formats
+3. **RLHF**: Reinforce outputs that humans prefer
+
+## Context Windows
+
+The **context window** is how much text the model can "see" at once:
+
+| Model | Context Window |
+|-------|----------------|
+| GPT-4o | 128K tokens |
+| Claude 3.5 | 200K tokens |
+| Gemini 1.5 | 1M+ tokens |
+
+Longer context windows enable:
+
+- Processing entire documents
+- Longer conversations
+- More examples in prompts
+
+## What LLMs Actually Do
+
+::: {.callout-important}
+## Key Insight
+LLMs predict **statistically likely continuations** based on patterns learned during training. They don't "know" facts — they've learned patterns that often produce factually correct outputs.
+:::
+
+This explains both their capabilities and limitations:
+
+- **Strength**: Excellent at tasks where patterns in training data apply
+- **Limitation**: Can confidently produce incorrect information (hallucination)
+
+## Implications for Users
+
+Understanding these mechanics helps you:
+
+1. **Write better prompts** — Provide clear context and examples
+2. **Anticipate failures** — Know when the model might hallucinate
+3. **Use appropriate techniques** — Like retrieval augmentation for factual tasks
+4. **Interpret outputs wisely** — Verify critical information

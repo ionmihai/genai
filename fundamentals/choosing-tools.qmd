@@ -1,0 +1,132 @@
+---
+title: "Choosing the Right Tool"
+---
+
+## Introduction
+
+With dozens of GenAI tools available, selecting the right one for your needs can be overwhelming. This guide provides a framework for making informed choices.
+
+## Decision Framework
+
+### 1. Define Your Use Case
+
+Start by clearly identifying what you need:
+
+- **Task type**: Writing, coding, analysis, research?
+- **Input/output**: Text only, or images/files too?
+- **Frequency**: One-off task or ongoing usage?
+- **Integration**: Standalone or part of a workflow?
+
+### 2. Evaluate Key Factors
+
+#### Capability Match
+
+| Use Case | Recommended Tools |
+|----------|-------------------|
+| General writing | ChatGPT, Claude, Gemini |
+| Code development | GitHub Copilot, Cursor, Claude |
+| Research & search | Perplexity, Gemini |
+| Image generation | Midjourney, DALL-E, Stable Diffusion |
+| Document analysis | Claude (long context), Gemini |
+
+#### Cost Considerations
+
+::: {.callout-note}
+## Pricing Models
+- **Free tiers**: Limited usage, good for exploration
+- **Subscriptions**: $20/month typical for premium access
+- **API pricing**: Pay per token, scales with usage
+- **Enterprise**: Custom pricing with additional features
+:::
+
+#### Privacy & Security
+
+Consider data handling requirements:
+
+- **Sensitive data**: May require local/on-premise solutions
+- **Compliance**: Check vendor certifications (SOC 2, etc.)
+- **Data retention**: Understand how inputs are stored/used
+- **Training opt-out**: Some providers allow opting out of training
+
+### 3. Practical Considerations
+
+#### Ease of Use
+
+- Web interface vs. API vs. integrated tool
+- Learning curve and documentation quality
+- Team collaboration features
+
+#### Reliability
+
+- Uptime and availability
+- Rate limits and quotas
+- Response consistency
+
+#### Ecosystem
+
+- Plugins and extensions
+- Integration with existing tools
+- Community and support
+
+## Tool Categories
+
+### Conversational Assistants
+
+**Best for**: General tasks, brainstorming, Q&A
+
+- ChatGPT (OpenAI)
+- Claude (Anthropic)
+- Gemini (Google)
+
+### Code Assistants
+
+**Best for**: Development workflows
+
+- GitHub Copilot — IDE integration
+- Cursor — AI-native editor
+- Codeium — Free alternative
+
+### Search & Research
+
+**Best for**: Information retrieval, citations
+
+- Perplexity — AI search with sources
+- Gemini — Google integration
+- Consensus — Academic research
+
+### Specialized Tools
+
+**Best for**: Specific domains
+
+- Grammarly — Writing assistance
+- Notion AI — Note-taking and docs
+- Jasper — Marketing content
+
+## Making the Choice
+
+::: {.callout-tip}
+## Recommendation
+Start with a general-purpose tool (ChatGPT or Claude) to understand your needs, then specialize if necessary. Most users find 2-3 tools cover their needs.
+:::
+
+### Quick Selection Guide
+
+```
+Need general assistance? → ChatGPT or Claude
+Need to search/research? → Perplexity
+Need code help in IDE? → GitHub Copilot or Cursor
+Need image generation? → Midjourney or DALL-E
+Need document analysis? → Claude (long context)
+Need privacy/local? → Llama-based solutions
+```
+
+## Evaluation Checklist
+
+Before committing to a tool:
+
+- [ ] Test with your actual use cases
+- [ ] Review pricing for expected usage
+- [ ] Check data handling policies
+- [ ] Evaluate integration options
+- [ ] Consider team/organization needs
+- [ ] Plan for potential switching costs

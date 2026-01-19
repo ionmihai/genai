@@ -1,0 +1,99 @@
+---
+title: "Resources"
+---
+
+## Learning Resources
+
+### Courses & Tutorials
+
+- [DeepLearning.AI — Generative AI for Everyone](https://www.deeplearning.ai/courses/generative-ai-for-everyone/) — Excellent intro course by Andrew Ng
+- [Google — Generative AI Learning Path](https://cloud.google.com/training/machinelearning-ai) — Comprehensive Google Cloud training
+- [Prompt Engineering Guide](https://www.promptingguide.ai/) — Community resource for prompting techniques
+
+### Documentation
+
+| Provider | Documentation |
+|----------|---------------|
+| OpenAI | [platform.openai.com/docs](https://platform.openai.com/docs) |
+| Anthropic | [docs.anthropic.com](https://docs.anthropic.com) |
+| Google | [ai.google.dev](https://ai.google.dev) |
+
+### Books
+
+- *Co-Intelligence* by Ethan Mollick — Practical guide to working with AI
+- *The Alignment Problem* by Brian Christian — Understanding AI safety
+- *AI 2041* by Kai-Fu Lee & Chen Qiufan — Future scenarios
+
+## Tools & Platforms
+
+### Conversational AI
+
+- [ChatGPT](https://chat.openai.com) — OpenAI's flagship interface
+- [Claude](https://claude.ai) — Anthropic's assistant
+- [Gemini](https://gemini.google.com) — Google's AI assistant
+- [Perplexity](https://perplexity.ai) — AI-powered search
+
+### Development Tools
+
+- [GitHub Copilot](https://github.com/features/copilot) — AI pair programmer
+- [Cursor](https://cursor.sh) — AI-first code editor
+- [Replit](https://replit.com) — AI-assisted coding platform
+
+### Image Generation
+
+- [Midjourney](https://midjourney.com) — High-quality image generation
+- [DALL-E](https://openai.com/dall-e-3) — OpenAI's image model
+- [Stable Diffusion](https://stability.ai) — Open-source image generation
+
+## Research & News
+
+### Stay Updated
+
+- [The Batch](https://www.deeplearning.ai/the-batch/) — Weekly AI newsletter by DeepLearning.AI
+- [Import AI](https://jack-clark.net/) — Weekly AI developments newsletter
+- [AI News](https://buttondown.email/ainews) — Daily AI news digest
+
+### Research
+
+- [arXiv AI](https://arxiv.org/list/cs.AI/recent) — Latest AI research papers
+- [Papers With Code](https://paperswithcode.com/) — Research with implementations
+- [Hugging Face](https://huggingface.co/) — Models, datasets, and community
+
+## Community
+
+### Forums & Discussion
+
+- [r/MachineLearning](https://reddit.com/r/MachineLearning) — Research-focused community
+- [r/LocalLLaMA](https://reddit.com/r/LocalLLaMA) — Open-source LLM community
+- [Hacker News](https://news.ycombinator.com) — Tech community with AI coverage
+
+### Professional Networks
+
+- [AI LinkedIn Groups](https://www.linkedin.com/groups/) — Professional AI communities
+- [Local AI Meetups](https://www.meetup.com/topics/artificial-intelligence/) — In-person events
+
+## Prompt Libraries
+
+::: {.callout-tip}
+## Useful Prompt Collections
+- [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts)
+- [FlowGPT](https://flowgpt.com/) — Community prompts
+- [PromptBase](https://promptbase.com/) — Prompt marketplace
+:::
+
+## Ethics & Safety
+
+### Guidelines & Frameworks
+
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [EU AI Act Overview](https://artificialintelligenceact.eu/)
+- [Responsible AI Practices](https://ai.google/responsibility/responsible-ai-practices/)
+
+### Critical Perspectives
+
+- [AI Incident Database](https://incidentdatabase.ai/) — Documented AI failures
+- [Algorithm Watch](https://algorithmwatch.org/) — Critical AI analysis
+
+---
+
+*This resource list is regularly updated. Have a suggestion? Let us know!*

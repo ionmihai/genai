@@ -1,0 +1,104 @@
+---
+title: "Key GenAI Capabilities"
+---
+
+## Overview
+
+Modern generative AI systems offer a wide range of capabilities. Understanding what these systems can (and cannot) do is essential for effective utilization.
+
+## Core Text Capabilities
+
+### Generation & Composition
+
+- **Writing assistance**: Drafts, emails, reports, creative writing
+- **Summarization**: Condense long documents into key points
+- **Translation**: Convert between languages with nuance
+- **Reformatting**: Change tone, style, or structure
+
+### Analysis & Understanding
+
+- **Text analysis**: Extract themes, sentiment, key information
+- **Question answering**: Respond to queries about provided content
+- **Comparison**: Analyze similarities and differences
+- **Classification**: Categorize content by topic, type, or criteria
+
+### Reasoning & Problem-Solving
+
+- **Logical reasoning**: Work through multi-step problems
+- **Mathematical computation**: Solve equations, statistical analysis
+- **Planning**: Break down complex tasks into steps
+- **Evaluation**: Assess arguments, identify weaknesses
+
+## Code Capabilities
+
+::: {.callout-tip}
+## Code Generation
+Modern LLMs are remarkably capable code assistants, able to:
+
+- Write code from natural language descriptions
+- Explain existing code
+- Debug and fix errors
+- Translate between programming languages
+- Write tests and documentation
+:::
+
+### Common Use Cases
+
+| Task | Example |
+|------|---------|
+| Code generation | "Write a Python function to parse CSV files" |
+| Debugging | "Why does this code throw a TypeError?" |
+| Refactoring | "Improve this code's readability" |
+| Documentation | "Add docstrings to these functions" |
+
+## Multimodal Capabilities
+
+Modern models increasingly work across modalities:
+
+### Vision
+
+- **Image analysis**: Describe, analyze, extract text from images
+- **Document processing**: Read charts, tables, handwriting
+- **Visual reasoning**: Answer questions about image content
+
+### Audio (emerging)
+
+- **Transcription**: Convert speech to text
+- **Voice interaction**: Real-time conversation
+- **Music understanding**: Analyze and describe audio
+
+## What GenAI Does Well
+
+✅ Pattern-based tasks with clear examples  
+✅ Creative brainstorming and ideation  
+✅ Drafting and iteration on content  
+✅ Explanation and education  
+✅ Code assistance and debugging  
+✅ Summarization and synthesis  
+
+## Current Limitations
+
+::: {.callout-warning}
+## Important Limitations
+Be aware of these common limitations:
+
+- **Hallucination**: Can generate plausible but false information
+- **Knowledge cutoff**: Training data has a cutoff date
+- **Math reliability**: Can make arithmetic errors
+- **Citation accuracy**: Often fabricates sources
+- **Consistency**: May give different answers to same question
+:::
+
+❌ Guaranteed factual accuracy  
+❌ Real-time information (without tools)  
+❌ Reliable mathematical computation  
+❌ Genuine understanding or consciousness  
+❌ Perfect memory across sessions  
+
+## Maximizing Effectiveness
+
+1. **Play to strengths**: Use GenAI for tasks it excels at
+2. **Verify outputs**: Especially for factual claims
+3. **Iterate**: Use conversation to refine outputs
+4. **Provide context**: Better input yields better output
+5. **Combine with tools**: Use retrieval, calculators, etc.
