@@ -1,0 +1,296 @@
+[
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "DeepLearning.AI — Generative AI for Everyone — Excellent intro course by Andrew Ng\nGoogle — Generative AI Learning Path — Comprehensive Google Cloud training\nPrompt Engineering Guide — Community resource for prompting techniques\n\n\n\n\n\n\n\nProvider\nDocumentation\n\n\n\n\nOpenAI\nplatform.openai.com/docs\n\n\nAnthropic\ndocs.anthropic.com\n\n\nGoogle\nai.google.dev\n\n\n\n\n\n\n\nCo-Intelligence by Ethan Mollick — Practical guide to working with AI\nThe Alignment Problem by Brian Christian — Understanding AI safety\nAI 2041 by Kai-Fu Lee & Chen Qiufan — Future scenarios"
+  },
+  {
+    "objectID": "resources.html#learning-resources",
+    "href": "resources.html#learning-resources",
+    "title": "Resources",
+    "section": "",
+    "text": "DeepLearning.AI — Generative AI for Everyone — Excellent intro course by Andrew Ng\nGoogle — Generative AI Learning Path — Comprehensive Google Cloud training\nPrompt Engineering Guide — Community resource for prompting techniques\n\n\n\n\n\n\n\nProvider\nDocumentation\n\n\n\n\nOpenAI\nplatform.openai.com/docs\n\n\nAnthropic\ndocs.anthropic.com\n\n\nGoogle\nai.google.dev\n\n\n\n\n\n\n\nCo-Intelligence by Ethan Mollick — Practical guide to working with AI\nThe Alignment Problem by Brian Christian — Understanding AI safety\nAI 2041 by Kai-Fu Lee & Chen Qiufan — Future scenarios"
+  },
+  {
+    "objectID": "resources.html#tools-platforms",
+    "href": "resources.html#tools-platforms",
+    "title": "Resources",
+    "section": "Tools & Platforms",
+    "text": "Tools & Platforms\n\nConversational AI\n\nChatGPT — OpenAI’s flagship interface\nClaude — Anthropic’s assistant\nGemini — Google’s AI assistant\nPerplexity — AI-powered search\n\n\n\nDevelopment Tools\n\nGitHub Copilot — AI pair programmer\nCursor — AI-first code editor\nReplit — AI-assisted coding platform\n\n\n\nImage Generation\n\nMidjourney — High-quality image generation\nDALL-E — OpenAI’s image model\nStable Diffusion — Open-source image generation"
+  },
+  {
+    "objectID": "resources.html#research-news",
+    "href": "resources.html#research-news",
+    "title": "Resources",
+    "section": "Research & News",
+    "text": "Research & News\n\nStay Updated\n\nThe Batch — Weekly AI newsletter by DeepLearning.AI\nImport AI — Weekly AI developments newsletter\nAI News — Daily AI news digest\n\n\n\nResearch\n\narXiv AI — Latest AI research papers\nPapers With Code — Research with implementations\nHugging Face — Models, datasets, and community"
+  },
+  {
+    "objectID": "resources.html#community",
+    "href": "resources.html#community",
+    "title": "Resources",
+    "section": "Community",
+    "text": "Community\n\nForums & Discussion\n\nr/MachineLearning — Research-focused community\nr/LocalLLaMA — Open-source LLM community\nHacker News — Tech community with AI coverage\n\n\n\nProfessional Networks\n\nAI LinkedIn Groups — Professional AI communities\nLocal AI Meetups — In-person events"
+  },
+  {
+    "objectID": "resources.html#prompt-libraries",
+    "href": "resources.html#prompt-libraries",
+    "title": "Resources",
+    "section": "Prompt Libraries",
+    "text": "Prompt Libraries\n\n\n\n\n\n\nUseful Prompt Collections\n\n\n\n\nAwesome ChatGPT Prompts\nFlowGPT — Community prompts\nPromptBase — Prompt marketplace"
+  },
+  {
+    "objectID": "resources.html#ethics-safety",
+    "href": "resources.html#ethics-safety",
+    "title": "Resources",
+    "section": "Ethics & Safety",
+    "text": "Ethics & Safety\n\nGuidelines & Frameworks\n\nNIST AI Risk Management Framework\nEU AI Act Overview\nResponsible AI Practices\n\n\n\nCritical Perspectives\n\nAI Incident Database — Documented AI failures\nAlgorithm Watch — Critical AI analysis\n\n\nThis resource list is regularly updated. Have a suggestion? Let us know!"
+  },
+  {
+    "objectID": "ecosystem.html",
+    "href": "ecosystem.html",
+    "title": "The GenAI Ecosystem",
+    "section": "",
+    "text": "The generative AI ecosystem has rapidly evolved into a complex landscape of models, platforms, and applications. Understanding this ecosystem is essential for making informed decisions about which tools to use and how to leverage them effectively."
+  },
+  {
+    "objectID": "ecosystem.html#overview",
+    "href": "ecosystem.html#overview",
+    "title": "The GenAI Ecosystem",
+    "section": "",
+    "text": "The generative AI ecosystem has rapidly evolved into a complex landscape of models, platforms, and applications. Understanding this ecosystem is essential for making informed decisions about which tools to use and how to leverage them effectively."
+  },
+  {
+    "objectID": "ecosystem.html#major-players",
+    "href": "ecosystem.html#major-players",
+    "title": "The GenAI Ecosystem",
+    "section": "Major Players",
+    "text": "Major Players\n\nFoundation Model Providers\n\n\n\n\n\n\n\n\nProvider\nKey Models\nStrengths\n\n\n\n\nOpenAI\nGPT-4, GPT-4o, o1\nBroad capabilities, strong reasoning\n\n\nAnthropic\nClaude 3.5, Claude 3 Opus\nSafety-focused, long context\n\n\nGoogle\nGemini Pro, Gemini Ultra\nMultimodal, integration with Google services\n\n\nMeta\nLlama 3\nOpen weights, customizable\n\n\nMistral\nMistral Large, Mixtral\nEuropean, efficient architecture\n\n\n\n\n\nPlatforms & Interfaces\n\nChatGPT — OpenAI’s conversational interface\nClaude.ai — Anthropic’s web interface\nCopilot — Microsoft’s AI assistant integrated across products\nGemini — Google’s AI assistant\nPerplexity — AI-powered search engine"
+  },
+  {
+    "objectID": "ecosystem.html#the-open-vs.-closed-debate",
+    "href": "ecosystem.html#the-open-vs.-closed-debate",
+    "title": "The GenAI Ecosystem",
+    "section": "The Open vs. Closed Debate",
+    "text": "The Open vs. Closed Debate\n\n\n\n\n\n\nOpen vs. Closed Models\n\n\n\nClosed models (like GPT-4, Claude) are accessed via APIs with weights kept private. Open models (like Llama) release weights publicly, allowing local deployment and fine-tuning.\n\n\n\nConsiderations\n\nClosed models: Generally more capable, easier to use, but require API access and have usage costs\nOpen models: More control, privacy benefits, but require infrastructure and expertise"
+  },
+  {
+    "objectID": "ecosystem.html#emerging-trends",
+    "href": "ecosystem.html#emerging-trends",
+    "title": "The GenAI Ecosystem",
+    "section": "Emerging Trends",
+    "text": "Emerging Trends\n\nMultimodality — Models that can process text, images, audio, and video\nAgents — AI systems that can take actions and use tools\nSpecialized models — Domain-specific models for code, science, etc.\nEdge deployment — Running smaller models locally on devices\nRAG systems — Combining LLMs with retrieval for up-to-date information"
+  },
+  {
+    "objectID": "ecosystem.html#key-takeaways",
+    "href": "ecosystem.html#key-takeaways",
+    "title": "The GenAI Ecosystem",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nThe ecosystem is rapidly evolving with new models and capabilities emerging regularly\nNo single tool is best for all use cases\nUnderstanding the landscape helps in selecting appropriate tools\nConsider factors like cost, privacy, capabilities, and integration needs"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "GenAI Workshop",
+    "section": "",
+    "text": "Explore the world of Generative AI — from foundational concepts to practical applications"
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "GenAI Workshop",
+    "section": "Welcome",
+    "text": "Welcome\nThis workshop is designed to provide a comprehensive introduction to Generative AI (GenAI) technologies, with a focus on practical understanding and effective utilization of these powerful tools.\n\n\n🌐 The GenAI Ecosystem\nUnderstand the landscape of generative AI tools, platforms, and providers shaping the industry today.\n\n\n🧠 How LLMs Work\nDive into the mechanics of Large Language Models and understand what makes them tick.\n\n\n⚡ Key Capabilities\nExplore what generative AI can do — from text generation to code assistance and beyond.\n\n\n🎯 Choosing Tools\nLearn how to evaluate and select the right GenAI tools for your specific needs."
+  },
+  {
+    "objectID": "index.html#workshop-objectives",
+    "href": "index.html#workshop-objectives",
+    "title": "GenAI Workshop",
+    "section": "Workshop Objectives",
+    "text": "Workshop Objectives\nBy the end of this workshop, participants will be able to:\n\nUnderstand the fundamental concepts behind generative AI and large language models\nNavigate the current landscape of GenAI tools and platforms\nIdentify key capabilities and limitations of different GenAI systems\nSelect appropriate tools for various use cases\nApply best practices for effective GenAI utilization"
+  },
+  {
+    "objectID": "index.html#getting-started",
+    "href": "index.html#getting-started",
+    "title": "GenAI Workshop",
+    "section": "Getting Started",
+    "text": "Getting Started\nUse the navigation menu above to explore the workshop content. We recommend starting with The GenAI Ecosystem to get an overview of the field before diving into the Fundamentals."
+  },
+  {
+    "objectID": "fundamentals/key-capabilities.html",
+    "href": "fundamentals/key-capabilities.html",
+    "title": "Key GenAI Capabilities",
+    "section": "",
+    "text": "Modern generative AI systems offer a wide range of capabilities. Understanding what these systems can (and cannot) do is essential for effective utilization."
+  },
+  {
+    "objectID": "fundamentals/key-capabilities.html#overview",
+    "href": "fundamentals/key-capabilities.html#overview",
+    "title": "Key GenAI Capabilities",
+    "section": "",
+    "text": "Modern generative AI systems offer a wide range of capabilities. Understanding what these systems can (and cannot) do is essential for effective utilization."
+  },
+  {
+    "objectID": "fundamentals/key-capabilities.html#core-text-capabilities",
+    "href": "fundamentals/key-capabilities.html#core-text-capabilities",
+    "title": "Key GenAI Capabilities",
+    "section": "Core Text Capabilities",
+    "text": "Core Text Capabilities\n\nGeneration & Composition\n\nWriting assistance: Drafts, emails, reports, creative writing\nSummarization: Condense long documents into key points\nTranslation: Convert between languages with nuance\nReformatting: Change tone, style, or structure\n\n\n\nAnalysis & Understanding\n\nText analysis: Extract themes, sentiment, key information\nQuestion answering: Respond to queries about provided content\nComparison: Analyze similarities and differences\nClassification: Categorize content by topic, type, or criteria\n\n\n\nReasoning & Problem-Solving\n\nLogical reasoning: Work through multi-step problems\nMathematical computation: Solve equations, statistical analysis\nPlanning: Break down complex tasks into steps\nEvaluation: Assess arguments, identify weaknesses"
+  },
+  {
+    "objectID": "fundamentals/key-capabilities.html#code-capabilities",
+    "href": "fundamentals/key-capabilities.html#code-capabilities",
+    "title": "Key GenAI Capabilities",
+    "section": "Code Capabilities",
+    "text": "Code Capabilities\n\n\n\n\n\n\nCode Generation\n\n\n\nModern LLMs are remarkably capable code assistants, able to:\n\nWrite code from natural language descriptions\nExplain existing code\nDebug and fix errors\nTranslate between programming languages\nWrite tests and documentation\n\n\n\n\nCommon Use Cases\n\n\n\nTask\nExample\n\n\n\n\nCode generation\n“Write a Python function to parse CSV files”\n\n\nDebugging\n“Why does this code throw a TypeError?”\n\n\nRefactoring\n“Improve this code’s readability”\n\n\nDocumentation\n“Add docstrings to these functions”"
+  },
+  {
+    "objectID": "fundamentals/key-capabilities.html#multimodal-capabilities",
+    "href": "fundamentals/key-capabilities.html#multimodal-capabilities",
+    "title": "Key GenAI Capabilities",
+    "section": "Multimodal Capabilities",
+    "text": "Multimodal Capabilities\nModern models increasingly work across modalities:\n\nVision\n\nImage analysis: Describe, analyze, extract text from images\nDocument processing: Read charts, tables, handwriting\nVisual reasoning: Answer questions about image content\n\n\n\nAudio (emerging)\n\nTranscription: Convert speech to text\nVoice interaction: Real-time conversation\nMusic understanding: Analyze and describe audio"
+  },
+  {
+    "objectID": "fundamentals/key-capabilities.html#what-genai-does-well",
+    "href": "fundamentals/key-capabilities.html#what-genai-does-well",
+    "title": "Key GenAI Capabilities",
+    "section": "What GenAI Does Well",
+    "text": "What GenAI Does Well\n✅ Pattern-based tasks with clear examples\n✅ Creative brainstorming and ideation\n✅ Drafting and iteration on content\n✅ Explanation and education\n✅ Code assistance and debugging\n✅ Summarization and synthesis"
+  },
+  {
+    "objectID": "fundamentals/key-capabilities.html#current-limitations",
+    "href": "fundamentals/key-capabilities.html#current-limitations",
+    "title": "Key GenAI Capabilities",
+    "section": "Current Limitations",
+    "text": "Current Limitations\n\n\n\n\n\n\nImportant Limitations\n\n\n\nBe aware of these common limitations:\n\nHallucination: Can generate plausible but false information\nKnowledge cutoff: Training data has a cutoff date\nMath reliability: Can make arithmetic errors\nCitation accuracy: Often fabricates sources\nConsistency: May give different answers to same question\n\n\n\n❌ Guaranteed factual accuracy\n❌ Real-time information (without tools)\n❌ Reliable mathematical computation\n❌ Genuine understanding or consciousness\n❌ Perfect memory across sessions"
+  },
+  {
+    "objectID": "fundamentals/key-capabilities.html#maximizing-effectiveness",
+    "href": "fundamentals/key-capabilities.html#maximizing-effectiveness",
+    "title": "Key GenAI Capabilities",
+    "section": "Maximizing Effectiveness",
+    "text": "Maximizing Effectiveness\n\nPlay to strengths: Use GenAI for tasks it excels at\nVerify outputs: Especially for factual claims\nIterate: Use conversation to refine outputs\nProvide context: Better input yields better output\nCombine with tools: Use retrieval, calculators, etc."
+  },
+  {
+    "objectID": "fundamentals/index.html",
+    "href": "fundamentals/index.html",
+    "title": "Fundamentals of GenAI",
+    "section": "",
+    "text": "This section covers the foundational concepts you need to understand how generative AI works and how to use it effectively."
+  },
+  {
+    "objectID": "fundamentals/index.html#introduction",
+    "href": "fundamentals/index.html#introduction",
+    "title": "Fundamentals of GenAI",
+    "section": "",
+    "text": "This section covers the foundational concepts you need to understand how generative AI works and how to use it effectively."
+  },
+  {
+    "objectID": "fundamentals/index.html#topics",
+    "href": "fundamentals/index.html#topics",
+    "title": "Fundamentals of GenAI",
+    "section": "Topics",
+    "text": "Topics\n\nHow LLMs Work\nUnderstand the core mechanics behind Large Language Models:\n\nTransformer architecture basics\nTraining and fine-tuning processes\nTokens and tokenization\nContext windows and attention\n\n\n\nKey GenAI Capabilities\nExplore what modern GenAI systems can do:\n\nText generation and summarization\nCode generation and assistance\nAnalysis and reasoning\nCreative applications\nMultimodal capabilities\n\n\n\nChoosing the Right Tool\nLearn to evaluate and select appropriate tools:\n\nMatching capabilities to use cases\nCost considerations\nPrivacy and security factors\nIntegration requirements"
+  },
+  {
+    "objectID": "fundamentals/index.html#why-fundamentals-matter",
+    "href": "fundamentals/index.html#why-fundamentals-matter",
+    "title": "Fundamentals of GenAI",
+    "section": "Why Fundamentals Matter",
+    "text": "Why Fundamentals Matter\n\n\n\n\n\n\nBuilding Strong Foundations\n\n\n\nUnderstanding how these systems work — even at a high level — enables you to:\n\nWrite better prompts\nAnticipate limitations\nTroubleshoot unexpected outputs\nMake informed tool choices"
+  },
+  {
+    "objectID": "fundamentals/index.html#recommended-path",
+    "href": "fundamentals/index.html#recommended-path",
+    "title": "Fundamentals of GenAI",
+    "section": "Recommended Path",
+    "text": "Recommended Path\n\nStart with How LLMs Work to build foundational understanding\nMove to Key Capabilities to see what’s possible\nFinish with Choosing the Right Tool to apply your knowledge\n\nEach section builds on the previous one, so we recommend following this order."
+  },
+  {
+    "objectID": "fundamentals/choosing-tools.html",
+    "href": "fundamentals/choosing-tools.html",
+    "title": "Choosing the Right Tool",
+    "section": "",
+    "text": "With dozens of GenAI tools available, selecting the right one for your needs can be overwhelming. This guide provides a framework for making informed choices."
+  },
+  {
+    "objectID": "fundamentals/choosing-tools.html#introduction",
+    "href": "fundamentals/choosing-tools.html#introduction",
+    "title": "Choosing the Right Tool",
+    "section": "",
+    "text": "With dozens of GenAI tools available, selecting the right one for your needs can be overwhelming. This guide provides a framework for making informed choices."
+  },
+  {
+    "objectID": "fundamentals/choosing-tools.html#decision-framework",
+    "href": "fundamentals/choosing-tools.html#decision-framework",
+    "title": "Choosing the Right Tool",
+    "section": "Decision Framework",
+    "text": "Decision Framework\n\n1. Define Your Use Case\nStart by clearly identifying what you need:\n\nTask type: Writing, coding, analysis, research?\nInput/output: Text only, or images/files too?\nFrequency: One-off task or ongoing usage?\nIntegration: Standalone or part of a workflow?\n\n\n\n2. Evaluate Key Factors\n\nCapability Match\n\n\n\nUse Case\nRecommended Tools\n\n\n\n\nGeneral writing\nChatGPT, Claude, Gemini\n\n\nCode development\nGitHub Copilot, Cursor, Claude\n\n\nResearch & search\nPerplexity, Gemini\n\n\nImage generation\nMidjourney, DALL-E, Stable Diffusion\n\n\nDocument analysis\nClaude (long context), Gemini\n\n\n\n\n\nCost Considerations\n\n\n\n\n\n\nPricing Models\n\n\n\n\nFree tiers: Limited usage, good for exploration\nSubscriptions: $20/month typical for premium access\nAPI pricing: Pay per token, scales with usage\nEnterprise: Custom pricing with additional features\n\n\n\n\n\nPrivacy & Security\nConsider data handling requirements:\n\nSensitive data: May require local/on-premise solutions\nCompliance: Check vendor certifications (SOC 2, etc.)\nData retention: Understand how inputs are stored/used\nTraining opt-out: Some providers allow opting out of training\n\n\n\n\n3. Practical Considerations\n\nEase of Use\n\nWeb interface vs. API vs. integrated tool\nLearning curve and documentation quality\nTeam collaboration features\n\n\n\nReliability\n\nUptime and availability\nRate limits and quotas\nResponse consistency\n\n\n\nEcosystem\n\nPlugins and extensions\nIntegration with existing tools\nCommunity and support"
+  },
+  {
+    "objectID": "fundamentals/choosing-tools.html#tool-categories",
+    "href": "fundamentals/choosing-tools.html#tool-categories",
+    "title": "Choosing the Right Tool",
+    "section": "Tool Categories",
+    "text": "Tool Categories\n\nConversational Assistants\nBest for: General tasks, brainstorming, Q&A\n\nChatGPT (OpenAI)\nClaude (Anthropic)\nGemini (Google)\n\n\n\nCode Assistants\nBest for: Development workflows\n\nGitHub Copilot — IDE integration\nCursor — AI-native editor\nCodeium — Free alternative\n\n\n\nSearch & Research\nBest for: Information retrieval, citations\n\nPerplexity — AI search with sources\nGemini — Google integration\nConsensus — Academic research\n\n\n\nSpecialized Tools\nBest for: Specific domains\n\nGrammarly — Writing assistance\nNotion AI — Note-taking and docs\nJasper — Marketing content"
+  },
+  {
+    "objectID": "fundamentals/choosing-tools.html#making-the-choice",
+    "href": "fundamentals/choosing-tools.html#making-the-choice",
+    "title": "Choosing the Right Tool",
+    "section": "Making the Choice",
+    "text": "Making the Choice\n\n\n\n\n\n\nRecommendation\n\n\n\nStart with a general-purpose tool (ChatGPT or Claude) to understand your needs, then specialize if necessary. Most users find 2-3 tools cover their needs.\n\n\n\nQuick Selection Guide\nNeed general assistance? → ChatGPT or Claude\nNeed to search/research? → Perplexity\nNeed code help in IDE? → GitHub Copilot or Cursor\nNeed image generation? → Midjourney or DALL-E\nNeed document analysis? → Claude (long context)\nNeed privacy/local? → Llama-based solutions"
+  },
+  {
+    "objectID": "fundamentals/choosing-tools.html#evaluation-checklist",
+    "href": "fundamentals/choosing-tools.html#evaluation-checklist",
+    "title": "Choosing the Right Tool",
+    "section": "Evaluation Checklist",
+    "text": "Evaluation Checklist\nBefore committing to a tool:\n\nTest with your actual use cases\nReview pricing for expected usage\nCheck data handling policies\nEvaluate integration options\nConsider team/organization needs\nPlan for potential switching costs"
+  },
+  {
+    "objectID": "fundamentals/how-llms-work.html",
+    "href": "fundamentals/how-llms-work.html",
+    "title": "How LLMs Work",
+    "section": "",
+    "text": "Large Language Models (LLMs) are neural networks trained to predict the next token in a sequence. Despite this simple objective, this training process produces systems with remarkable capabilities."
+  },
+  {
+    "objectID": "fundamentals/how-llms-work.html#the-big-picture",
+    "href": "fundamentals/how-llms-work.html#the-big-picture",
+    "title": "How LLMs Work",
+    "section": "",
+    "text": "Large Language Models (LLMs) are neural networks trained to predict the next token in a sequence. Despite this simple objective, this training process produces systems with remarkable capabilities."
+  },
+  {
+    "objectID": "fundamentals/how-llms-work.html#key-concepts",
+    "href": "fundamentals/how-llms-work.html#key-concepts",
+    "title": "How LLMs Work",
+    "section": "Key Concepts",
+    "text": "Key Concepts\n\nTokens\nLLMs don’t process text character by character — they use tokens.\n\nA token might be a word, part of a word, or punctuation\n“Understanding” might be split into “Under” + “standing”\nMost models use ~50,000 different tokens\nToken count affects cost and context limits\n\n\n\n\n\n\n\nRule of Thumb\n\n\n\nIn English, 1 token ≈ 4 characters or ¾ of a word. A 1,000 word document is roughly 1,300-1,500 tokens.\n\n\n\n\nThe Transformer Architecture\nThe transformer is the neural network architecture powering modern LLMs. Key components:\n\nEmbeddings — Convert tokens to numerical vectors\nAttention — Allow tokens to “look at” other tokens\nFeed-forward layers — Process information\nOutput layer — Predict next token probabilities\n\n\n\nAttention: The Key Innovation\nAttention mechanisms allow the model to focus on relevant parts of the input:\n\"The cat sat on the mat because it was tired\"\n                                   ↑\n                          What does \"it\" refer to?\nThe attention mechanism helps the model understand that “it” refers to “cat” by learning patterns from training data.\n\n\nTraining Process\n\nPre-training: Learn language patterns from massive text datasets\nFine-tuning: Specialize for specific tasks or formats\nRLHF: Reinforce outputs that humans prefer"
+  },
+  {
+    "objectID": "fundamentals/how-llms-work.html#context-windows",
+    "href": "fundamentals/how-llms-work.html#context-windows",
+    "title": "How LLMs Work",
+    "section": "Context Windows",
+    "text": "Context Windows\nThe context window is how much text the model can “see” at once:\n\n\n\nModel\nContext Window\n\n\n\n\nGPT-4o\n128K tokens\n\n\nClaude 3.5\n200K tokens\n\n\nGemini 1.5\n1M+ tokens\n\n\n\nLonger context windows enable:\n\nProcessing entire documents\nLonger conversations\nMore examples in prompts"
+  },
+  {
+    "objectID": "fundamentals/how-llms-work.html#what-llms-actually-do",
+    "href": "fundamentals/how-llms-work.html#what-llms-actually-do",
+    "title": "How LLMs Work",
+    "section": "What LLMs Actually Do",
+    "text": "What LLMs Actually Do\n\n\n\n\n\n\nKey Insight\n\n\n\nLLMs predict statistically likely continuations based on patterns learned during training. They don’t “know” facts — they’ve learned patterns that often produce factually correct outputs.\n\n\nThis explains both their capabilities and limitations:\n\nStrength: Excellent at tasks where patterns in training data apply\nLimitation: Can confidently produce incorrect information (hallucination)"
+  },
+  {
+    "objectID": "fundamentals/how-llms-work.html#implications-for-users",
+    "href": "fundamentals/how-llms-work.html#implications-for-users",
+    "title": "How LLMs Work",
+    "section": "Implications for Users",
+    "text": "Implications for Users\nUnderstanding these mechanics helps you:\n\nWrite better prompts — Provide clear context and examples\nAnticipate failures — Know when the model might hallucinate\nUse appropriate techniques — Like retrieval augmentation for factual tasks\nInterpret outputs wisely — Verify critical information"
+  }
+]

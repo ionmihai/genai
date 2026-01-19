@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ionmihai.github.io/genai/resources.html</loc>
+    <lastmod>2026-01-19T20:08:44.067Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ionmihai.github.io/genai/ecosystem.html</loc>
+    <lastmod>2026-01-19T20:08:44.721Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ionmihai.github.io/genai/index.html</loc>
+    <lastmod>2026-01-19T20:08:45.021Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ionmihai.github.io/genai/fundamentals/key-capabilities.html</loc>
+    <lastmod>2026-01-19T20:08:45.406Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ionmihai.github.io/genai/fundamentals/index.html</loc>
+    <lastmod>2026-01-19T20:08:45.736Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ionmihai.github.io/genai/fundamentals/choosing-tools.html</loc>
+    <lastmod>2026-01-19T20:08:46.188Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ionmihai.github.io/genai/fundamentals/how-llms-work.html</loc>
+    <lastmod>2026-01-19T20:08:46.550Z</lastmod>
+  </url>
+</urlset>
