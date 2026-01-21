@@ -2,30 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ionmihai.github.io/genai/resources.html</loc>
-    <lastmod>2026-01-19T22:28:02.306Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ionmihai.github.io/genai/ecosystem.html</loc>
-    <lastmod>2026-01-19T22:28:02.606Z</lastmod>
+    <lastmod>2026-01-21T21:40:07.133Z</lastmod>
   </url>
   <url>
     <loc>https://ionmihai.github.io/genai/index.html</loc>
-    <lastmod>2026-01-19T22:28:02.918Z</lastmod>
+    <lastmod>2026-01-21T21:40:07.454Z</lastmod>
   </url>
   <url>
     <loc>https://ionmihai.github.io/genai/fundamentals/key-capabilities.html</loc>
-    <lastmod>2026-01-19T22:28:03.301Z</lastmod>
+    <lastmod>2026-01-21T21:40:07.841Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ionmihai.github.io/genai/fundamentals/ecosystem.html</loc>
+    <lastmod>2026-01-21T21:40:08.179Z</lastmod>
   </url>
   <url>
     <loc>https://ionmihai.github.io/genai/fundamentals/index.html</loc>
-    <lastmod>2026-01-19T22:28:03.623Z</lastmod>
+    <lastmod>2026-01-21T21:40:08.570Z</lastmod>
   </url>
   <url>
     <loc>https://ionmihai.github.io/genai/fundamentals/choosing-tools.html</loc>
-    <lastmod>2026-01-19T22:28:04.072Z</lastmod>
+    <lastmod>2026-01-21T21:40:09.040Z</lastmod>
   </url>
   <url>
     <loc>https://ionmihai.github.io/genai/fundamentals/how-llms-work.html</loc>
-    <lastmod>2026-01-19T22:28:04.605Z</lastmod>
+    <lastmod>2026-01-21T21:40:09.513Z</lastmod>
   </url>
 </urlset>

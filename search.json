@@ -49,53 +49,25 @@
     "text": "6 Ethics & Safety\n\n6.1 Guidelines & Frameworks\n\nNIST AI Risk Management Framework\nEU AI Act Overview\nResponsible AI Practices\n\n\n\n6.2 Critical Perspectives\n\nAI Incident Database — Documented AI failures\nAlgorithm Watch — Critical AI analysis\n\n\nThis resource list is regularly updated. Have a suggestion? Let us know!"
   },
   {
-    "objectID": "ecosystem.html",
-    "href": "ecosystem.html",
-    "title": "The GenAI Ecosystem",
-    "section": "",
-    "text": "When people say “GenAI,” they often mean “ChatGPT.” For faculty purposes, it’s more useful to think in layers:\n\nModels (the “brains”): GPT‑5.2, Claude Sonnet 4.5, Gemini 2.5 Pro, etc.\n\nTools (capabilities around the model): web search, file analysis, data analysis (Python), image analysis, spreadsheet/slides generation, connectors to Drive/Notion, etc.\nAgents (orchestrated workflows): the system plans steps, uses tools, and iterates until it produces an output.\nProducts (interfaces): ChatGPT, Claude, Gemini, Copilot, NotebookLM, Perplexity, etc.\n\nWhy this matters: most “wow moments” in 2025–2026 are not just bigger models, but models + tools + agentic workflows."
-  },
-  {
-    "objectID": "ecosystem.html#quick-framing-what-i-mean-by-genai",
-    "href": "ecosystem.html#quick-framing-what-i-mean-by-genai",
-    "title": "The GenAI Ecosystem",
-    "section": "",
-    "text": "When people say “GenAI,” they often mean “ChatGPT.” For faculty purposes, it’s more useful to think in layers:\n\nModels (the “brains”): GPT‑5.2, Claude Sonnet 4.5, Gemini 2.5 Pro, etc.\n\nTools (capabilities around the model): web search, file analysis, data analysis (Python), image analysis, spreadsheet/slides generation, connectors to Drive/Notion, etc.\nAgents (orchestrated workflows): the system plans steps, uses tools, and iterates until it produces an output.\nProducts (interfaces): ChatGPT, Claude, Gemini, Copilot, NotebookLM, Perplexity, etc.\n\nWhy this matters: most “wow moments” in 2025–2026 are not just bigger models, but models + tools + agentic workflows."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "GenAI Workshop",
+    "title": "GenAI for Teaching and Research",
     "section": "",
-    "text": "This workshop is designed to provide an introduction to Generative AI (GenAI) technologies, with a focus on practical understanding and effective utilization of these tools for teaching and research."
+    "text": "This website is designed to provide an introduction to Generative AI (GenAI) technologies, with a focus on practical understanding and effective utilization of these tools for teaching and research. The goal of the website is to provide a repository of resources that academics can use to:\n\nUnderstand the fundamental concepts behind generative AI and large language models\nNavigate the current landscape of GenAI tools and platforms\nIdentify key capabilities and limitations of different GenAI systems\nSelect appropriate tools for various use cases\nApply best practices for effective GenAI utilization"
   },
   {
     "objectID": "index.html#welcome",
     "href": "index.html#welcome",
-    "title": "GenAI Workshop",
+    "title": "GenAI for Teaching and Research",
     "section": "",
-    "text": "This workshop is designed to provide an introduction to Generative AI (GenAI) technologies, with a focus on practical understanding and effective utilization of these tools for teaching and research."
+    "text": "This website is designed to provide an introduction to Generative AI (GenAI) technologies, with a focus on practical understanding and effective utilization of these tools for teaching and research. The goal of the website is to provide a repository of resources that academics can use to:\n\nUnderstand the fundamental concepts behind generative AI and large language models\nNavigate the current landscape of GenAI tools and platforms\nIdentify key capabilities and limitations of different GenAI systems\nSelect appropriate tools for various use cases\nApply best practices for effective GenAI utilization"
   },
   {
-    "objectID": "index.html#house-rules",
-    "href": "index.html#house-rules",
-    "title": "GenAI Workshop",
-    "section": "2 House rules",
-    "text": "2 House rules\nBefore we talk capabilities, we need shared norms. The biggest risks in education and research are not “the models are too powerful,” but rather misplaced trust and unsafe data handling.\n\nDon’t upload sensitive data into consumer tools unless your institution has an approved, protected environment (usually Enterprise level subscriptions offer this).\n\nExamples of sensitive data: identifiable student info (FERPA), unpublished manuscripts, reviewer comments, proprietary datasets, IRB-protected data, confidential employer partner data.\n\nVerification is a skill, not an afterthought.\n\nTreat the model like a smart research/teaching assistant: helpful, fast, and occasionally wrong.\n\nWe will not debate whether students “should” use AI. They already are. The more productive conversation revolves around questions like:\n\nWhat learning outcomes do we want, in a world where GenAI can perform many of the tasks we traditionally teach our students?\nHow do we design assessments that reward thinking/understanding?"
-  },
-  {
-    "objectID": "index.html#workshop-objectives",
-    "href": "index.html#workshop-objectives",
-    "title": "GenAI Workshop",
-    "section": "3 Workshop Objectives",
-    "text": "3 Workshop Objectives\nBy the end of this workshop, participants will be able to:\n\nUnderstand the fundamental concepts behind generative AI and large language models\nNavigate the current landscape of GenAI tools and platforms\nIdentify key capabilities and limitations of different GenAI systems\nSelect appropriate tools for various use cases\nApply best practices for effective GenAI utilization"
-  },
-  {
-    "objectID": "index.html#getting-started",
-    "href": "index.html#getting-started",
-    "title": "GenAI Workshop",
-    "section": "4 Getting Started",
-    "text": "4 Getting Started\nUse the navigation menu on the left to explore the workshop content. We recommend starting with The GenAI Ecosystem to get an overview of the field before diving into the Fundamentals."
+    "objectID": "index.html#safety-and-privacy",
+    "href": "index.html#safety-and-privacy",
+    "title": "GenAI for Teaching and Research",
+    "section": "2 Safety and privacy",
+    "text": "2 Safety and privacy\nBefore we talk about capabilities, we need shared norms. The biggest risks of GenAI in education and research are not “the models are too powerful,” but rather misplaced trust and unsafe data handling.\n\nDon’t upload sensitive data into consumer tools unless your institution has an approved, protected environment (“Enterprise” level subscriptions usually offer this).\n\nExamples of sensitive data: identifiable student info (FERPA), unpublished manuscripts, reviewer comments, proprietary datasets, IRB-protected data, confidential employer partner data.\n\nVerification is a skill, not an afterthought.\n\nTreat the model like a smart research/teaching assistant: helpful, fast, and occasionally wrong.\n\nWe will not debate whether students “should” use AI. They already are. The more productive conversation revolves around questions like:\n\nWhat learning outcomes do we want, in a world where GenAI can perform many of the tasks we traditionally teach our students?\nHow do we design assessments that reward thinking/understanding?"
   },
   {
     "objectID": "fundamentals/key-capabilities.html",
@@ -110,6 +82,27 @@
     "title": "Key GenAI Capabilities",
     "section": "",
     "text": "Bigger windows help with long syllabi, papers, transcripts, cases, and multi-file projects.\nBut bigger windows do not guarantee accurate long-document reasoning.\n\nExamples of publicly stated context sizes (as of late 2025):\n\nOpenAI’s GPT‑5.2 Pro API model: 400k context window, 128k max output (API docs).[^openai-gpt52pro-api]\n\nChatGPT UI (GPT‑5.2): context varies by tier/model (e.g., “Thinking” has a much larger window than “Instant”).[^openai-gpt52-chatgpt]\n\nGoogle Gemini 2.5 Pro: announced 1M token context.[^google-gemini-25pro]\n\nAnthropic Claude long-context tiers include models with up to 1M tokens.[^anthropic-context]\n\n\n\n\nAsk:\n\nCan it read charts, tables, and screenshots?\nCan it generate images or just analyze them?\nIs multimodality native (one model) or stitched (separate encoders + LLM)?\n\nFor finance, multimodality matters for:\n\nreading charts in papers,\ninterpreting slide decks,\nextracting data from PDFs and tables,\nunderstanding UI screenshots from trading or analytics tools.\n\n\n\n\nMany providers now offer a mode that:\n\nspends more compute to deliberate,\nperforms better on multi-step tasks,\nis slower and more expensive.\n\nOpenAI’s GPT‑5.2 “Auto” can switch between Instant and Thinking; the UI can show a “slimmed-down” view of chain-of-thought, with an “Answer now” option.[^openai-gpt52-chatgpt]\n\n\n\nA model with tool access can:\n\nbrowse the web (and cite sources),\nuse a Python environment for calculations,\nanalyze files,\ngenerate spreadsheets / slide decks,\ncall external tools through connectors or “actions.”\n\nWithout tools, models are limited to:\n\ntheir training data,\nand whatever you provide in the prompt.\n\n\n\n\n“Deep research” typically means an agentic workflow:\n\nit searches,\ncollects sources,\nsynthesizes,\nand returns citations and an organized report.[^openai-deep-research]\n\nThis is usually not a separate “brain”; it’s an agent layer on top of a strong model + tools.\n\n\n\nCoding assistants aren’t only for programmers. Even if you don’t write software, they can:\n\ntranslate between Stata/R/Python,\nwrite reproducible scripts,\ngenerate data cleaning code,\nand explain unfamiliar code you inherited.\n\nOpenAI’s Codex ecosystem is one example (web/CLI/IDE integrations).[^openai-codex]"
+  },
+  {
+    "objectID": "fundamentals/ecosystem.html",
+    "href": "fundamentals/ecosystem.html",
+    "title": "The GenAI Ecosystem",
+    "section": "",
+    "text": "When people say “AI,” or “GenAI,” they often mean “ChatGPT” or a similar chat interface. It’s more useful to think of GenAI in layers:\n\nModels -&gt; the “brains”:\n\nGPT‑5.2, Claude Opus 4.5, Gemini 3.0 Pro, Grok 4.1, etc.\n\nThese models are frequently referred to as LLMs (large language models). This is somewhat of a misnomer these days since the latest iterations of these models can handle more than just language (text) as an input. They can also process audio, image, and video inputs.\n\n\n\nTools -&gt; capabilities around the model:\n\nweb search\nPython interpreter\nfile analysis\nspreadsheet/slides generation\nconnectors to other software/platforms like Outlook, Gmail, Dropbox, Google Drive, GitHub, etc.\n\nProducts (interfaces):\n\nWeb: ChatGPT, Claude, Gemini, Grok\nCoding agents: Codex, Claude Code, Gemini Code Assist, GitHub Copilot\nApps: Perplexity, Replit, Cursor, NotebookLM\n\nMany of these products use agents in the background (workflows orchestrated by a model)\n\nThe model plans steps, uses tools, analyzes the output of those tools, and iterates until it produces the requested output\n\n\n\n\n\n\n\nImage generated with Nano Banana Pro"
+  },
+  {
+    "objectID": "fundamentals/ecosystem.html#framing-what-i-mean-by-genai",
+    "href": "fundamentals/ecosystem.html#framing-what-i-mean-by-genai",
+    "title": "The GenAI Ecosystem",
+    "section": "",
+    "text": "When people say “AI,” or “GenAI,” they often mean “ChatGPT” or a similar chat interface. It’s more useful to think of GenAI in layers:\n\nModels -&gt; the “brains”:\n\nGPT‑5.2, Claude Opus 4.5, Gemini 3.0 Pro, Grok 4.1, etc.\n\nThese models are frequently referred to as LLMs (large language models). This is somewhat of a misnomer these days since the latest iterations of these models can handle more than just language (text) as an input. They can also process audio, image, and video inputs.\n\n\n\nTools -&gt; capabilities around the model:\n\nweb search\nPython interpreter\nfile analysis\nspreadsheet/slides generation\nconnectors to other software/platforms like Outlook, Gmail, Dropbox, Google Drive, GitHub, etc.\n\nProducts (interfaces):\n\nWeb: ChatGPT, Claude, Gemini, Grok\nCoding agents: Codex, Claude Code, Gemini Code Assist, GitHub Copilot\nApps: Perplexity, Replit, Cursor, NotebookLM\n\nMany of these products use agents in the background (workflows orchestrated by a model)\n\nThe model plans steps, uses tools, analyzes the output of those tools, and iterates until it produces the requested output\n\n\n\n\n\n\n\nImage generated with Nano Banana Pro"
+  },
+  {
+    "objectID": "fundamentals/ecosystem.html#why-the-genai-as-a-stack-framing-matters",
+    "href": "fundamentals/ecosystem.html#why-the-genai-as-a-stack-framing-matters",
+    "title": "The GenAI Ecosystem",
+    "section": "2 Why the “GenAI as a stack” framing matters",
+    "text": "2 Why the “GenAI as a stack” framing matters\nIt reminds us that:\n\nJumps in capability are not just about better models, but better models + better tools + better agentic workflows.\nDifferent products may be better at different tasks (sometimes in a way that is not necessarily related to the models they use underneath)\n\nFor example, Claude (product) may be better than ChatGPT (product) at generating Excel sheets because of better integration with Microsoft Office (tool), not because Claude Opus 4.5 (model) is better than GPT 5.2 (model)\n\nYou should not be judging the current capabilities of “GenAI” based on your experiences with a single product (ChatGPT for most people)"
   },
   {
     "objectID": "fundamentals/index.html",
