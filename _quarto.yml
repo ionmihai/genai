@@ -9,10 +9,10 @@ website:
     contents:
       - href: index.qmd
         text: Home
-      - href: ecosystem.qmd
-        text: The GenAI Ecosystem
       - section: "Fundamentals of GenAI"
         contents:
+          - href: fundamentals/ecosystem.qmd
+            text: The GenAI Ecosystem        
           - href: fundamentals/how-llms-work.qmd
             text: How LLMs Work
           - href: fundamentals/key-capabilities.qmd
@@ -32,3 +32,4 @@ format:
     css: styles.css
     toc: true
     number-sections: true
+    link-external-newwindow: true
