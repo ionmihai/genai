@@ -26,7 +26,7 @@ Start by clearly identifying what you need:
 | General writing | ChatGPT, Claude, Gemini |
 | Code development | GitHub Copilot, Cursor, Claude |
 | Research & search | Perplexity, Gemini |
-| Image generation | Midjourney, DALL-E, Stable Diffusion |
+| Image generation | Nano Banana Pro, Midjourney, Stable Diffusion |
 | Document analysis | Claude (long context), Gemini |
 
 #### Cost Considerations
@@ -47,26 +47,6 @@ Consider data handling requirements:
 - **Compliance**: Check vendor certifications (SOC 2, etc.)
 - **Data retention**: Understand how inputs are stored/used
 - **Training opt-out**: Some providers allow opting out of training
-
-### 3. Practical Considerations
-
-#### Ease of Use
-
-- Web interface vs. API vs. integrated tool
-- Learning curve and documentation quality
-- Team collaboration features
-
-#### Reliability
-
-- Uptime and availability
-- Rate limits and quotas
-- Response consistency
-
-#### Ecosystem
-
-- Plugins and extensions
-- Integration with existing tools
-- Community and support
 
 ## Tool Categories
 
@@ -94,14 +74,6 @@ Consider data handling requirements:
 - Gemini — Google integration
 - Consensus — Academic research
 
-### Specialized Tools
-
-**Best for**: Specific domains
-
-- Grammarly — Writing assistance
-- Notion AI — Note-taking and docs
-- Jasper — Marketing content
-
 ## Making the Choice
 
 ::: {.callout-tip}
@@ -119,14 +91,3 @@ Need image generation? → Midjourney or DALL-E
 Need document analysis? → Claude (long context)
 Need privacy/local? → Llama-based solutions
 ```
-
-## Evaluation Checklist
-
-Before committing to a tool:
-
-- [ ] Test with your actual use cases
-- [ ] Review pricing for expected usage
-- [ ] Check data handling policies
-- [ ] Evaluate integration options
-- [ ] Consider team/organization needs
-- [ ] Plan for potential switching costs

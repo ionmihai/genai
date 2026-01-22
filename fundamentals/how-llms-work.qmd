@@ -20,6 +20,7 @@ The training process happens in stages:
 **Pre-training:** The model reads massive amounts of text from the internet, books, code repositories, academic papers—essentially a substantial portion of human written output. During this phase, it learns to predict "what word comes next?" billions of times. The parameters adjust to get better at prediction. This takes months and costs tens to hundreds of millions of dollars in compute.
 
 **Post-training (Fine-tuning):** The base model is then adjusted using:
+
 - **Supervised fine-tuning (SFT):** Humans write example conversations showing how the model should respond
 - **Reinforcement learning from human feedback (RLHF):** Humans rate model outputs, and the model learns to generate outputs that get higher ratings
 - **Constitutional AI (CAI):** Used by Anthropic, where the model learns to critique and revise its own outputs based on principles
@@ -44,73 +45,16 @@ When you type a question into ChatGPT or Claude, here's what actually happens:
 
 5. **Detokenization:** The output tokens are converted back to human-readable text.
 
-The key insight: **the model is doing sophisticated pattern matching and transformation, not reasoning from first principles.** It's incredibly good at producing text that looks like text it saw during training. But it has no real understanding in the way humans understand—it can't verify its outputs against reality.
+The key insight: **the model is doing sophisticated pattern matching and transformation, not reasoning from first principles.** It's incredibly good at producing text that looks like text it saw during training. But it has no real understanding in the way humans understand—it can't verify its outputs against reality (without the use of tools).
 
 This is why AI systems can be confidently wrong. They produce plausible-sounding text, but that plausibility comes from statistical patterns, not from checking facts.
-
----
-
-## Key Concepts
-
-### Tokens
-
-LLMs don't process text character by character — they use **tokens**.
-
-- A token might be a word, part of a word, or punctuation
-- "Understanding" might be split into "Under" + "standing"
-- Most models use ~50,000 different tokens
-- Token count affects cost and context limits
-
-::: {.callout-note}
-## Rule of Thumb
-In English, 1 token ≈ 4 characters or ¾ of a word. A 1,000 word document is roughly 1,300-1,500 tokens.
-:::
-
-### The Transformer Architecture
-
-The transformer is the neural network architecture powering modern LLMs. Key components:
-
-1. **Embeddings** — Convert tokens to numerical vectors
-2. **Attention** — Allow tokens to "look at" other tokens
-3. **Feed-forward layers** — Process information
-4. **Output layer** — Predict next token probabilities
-
-### Attention: The Key Innovation
-
-Attention mechanisms allow the model to focus on relevant parts of the input:
-
-```
-"The cat sat on the mat because it was tired"
-                                ↑
-                    What does "it" refer to?
-```
-
-The attention mechanism helps the model understand that "it" refers to "cat" by learning patterns from training data.
-
-### What does "training" a model actually mean?
-
-1. **Pre-training** (self-supervised)
-    - The model reads huge corpora and learns to predict the next token.
-    - Outcome: broad language competence + lots of embedded world knowledge.
-
-2. **Mid-training / continued training** (optional, but common)
-    - Additional training on domain data, long-context data, code, or multimodal data.
-    - Outcome: “specialization,” better long-document handling, better domain patterns.
-
-3. **Post-training** (instruction following + alignment)
-    - **SFT** (supervised fine-tuning on instruction data),
-    - **RLHF / RLAIF** (reinforcement learning from human/AI feedback),
-    - **DPO** (direct preference optimization),
-    - safety tuning and refusal training.
-
-Outcome: the model becomes better at following user intent, formatting outputs, and refusing unsafe requests.
-
 
 ---
 
 ## Context windows
 
 ### What is a context window?
+
 The **context window** is the maximum amount of text (and other inputs) the model can consider at once:  
 **(system instructions + your prompt + chat history + retrieved snippets + tool outputs + file excerpts) + the model’s output.**
 
@@ -120,6 +64,7 @@ If the total exceeds the limit:
 - or it returns an error (depending on provider).
 
 ### What providers may include automatically (even if you don’t see it)
+
 Many modern assistants can add extra context such as:
 
 - system safety instructions,
@@ -131,6 +76,7 @@ Many modern assistants can add extra context such as:
 This is why two people can ask the “same prompt” and get slightly different results.
 
 ### Uploading files: why “I uploaded it” ≠ “the model read it”
+
 In most systems, uploading a file does **not** mean the entire file is placed into the context window verbatim.
 
 A common approach is retrieval:
@@ -139,7 +85,7 @@ A common approach is retrieval:
 - the system builds embeddings (a searchable representation),
 - and only relevant chunks are pulled into the context window when needed.
 
-OpenAI explicitly describes this chunking/embedding behavior for “Knowledge” files in custom GPTs.[^openai-knowledge-files]
+OpenAI explicitly describes this chunking/embedding behavior for “Knowledge” files in custom GPTs.
 
 **Faculty implication:**  
 To get reliable file-based answers, you often need to ask for:
@@ -155,7 +101,7 @@ Different providers handle this differently:
 - Some drop the earliest conversation turns (“truncation”).
 - Some run a compaction step to preserve key details.
 
-OpenAI notes a `/compact` approach (in its ecosystem) for extending effective context windows in tool-heavy workflows.[^openai-gpt52] Anthropic documents that their API returns errors if input + output exceeds the context window rather than silently truncating.[^anthropic-context]
+OpenAI notes a `/compact` approach (in its ecosystem) for extending effective context windows in tool-heavy workflows. Anthropic documents that their API returns errors if input + output exceeds the context window rather than silently truncating.
 
 ### Output limits
 Even with a huge input window, models have **output caps**. When you ask for “write 30 pages,” you usually get:
@@ -164,9 +110,7 @@ Even with a huge input window, models have **output caps**. When you ask for “
 - or a refusal,
 - or “here is an outline; ask me to expand section by section.”
 
-**Faculty-friendly move:**  
-For long outputs, ask for:
-
-1) outline, 2) draft section 1, 3) draft section 2…  
+**Recommendation:**  
+For long outputs, ask for 1) outline, 2) draft section 1, 3) draft section 2…  
 
 This yields better control and fewer errors.
