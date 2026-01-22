@@ -58,9 +58,3 @@ a.feature-card p {
 .callout-tip {
   border-left-color: #e94560 !important;
 }
-
-/* Add more space between page title and content */
-#quarto-document-content > header.quarto-title-block {
-  margin-bottom: 2rem !important;
-  padding-bottom: 1rem !important;
-}

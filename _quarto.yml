@@ -14,7 +14,7 @@ website:
           - href: fundamentals/ecosystem.qmd
             text: The GenAI Ecosystem        
           - href: fundamentals/how-llms-work.qmd
-            text: How LLMs Work
+            text: How GenAI Models Work
           - href: fundamentals/key-capabilities.qmd
             text: Key GenAI Capabilities
           - href: fundamentals/choosing-tools.qmd
@@ -22,7 +22,7 @@ website:
       - href: resources.qmd
         text: Resources
   page-footer:
-    center: "GenAI Workshop | 2026"
+    center: "GenAI For Teaching and Research | 2026"
 
 format:
   html:

@@ -1,25 +1,54 @@
 ---
-title: "How LLMs Work"
+title: "How GenAI Models Work"
+subtitle: A non-technical introduction
 ---
 
-## The Big Picture
+## The Model as a File
 
-Large Language Models (LLMs) are neural networks trained to predict the next token in a sequence. Despite this simple objective, this training process produces systems with remarkable capabilities.
+Here's the most important thing to understand: **a large language model is just a file full of numbers.**
 
-### What happens when you “prompt” a model (what’s actually occurring)
+When companies like OpenAI, Anthropic, or Google train a model, they're creating a very large file—hundreds of gigabytes for frontier models—that contains billions of numerical parameters. These parameters encode patterns learned from reading enormous amounts of text.
 
-When you type into ChatGPT (or an API), the system does roughly this:
+What do we mean by "patterns" in text? Some of these are grammar-related patterns, but they need not be. Here's an intuitive example: if I asked you to finishe the sentence: "I think therefore I ... ", most of you would say "am". You did that because overwhelmingly, whenever you've encountered the phrase "I think therefore I", it was followed by "am". 
 
-1. Your text is converted into tokens (numbers).
-2. Tokens are turned into vectors (“embeddings”).
-3. The model runs a forward pass (a lot of matrix multiplication / attention).
-4. It produces probabilities for the next token.
-5. A decoding method picks the next token (sampling / temperature / etc.).
-6. Repeat until it hits a stop condition or an output limit.
+That's essentially what the model "knows"—statistical patterns about how language works and what tends to follow what.
 
-**Key implication:**  
-The model is not retrieving a “stored answer.” It is **generating** a continuation that fits the prompt and its training patterns.
+### How the Numbers Are Obtained
 
+The training process happens in stages:
+
+**Pre-training:** The model reads massive amounts of text from the internet, books, code repositories, academic papers—essentially a substantial portion of human written output. During this phase, it learns to predict "what word comes next?" billions of times. The parameters adjust to get better at prediction. This takes months and costs tens to hundreds of millions of dollars in compute.
+
+**Post-training (Fine-tuning):** The base model is then adjusted using:
+- **Supervised fine-tuning (SFT):** Humans write example conversations showing how the model should respond
+- **Reinforcement learning from human feedback (RLHF):** Humans rate model outputs, and the model learns to generate outputs that get higher ratings
+- **Constitutional AI (CAI):** Used by Anthropic, where the model learns to critique and revise its own outputs based on principles
+
+**Continuous refinement:** Models are updated regularly to improve performance, fix issues, and add capabilities.
+
+Key terms you might hear: "transformer architecture" (the mathematical structure these models use), "attention mechanism" (how the model decides what parts of the input to focus on), "parameters" or "weights" (the numbers in the file).
+
+---
+
+## What Happens When You Prompt
+
+When you type a question into ChatGPT or Claude, here's what actually happens:
+
+1. **Tokenization:** Your text is converted into numbers. The word "investment" might become token 7342. "Portfolio" might be 4521. Each model has its own vocabulary of tokens.
+
+2. **Context assembly:** Your prompt is combined with any previous messages in the conversation, plus a "system prompt" (instructions the model provider includes automatically—more on this later).
+
+3. **Forward pass:** The tokenized input goes through the model's neural network. Each layer does mathematical operations—essentially matrix multiplications—transforming the input through the billions of parameters.
+
+4. **Output generation:** The model produces a probability distribution over all possible next tokens. It samples from this distribution (with some randomness controlled by "temperature"), adds that token to the sequence, and repeats until it decides to stop.
+
+5. **Detokenization:** The output tokens are converted back to human-readable text.
+
+The key insight: **the model is doing sophisticated pattern matching and transformation, not reasoning from first principles.** It's incredibly good at producing text that looks like text it saw during training. But it has no real understanding in the way humans understand—it can't verify its outputs against reality.
+
+This is why AI systems can be confidently wrong. They produce plausible-sounding text, but that plausibility comes from statistical patterns, not from checking facts.
+
+---
 
 ## Key Concepts
 

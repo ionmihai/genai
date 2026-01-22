@@ -1,0 +1,60 @@
+/* Custom styles for GenAI Workshop */
+
+.hero-banner {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.hero-banner h1 {
+  color: #e94560;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-banner p {
+  color: #eaeaea;
+  font-size: 1.25rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+a.feature-card {
+  display: block;
+  background: var(--bs-body-bg);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-color: #e94560;
+  text-decoration: none;
+}
+
+a.feature-card h3 {
+  color: #e94560;
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+}
+
+a.feature-card p {
+  color: var(--bs-body-color);
+  margin-bottom: 0;
+}
+
+.callout-tip {
+  border-left-color: #e94560 !important;
+}
