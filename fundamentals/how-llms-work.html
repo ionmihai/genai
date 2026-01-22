@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>GenAI Workshop - How LLMs Work</title>
+<title>GenAI Workshop - How GenAI Models Work</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../fundamentals/ecosystem.html">Fundamentals of GenAI</a></li><li class="breadcrumb-item"><a href="../fundamentals/how-llms-work.html">How LLMs Work</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../fundamentals/ecosystem.html">Fundamentals of GenAI</a></li><li class="breadcrumb-item"><a href="../fundamentals/how-llms-work.html">How GenAI Models Work</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../fundamentals/how-llms-work.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">How LLMs Work</span></a>
+ <span class="menu-text">How GenAI Models Work</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -160,24 +160,25 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-big-picture" id="toc-the-big-picture" class="nav-link active" data-scroll-target="#the-big-picture"><span class="header-section-number">1</span> The Big Picture</a>
+  <li><a href="#the-model-as-a-file" id="toc-the-model-as-a-file" class="nav-link active" data-scroll-target="#the-model-as-a-file"><span class="header-section-number">1</span> The Model as a File</a>
   <ul class="collapse">
-  <li><a href="#what-happens-when-you-prompt-a-model-whats-actually-occurring" id="toc-what-happens-when-you-prompt-a-model-whats-actually-occurring" class="nav-link" data-scroll-target="#what-happens-when-you-prompt-a-model-whats-actually-occurring"><span class="header-section-number">1.1</span> What happens when you “prompt” a model (what’s actually occurring)</a></li>
+  <li><a href="#how-the-numbers-are-obtained" id="toc-how-the-numbers-are-obtained" class="nav-link" data-scroll-target="#how-the-numbers-are-obtained"><span class="header-section-number">1.1</span> How the Numbers Are Obtained</a></li>
   </ul></li>
-  <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link" data-scroll-target="#key-concepts"><span class="header-section-number">2</span> Key Concepts</a>
+  <li><a href="#what-happens-when-you-prompt" id="toc-what-happens-when-you-prompt" class="nav-link" data-scroll-target="#what-happens-when-you-prompt"><span class="header-section-number">2</span> What Happens When You Prompt</a></li>
+  <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link" data-scroll-target="#key-concepts"><span class="header-section-number">3</span> Key Concepts</a>
   <ul class="collapse">
-  <li><a href="#tokens" id="toc-tokens" class="nav-link" data-scroll-target="#tokens"><span class="header-section-number">2.1</span> Tokens</a></li>
-  <li><a href="#the-transformer-architecture" id="toc-the-transformer-architecture" class="nav-link" data-scroll-target="#the-transformer-architecture"><span class="header-section-number">2.2</span> The Transformer Architecture</a></li>
-  <li><a href="#attention-the-key-innovation" id="toc-attention-the-key-innovation" class="nav-link" data-scroll-target="#attention-the-key-innovation"><span class="header-section-number">2.3</span> Attention: The Key Innovation</a></li>
-  <li><a href="#what-does-training-a-model-actually-mean" id="toc-what-does-training-a-model-actually-mean" class="nav-link" data-scroll-target="#what-does-training-a-model-actually-mean"><span class="header-section-number">2.4</span> What does “training” a model actually mean?</a></li>
+  <li><a href="#tokens" id="toc-tokens" class="nav-link" data-scroll-target="#tokens"><span class="header-section-number">3.1</span> Tokens</a></li>
+  <li><a href="#the-transformer-architecture" id="toc-the-transformer-architecture" class="nav-link" data-scroll-target="#the-transformer-architecture"><span class="header-section-number">3.2</span> The Transformer Architecture</a></li>
+  <li><a href="#attention-the-key-innovation" id="toc-attention-the-key-innovation" class="nav-link" data-scroll-target="#attention-the-key-innovation"><span class="header-section-number">3.3</span> Attention: The Key Innovation</a></li>
+  <li><a href="#what-does-training-a-model-actually-mean" id="toc-what-does-training-a-model-actually-mean" class="nav-link" data-scroll-target="#what-does-training-a-model-actually-mean"><span class="header-section-number">3.4</span> What does “training” a model actually mean?</a></li>
   </ul></li>
-  <li><a href="#context-windows" id="toc-context-windows" class="nav-link" data-scroll-target="#context-windows"><span class="header-section-number">3</span> Context windows</a>
+  <li><a href="#context-windows" id="toc-context-windows" class="nav-link" data-scroll-target="#context-windows"><span class="header-section-number">4</span> Context windows</a>
   <ul class="collapse">
-  <li><a href="#what-is-a-context-window" id="toc-what-is-a-context-window" class="nav-link" data-scroll-target="#what-is-a-context-window"><span class="header-section-number">3.1</span> What is a context window?</a></li>
-  <li><a href="#what-providers-may-include-automatically-even-if-you-dont-see-it" id="toc-what-providers-may-include-automatically-even-if-you-dont-see-it" class="nav-link" data-scroll-target="#what-providers-may-include-automatically-even-if-you-dont-see-it"><span class="header-section-number">3.2</span> What providers may include automatically (even if you don’t see it)</a></li>
-  <li><a href="#uploading-files-why-i-uploaded-it-the-model-read-it" id="toc-uploading-files-why-i-uploaded-it-the-model-read-it" class="nav-link" data-scroll-target="#uploading-files-why-i-uploaded-it-the-model-read-it"><span class="header-section-number">3.3</span> Uploading files: why “I uploaded it” ≠ “the model read it”</a></li>
-  <li><a href="#what-happens-near-the-limit" id="toc-what-happens-near-the-limit" class="nav-link" data-scroll-target="#what-happens-near-the-limit"><span class="header-section-number">3.4</span> What happens near the limit</a></li>
-  <li><a href="#output-limits" id="toc-output-limits" class="nav-link" data-scroll-target="#output-limits"><span class="header-section-number">3.5</span> Output limits</a></li>
+  <li><a href="#what-is-a-context-window" id="toc-what-is-a-context-window" class="nav-link" data-scroll-target="#what-is-a-context-window"><span class="header-section-number">4.1</span> What is a context window?</a></li>
+  <li><a href="#what-providers-may-include-automatically-even-if-you-dont-see-it" id="toc-what-providers-may-include-automatically-even-if-you-dont-see-it" class="nav-link" data-scroll-target="#what-providers-may-include-automatically-even-if-you-dont-see-it"><span class="header-section-number">4.2</span> What providers may include automatically (even if you don’t see it)</a></li>
+  <li><a href="#uploading-files-why-i-uploaded-it-the-model-read-it" id="toc-uploading-files-why-i-uploaded-it-the-model-read-it" class="nav-link" data-scroll-target="#uploading-files-why-i-uploaded-it-the-model-read-it"><span class="header-section-number">4.3</span> Uploading files: why “I uploaded it” ≠ “the model read it”</a></li>
+  <li><a href="#what-happens-near-the-limit" id="toc-what-happens-near-the-limit" class="nav-link" data-scroll-target="#what-happens-near-the-limit"><span class="header-section-number">4.4</span> What happens near the limit</a></li>
+  <li><a href="#output-limits" id="toc-output-limits" class="nav-link" data-scroll-target="#output-limits"><span class="header-section-number">4.5</span> Output limits</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -187,7 +188,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">How LLMs Work</h1>
+<h1 class="title">How GenAI Models Work</h1>
+<p class="subtitle lead">A non-technical introduction</p>
 </div>
 
 
@@ -202,28 +204,40 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="the-big-picture" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="the-big-picture"><span class="header-section-number">1</span> The Big Picture</h2>
-<p>Large Language Models (LLMs) are neural networks trained to predict the next token in a sequence. Despite this simple objective, this training process produces systems with remarkable capabilities.</p>
-<section id="what-happens-when-you-prompt-a-model-whats-actually-occurring" class="level3" data-number="1.1">
-<h3 data-number="1.1" class="anchored" data-anchor-id="what-happens-when-you-prompt-a-model-whats-actually-occurring"><span class="header-section-number">1.1</span> What happens when you “prompt” a model (what’s actually occurring)</h3>
-<p>When you type into ChatGPT (or an API), the system does roughly this:</p>
+<section id="the-model-as-a-file" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="the-model-as-a-file"><span class="header-section-number">1</span> The Model as a File</h2>
+<p>Here’s the most important thing to understand: <strong>a large language model is just a file full of numbers.</strong></p>
+<p>When companies like OpenAI, Anthropic, or Google train a model, they’re creating a very large file—hundreds of gigabytes for frontier models—that contains billions of numerical parameters. These parameters encode patterns learned from reading enormous amounts of text.</p>
+<p>What do we mean by “patterns” in text? Some of these are grammar-related patterns, but they need not be. Here’s an intuitive example: if I asked you to finishe the sentence: “I think therefore I …”, most of you would say “am”. You did that because overwhelmingly, whenever you’ve encountered the phrase “I think therefore I”, it was followed by “am”.</p>
+<p>That’s essentially what the model “knows”—statistical patterns about how language works and what tends to follow what.</p>
+<section id="how-the-numbers-are-obtained" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="how-the-numbers-are-obtained"><span class="header-section-number">1.1</span> How the Numbers Are Obtained</h3>
+<p>The training process happens in stages:</p>
+<p><strong>Pre-training:</strong> The model reads massive amounts of text from the internet, books, code repositories, academic papers—essentially a substantial portion of human written output. During this phase, it learns to predict “what word comes next?” billions of times. The parameters adjust to get better at prediction. This takes months and costs tens to hundreds of millions of dollars in compute.</p>
+<p><strong>Post-training (Fine-tuning):</strong> The base model is then adjusted using: - <strong>Supervised fine-tuning (SFT):</strong> Humans write example conversations showing how the model should respond - <strong>Reinforcement learning from human feedback (RLHF):</strong> Humans rate model outputs, and the model learns to generate outputs that get higher ratings - <strong>Constitutional AI (CAI):</strong> Used by Anthropic, where the model learns to critique and revise its own outputs based on principles</p>
+<p><strong>Continuous refinement:</strong> Models are updated regularly to improve performance, fix issues, and add capabilities.</p>
+<p>Key terms you might hear: “transformer architecture” (the mathematical structure these models use), “attention mechanism” (how the model decides what parts of the input to focus on), “parameters” or “weights” (the numbers in the file).</p>
+<hr>
+</section>
+</section>
+<section id="what-happens-when-you-prompt" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="what-happens-when-you-prompt"><span class="header-section-number">2</span> What Happens When You Prompt</h2>
+<p>When you type a question into ChatGPT or Claude, here’s what actually happens:</p>
 <ol type="1">
-<li>Your text is converted into tokens (numbers).</li>
-<li>Tokens are turned into vectors (“embeddings”).</li>
-<li>The model runs a forward pass (a lot of matrix multiplication / attention).</li>
-<li>It produces probabilities for the next token.</li>
-<li>A decoding method picks the next token (sampling / temperature / etc.).</li>
-<li>Repeat until it hits a stop condition or an output limit.</li>
+<li><p><strong>Tokenization:</strong> Your text is converted into numbers. The word “investment” might become token 7342. “Portfolio” might be 4521. Each model has its own vocabulary of tokens.</p></li>
+<li><p><strong>Context assembly:</strong> Your prompt is combined with any previous messages in the conversation, plus a “system prompt” (instructions the model provider includes automatically—more on this later).</p></li>
+<li><p><strong>Forward pass:</strong> The tokenized input goes through the model’s neural network. Each layer does mathematical operations—essentially matrix multiplications—transforming the input through the billions of parameters.</p></li>
+<li><p><strong>Output generation:</strong> The model produces a probability distribution over all possible next tokens. It samples from this distribution (with some randomness controlled by “temperature”), adds that token to the sequence, and repeats until it decides to stop.</p></li>
+<li><p><strong>Detokenization:</strong> The output tokens are converted back to human-readable text.</p></li>
 </ol>
-<p><strong>Key implication:</strong><br>
-The model is not retrieving a “stored answer.” It is <strong>generating</strong> a continuation that fits the prompt and its training patterns.</p>
+<p>The key insight: <strong>the model is doing sophisticated pattern matching and transformation, not reasoning from first principles.</strong> It’s incredibly good at producing text that looks like text it saw during training. But it has no real understanding in the way humans understand—it can’t verify its outputs against reality.</p>
+<p>This is why AI systems can be confidently wrong. They produce plausible-sounding text, but that plausibility comes from statistical patterns, not from checking facts.</p>
+<hr>
 </section>
-</section>
-<section id="key-concepts" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="key-concepts"><span class="header-section-number">2</span> Key Concepts</h2>
-<section id="tokens" class="level3" data-number="2.1">
-<h3 data-number="2.1" class="anchored" data-anchor-id="tokens"><span class="header-section-number">2.1</span> Tokens</h3>
+<section id="key-concepts" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="key-concepts"><span class="header-section-number">3</span> Key Concepts</h2>
+<section id="tokens" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="tokens"><span class="header-section-number">3.1</span> Tokens</h3>
 <p>LLMs don’t process text character by character — they use <strong>tokens</strong>.</p>
 <ul>
 <li>A token might be a word, part of a word, or punctuation</li>
@@ -245,8 +259,8 @@ Rule of Thumb
 </div>
 </div>
 </section>
-<section id="the-transformer-architecture" class="level3" data-number="2.2">
-<h3 data-number="2.2" class="anchored" data-anchor-id="the-transformer-architecture"><span class="header-section-number">2.2</span> The Transformer Architecture</h3>
+<section id="the-transformer-architecture" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="the-transformer-architecture"><span class="header-section-number">3.2</span> The Transformer Architecture</h3>
 <p>The transformer is the neural network architecture powering modern LLMs. Key components:</p>
 <ol type="1">
 <li><strong>Embeddings</strong> — Convert tokens to numerical vectors</li>
@@ -255,16 +269,16 @@ Rule of Thumb
 <li><strong>Output layer</strong> — Predict next token probabilities</li>
 </ol>
 </section>
-<section id="attention-the-key-innovation" class="level3" data-number="2.3">
-<h3 data-number="2.3" class="anchored" data-anchor-id="attention-the-key-innovation"><span class="header-section-number">2.3</span> Attention: The Key Innovation</h3>
+<section id="attention-the-key-innovation" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="attention-the-key-innovation"><span class="header-section-number">3.3</span> Attention: The Key Innovation</h3>
 <p>Attention mechanisms allow the model to focus on relevant parts of the input:</p>
 <pre><code>"The cat sat on the mat because it was tired"
                                 ↑
                     What does "it" refer to?</code></pre>
 <p>The attention mechanism helps the model understand that “it” refers to “cat” by learning patterns from training data.</p>
 </section>
-<section id="what-does-training-a-model-actually-mean" class="level3" data-number="2.4">
-<h3 data-number="2.4" class="anchored" data-anchor-id="what-does-training-a-model-actually-mean"><span class="header-section-number">2.4</span> What does “training” a model actually mean?</h3>
+<section id="what-does-training-a-model-actually-mean" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="what-does-training-a-model-actually-mean"><span class="header-section-number">3.4</span> What does “training” a model actually mean?</h3>
 <ol type="1">
 <li><strong>Pre-training</strong> (self-supervised)
 <ul>
@@ -288,10 +302,10 @@ Rule of Thumb
 <hr>
 </section>
 </section>
-<section id="context-windows" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="context-windows"><span class="header-section-number">3</span> Context windows</h2>
-<section id="what-is-a-context-window" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="what-is-a-context-window"><span class="header-section-number">3.1</span> What is a context window?</h3>
+<section id="context-windows" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="context-windows"><span class="header-section-number">4</span> Context windows</h2>
+<section id="what-is-a-context-window" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="what-is-a-context-window"><span class="header-section-number">4.1</span> What is a context window?</h3>
 <p>The <strong>context window</strong> is the maximum amount of text (and other inputs) the model can consider at once:<br>
 <strong>(system instructions + your prompt + chat history + retrieved snippets + tool outputs + file excerpts) + the model’s output.</strong></p>
 <p>If the total exceeds the limit:</p>
@@ -300,8 +314,8 @@ Rule of Thumb
 <li>or it returns an error (depending on provider).</li>
 </ul>
 </section>
-<section id="what-providers-may-include-automatically-even-if-you-dont-see-it" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="what-providers-may-include-automatically-even-if-you-dont-see-it"><span class="header-section-number">3.2</span> What providers may include automatically (even if you don’t see it)</h3>
+<section id="what-providers-may-include-automatically-even-if-you-dont-see-it" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="what-providers-may-include-automatically-even-if-you-dont-see-it"><span class="header-section-number">4.2</span> What providers may include automatically (even if you don’t see it)</h3>
 <p>Many modern assistants can add extra context such as:</p>
 <ul>
 <li>system safety instructions,</li>
@@ -312,8 +326,8 @@ Rule of Thumb
 </ul>
 <p>This is why two people can ask the “same prompt” and get slightly different results.</p>
 </section>
-<section id="uploading-files-why-i-uploaded-it-the-model-read-it" class="level3" data-number="3.3">
-<h3 data-number="3.3" class="anchored" data-anchor-id="uploading-files-why-i-uploaded-it-the-model-read-it"><span class="header-section-number">3.3</span> Uploading files: why “I uploaded it” ≠ “the model read it”</h3>
+<section id="uploading-files-why-i-uploaded-it-the-model-read-it" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="uploading-files-why-i-uploaded-it-the-model-read-it"><span class="header-section-number">4.3</span> Uploading files: why “I uploaded it” ≠ “the model read it”</h3>
 <p>In most systems, uploading a file does <strong>not</strong> mean the entire file is placed into the context window verbatim.</p>
 <p>A common approach is retrieval:</p>
 <ul>
@@ -330,8 +344,8 @@ To get reliable file-based answers, you often need to ask for:</p>
 <li>and “show your work” audits (e.g., “quote the exact line you used”).</li>
 </ul>
 </section>
-<section id="what-happens-near-the-limit" class="level3" data-number="3.4">
-<h3 data-number="3.4" class="anchored" data-anchor-id="what-happens-near-the-limit"><span class="header-section-number">3.4</span> What happens near the limit</h3>
+<section id="what-happens-near-the-limit" class="level3" data-number="4.4">
+<h3 data-number="4.4" class="anchored" data-anchor-id="what-happens-near-the-limit"><span class="header-section-number">4.4</span> What happens near the limit</h3>
 <p>Different providers handle this differently:</p>
 <ul>
 <li>Some UIs summarize older messages.</li>
@@ -340,8 +354,8 @@ To get reliable file-based answers, you often need to ask for:</p>
 </ul>
 <p>OpenAI notes a <code>/compact</code> approach (in its ecosystem) for extending effective context windows in tool-heavy workflows.[^openai-gpt52] Anthropic documents that their API returns errors if input + output exceeds the context window rather than silently truncating.[^anthropic-context]</p>
 </section>
-<section id="output-limits" class="level3" data-number="3.5">
-<h3 data-number="3.5" class="anchored" data-anchor-id="output-limits"><span class="header-section-number">3.5</span> Output limits</h3>
+<section id="output-limits" class="level3" data-number="4.5">
+<h3 data-number="4.5" class="anchored" data-anchor-id="output-limits"><span class="header-section-number">4.5</span> Output limits</h3>
 <p>Even with a huge input window, models have <strong>output caps</strong>. When you ask for “write 30 pages,” you usually get:</p>
 <ul>
 <li>a truncated response,</li>
@@ -728,7 +742,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       &nbsp;
     </div>   
-    <div class="nav-footer-center">GenAI Workshop | 2026</div>
+    <div class="nav-footer-center">GenAI For Teaching and Research | 2026</div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
