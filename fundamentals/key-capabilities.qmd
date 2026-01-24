@@ -11,10 +11,10 @@ title: "Key GenAI Capabilities"
 
 Examples of publicly stated context sizes (as of late 2025):
 
-- OpenAI’s GPT‑5.2 Pro API model: **400k context window**, **128k max output** (API docs).[^openai-gpt52pro-api]  
-- ChatGPT UI (GPT‑5.2): context varies by tier/model (e.g., “Thinking” has a much larger window than “Instant”).[^openai-gpt52-chatgpt]  
-- Google Gemini 2.5 Pro: announced **1M token** context.[^google-gemini-25pro]  
-- Anthropic Claude long-context tiers include models with up to **1M tokens**.[^anthropic-context]
+- OpenAI’s GPT‑5.2 Pro API model: **400k context window**, **128k max output** (API docs).  
+- ChatGPT UI (GPT‑5.2): context varies by tier/model (e.g., “Thinking” has a much larger window than “Instant”).  
+- Google Gemini 2.5 Pro: announced **1M token** context.  
+- Anthropic Claude long-context tiers include models with up to **1M tokens**.
 
 ### Multimodality (text + image + audio + video)
 
@@ -39,7 +39,7 @@ Many providers now offer a mode that:
 - performs better on multi-step tasks,
 - is slower and more expensive.
 
-OpenAI’s GPT‑5.2 “Auto” can switch between Instant and Thinking; the UI can show a “slimmed-down” view of chain-of-thought, with an “Answer now” option.[^openai-gpt52-chatgpt]
+OpenAI’s GPT‑5.2 “Auto” can switch between Instant and Thinking; the UI can show a “slimmed-down” view of chain-of-thought, with an “Answer now” option.
 
 ### Tool access (this matters more than people realize)
 
@@ -63,7 +63,7 @@ Without tools, models are limited to:
 - it searches,
 - collects sources,
 - synthesizes,
-- and returns citations and an organized report.[^openai-deep-research]
+- and returns citations and an organized report.
 
 This is usually not a separate “brain”; it’s an **agent layer** on top of a strong model + tools.
 
@@ -76,4 +76,4 @@ Coding assistants aren’t only for programmers. Even if you don’t write softw
 - generate data cleaning code,
 - and explain unfamiliar code you inherited.
 
-OpenAI’s Codex ecosystem is one example (web/CLI/IDE integrations).[^openai-codex]
+OpenAI’s Codex ecosystem is one example (web/CLI/IDE integrations).

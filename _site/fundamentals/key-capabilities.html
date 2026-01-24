@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>GenAI Workshop - Key GenAI Capabilities</title>
+<title>GenAI in Academia - Key GenAI Capabilities</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -90,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">GenAI Workshop</a> 
+      <a href="../">GenAI in Academia</a> 
         <div class="sidebar-tools-main">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
@@ -202,13 +202,13 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>Examples of publicly stated context sizes (as of late 2025):</p>
 <ul>
-<li>OpenAI’s GPT‑5.2 Pro API model: <strong>400k context window</strong>, <strong>128k max output</strong> (API docs).[^openai-gpt52pro-api]<br>
+<li>OpenAI’s GPT‑5.2 Pro API model: <strong>400k context window</strong>, <strong>128k max output</strong> (API docs).<br>
 </li>
-<li>ChatGPT UI (GPT‑5.2): context varies by tier/model (e.g., “Thinking” has a much larger window than “Instant”).[^openai-gpt52-chatgpt]<br>
+<li>ChatGPT UI (GPT‑5.2): context varies by tier/model (e.g., “Thinking” has a much larger window than “Instant”).<br>
 </li>
-<li>Google Gemini 2.5 Pro: announced <strong>1M token</strong> context.[^google-gemini-25pro]<br>
+<li>Google Gemini 2.5 Pro: announced <strong>1M token</strong> context.<br>
 </li>
-<li>Anthropic Claude long-context tiers include models with up to <strong>1M tokens</strong>.[^anthropic-context]</li>
+<li>Anthropic Claude long-context tiers include models with up to <strong>1M tokens</strong>.</li>
 </ul>
 </section>
 <section id="multimodality-text-image-audio-video" class="level3" data-number="1.2">
@@ -235,7 +235,7 @@ ul.task-list li input[type="checkbox"] {
 <li>performs better on multi-step tasks,</li>
 <li>is slower and more expensive.</li>
 </ul>
-<p>OpenAI’s GPT‑5.2 “Auto” can switch between Instant and Thinking; the UI can show a “slimmed-down” view of chain-of-thought, with an “Answer now” option.[^openai-gpt52-chatgpt]</p>
+<p>OpenAI’s GPT‑5.2 “Auto” can switch between Instant and Thinking; the UI can show a “slimmed-down” view of chain-of-thought, with an “Answer now” option.</p>
 </section>
 <section id="tool-access-this-matters-more-than-people-realize" class="level3" data-number="1.4">
 <h3 data-number="1.4" class="anchored" data-anchor-id="tool-access-this-matters-more-than-people-realize"><span class="header-section-number">1.4</span> Tool access (this matters more than people realize)</h3>
@@ -260,7 +260,7 @@ ul.task-list li input[type="checkbox"] {
 <li>it searches,</li>
 <li>collects sources,</li>
 <li>synthesizes,</li>
-<li>and returns citations and an organized report.[^openai-deep-research]</li>
+<li>and returns citations and an organized report.</li>
 </ul>
 <p>This is usually not a separate “brain”; it’s an <strong>agent layer</strong> on top of a strong model + tools.</p>
 </section>
@@ -273,7 +273,7 @@ ul.task-list li input[type="checkbox"] {
 <li>generate data cleaning code,</li>
 <li>and explain unfamiliar code you inherited.</li>
 </ul>
-<p>OpenAI’s Codex ecosystem is one example (web/CLI/IDE integrations).[^openai-codex]</p>
+<p>OpenAI’s Codex ecosystem is one example (web/CLI/IDE integrations).</p>
 
 
 </section>
@@ -627,7 +627,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp("https:\/\/ionmihai\.github\.io\/genai\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>GenAI Workshop - How GenAI Models Work</title>
+<title>GenAI in Academia - How GenAI Models Work</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -61,6 +61,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -90,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">GenAI Workshop</a> 
+      <a href="../">GenAI in Academia</a> 
         <div class="sidebar-tools-main">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
@@ -160,18 +164,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-model-as-a-file" id="toc-the-model-as-a-file" class="nav-link active" data-scroll-target="#the-model-as-a-file"><span class="header-section-number">1</span> The Model as a File</a>
+  <li><a href="#what-happens-when-you-prompt" id="toc-what-happens-when-you-prompt" class="nav-link active" data-scroll-target="#what-happens-when-you-prompt"><span class="header-section-number">1</span> What Happens When You Prompt</a></li>
+  <li><a href="#the-model" id="toc-the-model" class="nav-link" data-scroll-target="#the-model"><span class="header-section-number">2</span> The Model</a>
   <ul class="collapse">
-  <li><a href="#how-the-numbers-are-obtained" id="toc-how-the-numbers-are-obtained" class="nav-link" data-scroll-target="#how-the-numbers-are-obtained"><span class="header-section-number">1.1</span> How the Numbers Are Obtained</a></li>
+  <li><a href="#how-the-numbers-are-obtained" id="toc-how-the-numbers-are-obtained" class="nav-link" data-scroll-target="#how-the-numbers-are-obtained"><span class="header-section-number">2.1</span> How the Numbers Are Obtained</a></li>
   </ul></li>
-  <li><a href="#what-happens-when-you-prompt" id="toc-what-happens-when-you-prompt" class="nav-link" data-scroll-target="#what-happens-when-you-prompt"><span class="header-section-number">2</span> What Happens When You Prompt</a></li>
-  <li><a href="#context-windows" id="toc-context-windows" class="nav-link" data-scroll-target="#context-windows"><span class="header-section-number">3</span> Context windows</a>
+  <li><a href="#the-context-window" id="toc-the-context-window" class="nav-link" data-scroll-target="#the-context-window"><span class="header-section-number">3</span> The Context Window</a>
   <ul class="collapse">
-  <li><a href="#what-is-a-context-window" id="toc-what-is-a-context-window" class="nav-link" data-scroll-target="#what-is-a-context-window"><span class="header-section-number">3.1</span> What is a context window?</a></li>
-  <li><a href="#what-providers-may-include-automatically-even-if-you-dont-see-it" id="toc-what-providers-may-include-automatically-even-if-you-dont-see-it" class="nav-link" data-scroll-target="#what-providers-may-include-automatically-even-if-you-dont-see-it"><span class="header-section-number">3.2</span> What providers may include automatically (even if you don’t see it)</a></li>
-  <li><a href="#uploading-files-why-i-uploaded-it-the-model-read-it" id="toc-uploading-files-why-i-uploaded-it-the-model-read-it" class="nav-link" data-scroll-target="#uploading-files-why-i-uploaded-it-the-model-read-it"><span class="header-section-number">3.3</span> Uploading files: why “I uploaded it” ≠ “the model read it”</a></li>
-  <li><a href="#what-happens-near-the-limit" id="toc-what-happens-near-the-limit" class="nav-link" data-scroll-target="#what-happens-near-the-limit"><span class="header-section-number">3.4</span> What happens near the limit</a></li>
-  <li><a href="#output-limits" id="toc-output-limits" class="nav-link" data-scroll-target="#output-limits"><span class="header-section-number">3.5</span> Output limits</a></li>
+  <li><a href="#what-providers-may-automatically-include-in-the-context-window-even-if-you-dont-see-it" id="toc-what-providers-may-automatically-include-in-the-context-window-even-if-you-dont-see-it" class="nav-link" data-scroll-target="#what-providers-may-automatically-include-in-the-context-window-even-if-you-dont-see-it"><span class="header-section-number">3.1</span> What providers may automatically include in the context window (even if you don’t see it)</a></li>
+  <li><a href="#uploading-files-with-your-prompt" id="toc-uploading-files-with-your-prompt" class="nav-link" data-scroll-target="#uploading-files-with-your-prompt"><span class="header-section-number">3.2</span> Uploading files with your prompt</a></li>
+  <li><a href="#what-happens-when-you-near-the-limit-of-the-context-window" id="toc-what-happens-when-you-near-the-limit-of-the-context-window" class="nav-link" data-scroll-target="#what-happens-when-you-near-the-limit-of-the-context-window"><span class="header-section-number">3.3</span> What happens when you near the limit of the context window</a></li>
+  <li><a href="#output-limits" id="toc-output-limits" class="nav-link" data-scroll-target="#output-limits"><span class="header-section-number">3.4</span> Output limits</a></li>
+  </ul></li>
+  <li><a href="#thinking-planning-models-and-tool-use" id="toc-thinking-planning-models-and-tool-use" class="nav-link" data-scroll-target="#thinking-planning-models-and-tool-use"><span class="header-section-number">4</span> “Thinking” (Planning) Models and Tool Use</a>
+  <ul class="collapse">
+  <li><a href="#thinking-models" id="toc-thinking-models" class="nav-link" data-scroll-target="#thinking-models"><span class="header-section-number">4.1</span> Thinking Models</a></li>
+  <li><a href="#tool-use" id="toc-tool-use" class="nav-link" data-scroll-target="#tool-use"><span class="header-section-number">4.2</span> Tool Use</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -197,14 +205,72 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="the-model-as-a-file" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="the-model-as-a-file"><span class="header-section-number">1</span> The Model as a File</h2>
-<p>Here’s the most important thing to understand: <strong>a large language model is just a file full of numbers.</strong></p>
+<section id="what-happens-when-you-prompt" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="what-happens-when-you-prompt"><span class="header-section-number">1</span> What Happens When You Prompt</h2>
+<p>When you type a question into ChatGPT or Claude, here’s what actually happens:</p>
+<ol type="1">
+<li><p><strong>Tokenization:</strong> Your prompt is converted into a sequence of numbers. Text is split into “tokens”—not exactly words, but chunks. Common words are single tokens; rare words get split into pieces. Each token maps to a number (ID) the model can process. Each model has its own vocabulary of tokens.</p></li>
+<li><p><strong>Context assembly:</strong> Your prompt is combined with any previous messages in the conversation, plus a “system prompt” (instructions the model provider includes automatically).</p>
+<ul>
+<li><strong>Context Window</strong>: The model sees all tokens in the context at once (no memory between subsequent prompts). Window size limits how much text fits in a single interaction. Larger windows = more capability but higher cost.</li>
+</ul></li>
+<li><p><strong>Forward pass:</strong> The tokenized input goes through the model’s neural network. Each layer does mathematical operations—essentially matrix multiplications—transforming the input through the billions of parameters.</p></li>
+<li><p><strong>Output generation:</strong> The model produces a probability distribution over all possible next tokens in its vocabulary. It samples from this distribution (with some randomness controlled by “temperature”), adds that token to the sequence, and repeats until it ends up sampling a “stop” token.</p>
+<ul>
+<li><strong>Temperature</strong>: Controls randomness in selection:
+<ul>
+<li>Temperature = 0: Always pick the highest-probability token (deterministic)</li>
+<li>Temperature = 1: Sample proportionally to probabilities<br>
+</li>
+<li>Temperature &gt; 1: Flatten the distribution (more random/creative)</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Detokenization:</strong> Once a “stop” token is reached, the output tokens are converted back to human-readable text.</p></li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    subgraph Input
+        A["User Prompt"]
+        S["System Prompt"]
+    end
+    
+    subgraph Tokenization
+        B["Tokenizer"]
+        C["Token IDs"]
+    end
+    
+    subgraph Processing
+        D["Context Window"]
+        E["LLM"]
+    end
+    
+    subgraph Output
+        F{"Probability\nDistribution"}
+        G["Temperature"]
+        H["Selected Token"]
+    end
+    
+    A --&gt; B
+    S --&gt; B
+    B --&gt; C --&gt; D --&gt; E --&gt; F --&gt; G --&gt; H
+    H --&gt;|"Append &amp; repeat"| D
+    linkStyle 8 stroke-dasharray: 5 5
+</pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="the-model" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="the-model"><span class="header-section-number">2</span> The Model</h2>
+<p><strong>A large language model is just a file full of numbers.</strong></p>
 <p>When companies like OpenAI, Anthropic, or Google train a model, they’re creating a very large file—hundreds of gigabytes for frontier models—that contains billions of numerical parameters. These parameters encode patterns learned from reading enormous amounts of text.</p>
-<p>What do we mean by “patterns” in text? Some of these are grammar-related patterns, but they need not be. Here’s an intuitive example: if I asked you to finishe the sentence: “I think therefore I …”, most of you would say “am”. You did that because overwhelmingly, whenever you’ve encountered the phrase “I think therefore I”, it was followed by “am”.</p>
-<p>That’s essentially what the model “knows”—statistical patterns about how language works and what tends to follow what.</p>
-<section id="how-the-numbers-are-obtained" class="level3" data-number="1.1">
-<h3 data-number="1.1" class="anchored" data-anchor-id="how-the-numbers-are-obtained"><span class="header-section-number">1.1</span> How the Numbers Are Obtained</h3>
+<p>That is what the model “knows”—statistical patterns about how language works and what tends to follow what.</p>
+<section id="how-the-numbers-are-obtained" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="how-the-numbers-are-obtained"><span class="header-section-number">2.1</span> How the Numbers Are Obtained</h3>
 <p>The training process happens in stages:</p>
 <p><strong>Pre-training:</strong> The model reads massive amounts of text from the internet, books, code repositories, academic papers—essentially a substantial portion of human written output. During this phase, it learns to predict “what word comes next?” billions of times. The parameters adjust to get better at prediction. This takes months and costs tens to hundreds of millions of dollars in compute.</p>
 <p><strong>Post-training (Fine-tuning):</strong> The base model is then adjusted using:</p>
@@ -218,34 +284,17 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 </section>
-<section id="what-happens-when-you-prompt" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="what-happens-when-you-prompt"><span class="header-section-number">2</span> What Happens When You Prompt</h2>
-<p>When you type a question into ChatGPT or Claude, here’s what actually happens:</p>
-<ol type="1">
-<li><p><strong>Tokenization:</strong> Your text is converted into numbers. The word “investment” might become token 7342. “Portfolio” might be 4521. Each model has its own vocabulary of tokens.</p></li>
-<li><p><strong>Context assembly:</strong> Your prompt is combined with any previous messages in the conversation, plus a “system prompt” (instructions the model provider includes automatically—more on this later).</p></li>
-<li><p><strong>Forward pass:</strong> The tokenized input goes through the model’s neural network. Each layer does mathematical operations—essentially matrix multiplications—transforming the input through the billions of parameters.</p></li>
-<li><p><strong>Output generation:</strong> The model produces a probability distribution over all possible next tokens. It samples from this distribution (with some randomness controlled by “temperature”), adds that token to the sequence, and repeats until it decides to stop.</p></li>
-<li><p><strong>Detokenization:</strong> The output tokens are converted back to human-readable text.</p></li>
-</ol>
-<p>The key insight: <strong>the model is doing sophisticated pattern matching and transformation, not reasoning from first principles.</strong> It’s incredibly good at producing text that looks like text it saw during training. But it has no real understanding in the way humans understand—it can’t verify its outputs against reality (without the use of tools).</p>
-<p>This is why AI systems can be confidently wrong. They produce plausible-sounding text, but that plausibility comes from statistical patterns, not from checking facts.</p>
-<hr>
-</section>
-<section id="context-windows" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="context-windows"><span class="header-section-number">3</span> Context windows</h2>
-<section id="what-is-a-context-window" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="what-is-a-context-window"><span class="header-section-number">3.1</span> What is a context window?</h3>
-<p>The <strong>context window</strong> is the maximum amount of text (and other inputs) the model can consider at once:<br>
+<section id="the-context-window" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="the-context-window"><span class="header-section-number">3</span> The Context Window</h2>
+<p>The context window is the maximum amount of text (and other inputs) the model can consider at once:<br>
 <strong>(system instructions + your prompt + chat history + retrieved snippets + tool outputs + file excerpts) + the model’s output.</strong></p>
 <p>If the total exceeds the limit:</p>
 <ul>
 <li>the system must drop, summarize, or “compact” something,</li>
 <li>or it returns an error (depending on provider).</li>
 </ul>
-</section>
-<section id="what-providers-may-include-automatically-even-if-you-dont-see-it" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="what-providers-may-include-automatically-even-if-you-dont-see-it"><span class="header-section-number">3.2</span> What providers may include automatically (even if you don’t see it)</h3>
+<section id="what-providers-may-automatically-include-in-the-context-window-even-if-you-dont-see-it" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="what-providers-may-automatically-include-in-the-context-window-even-if-you-dont-see-it"><span class="header-section-number">3.1</span> What providers may automatically include in the context window (even if you don’t see it)</h3>
 <p>Many modern assistants can add extra context such as:</p>
 <ul>
 <li>system safety instructions,</li>
@@ -256,45 +305,112 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>This is why two people can ask the “same prompt” and get slightly different results.</p>
 </section>
-<section id="uploading-files-why-i-uploaded-it-the-model-read-it" class="level3" data-number="3.3">
-<h3 data-number="3.3" class="anchored" data-anchor-id="uploading-files-why-i-uploaded-it-the-model-read-it"><span class="header-section-number">3.3</span> Uploading files: why “I uploaded it” ≠ “the model read it”</h3>
+<section id="uploading-files-with-your-prompt" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="uploading-files-with-your-prompt"><span class="header-section-number">3.2</span> Uploading files with your prompt</h3>
 <p>In most systems, uploading a file does <strong>not</strong> mean the entire file is placed into the context window verbatim.</p>
-<p>A common approach is retrieval:</p>
+<p>A common approach is <strong>retrieval</strong>:</p>
 <ul>
 <li>the file is chunked,</li>
-<li>the system builds embeddings (a searchable representation),</li>
-<li>and only relevant chunks are pulled into the context window when needed.</li>
-</ul>
-<p>OpenAI explicitly describes this chunking/embedding behavior for “Knowledge” files in custom GPTs.</p>
-<p><strong>Faculty implication:</strong><br>
-To get reliable file-based answers, you often need to ask for:</p>
-<ul>
-<li>citations / quotes with page numbers,</li>
-<li>explicit references to the provided document,</li>
-<li>and “show your work” audits (e.g., “quote the exact line you used”).</li>
+<li>the system builds embeddings (a searchable representation) from each chunk</li>
+<li>and only relevant chunks are pulled into the context window when needed (based on what you asked about the file)</li>
 </ul>
 </section>
-<section id="what-happens-near-the-limit" class="level3" data-number="3.4">
-<h3 data-number="3.4" class="anchored" data-anchor-id="what-happens-near-the-limit"><span class="header-section-number">3.4</span> What happens near the limit</h3>
+<section id="what-happens-when-you-near-the-limit-of-the-context-window" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="what-happens-when-you-near-the-limit-of-the-context-window"><span class="header-section-number">3.3</span> What happens when you near the limit of the context window</h3>
 <p>Different providers handle this differently:</p>
 <ul>
 <li>Some UIs summarize older messages.</li>
 <li>Some drop the earliest conversation turns (“truncation”).</li>
 <li>Some run a compaction step to preserve key details.</li>
 </ul>
-<p>OpenAI notes a <code>/compact</code> approach (in its ecosystem) for extending effective context windows in tool-heavy workflows. Anthropic documents that their API returns errors if input + output exceeds the context window rather than silently truncating.</p>
 </section>
-<section id="output-limits" class="level3" data-number="3.5">
-<h3 data-number="3.5" class="anchored" data-anchor-id="output-limits"><span class="header-section-number">3.5</span> Output limits</h3>
-<p>Even with a huge input window, models have <strong>output caps</strong>. When you ask for “write 30 pages,” you usually get:</p>
+<section id="output-limits" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="output-limits"><span class="header-section-number">3.4</span> Output limits</h3>
+<p>Even with a very large <strong>input</strong> window, models have <strong>output caps</strong>. When you ask for “write 30 pages,” you usually get:</p>
 <ul>
 <li>a truncated response,</li>
 <li>or a refusal,</li>
 <li>or “here is an outline; ask me to expand section by section.”</li>
 </ul>
 <p><strong>Recommendation:</strong><br>
-For long outputs, ask for 1) outline, 2) draft section 1, 3) draft section 2…</p>
-<p>This yields better control and fewer errors.</p>
+For long outputs, ask the model to 1) write an outline, 2) draft section 1, 3) draft section 2…<br>
+This yields better control and fewer errors.</p>
+</section>
+</section>
+<section id="thinking-planning-models-and-tool-use" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="thinking-planning-models-and-tool-use"><span class="header-section-number">4</span> “Thinking” (Planning) Models and Tool Use</h2>
+<section id="thinking-models" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="thinking-models"><span class="header-section-number">4.1</span> Thinking Models</h3>
+<p>Standard LLMs generate output token-by-token in a single pass—they don’t “stop and think.” <strong>Thinking models</strong> (like OpenAI’s o1/o3, Claude with extended thinking, or DeepSeek R1) add an explicit reasoning phase before producing their final answer.</p>
+<p>How it works:</p>
+<ol type="1">
+<li>The model receives your prompt</li>
+<li>Before answering, it generates a <strong>chain of thought</strong>—a series of reasoning steps that break down the problem
+<ul>
+<li>In modern systems, this thinking is visible to you and it’s a good idea to inspect it and see if you can spot issues with it</li>
+<li>For some producs like ChatGPT Pro Deep Research, you can <strong>pause</strong> the thinking/execution loop if you want to correct some reasoning errors or want to add more context<br>
+</li>
+</ul></li>
+<li>The model can reconsider, catch errors, and refine its approach during this phase</li>
+<li>Only after thinking does it produce the final response</li>
+</ol>
+<p><strong>Trade-offs:</strong> Thinking models are better at complex reasoning (math, logic, multi-step problems) but are slower and more expensive because they generate many more tokens internally.</p>
+</section>
+<section id="tool-use" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="tool-use"><span class="header-section-number">4.2</span> Tool Use</h3>
+<p>LLMs can only generate tokens—they can’t browse the web, run code, or access databases. “Tool use” (also called “function calling”) extends models to interact with external systems.</p>
+<p>How it works:</p>
+<ol type="1">
+<li>The system prompt tells the model what tools are available (e.g., “You can search the web” or “You can run Python code”)</li>
+<li>Instead of generating text, the model can output a structured <strong>tool call</strong> (e.g., <code>search("current weather in NYC")</code>, where <code>search</code> is a Python function somewhere on an OpenAI server)</li>
+<li>The system executes the tool and returns the result to the model</li>
+<li>The model incorporates the result into its context and continues generating</li>
+<li>This loop can repeat—models can chain multiple tool calls to accomplish complex tasks</li>
+</ol>
+<p><strong>Why it matters:</strong> Tool use lets models access current information (web search), verify calculations (code execution), and take actions in the real world (APIs). It transforms LLMs from text generators into agents that can accomplish tasks.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    subgraph Input
+        A["User Prompt"]
+        S["System Prompt\n+ Available Tools"]
+    end
+    
+    subgraph Processing
+        D["Context Window"]
+        E["LLM"]
+    end
+    
+    subgraph "LLM Output"
+        F{"Output\nType?"}
+        T["Thinking\nTokens"]
+        G["Tool Call"]
+        H["Final\nResponse"]
+    end
+    
+    subgraph Tools
+        X["Execute Tool"]
+        R["Tool Result"]
+    end
+    
+    A --&gt; D
+    S --&gt; D
+    D --&gt; E --&gt; F
+    F --&gt;|"Reasoning"| T
+    T --&gt;|"Append"| D
+    F --&gt;|"Tool"| G --&gt; X --&gt; R
+    R --&gt;|"Append"| D
+    F --&gt;|"Done"| H
+    linkStyle 5 stroke-dasharray: 5 5
+    linkStyle 9 stroke-dasharray: 5 5
+</pre>
+</div>
+</div>
+</div>
+</div>
+<p>The key difference from the basic pipeline (at the top of this page): thinking models generate reasoning tokens as <em>output</em> that gets appended to the context, creating a loop where the model “thinks out loud” before producing its final answer. Tool-enabled models can similarly pause, call external tools, and incorporate results before continuing.</p>
 
 
 </section>
