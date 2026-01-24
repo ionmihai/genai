@@ -2,26 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ionmihai.github.io/genai/resources.html</loc>
-    <lastmod>2026-01-24T12:52:20.203Z</lastmod>
+    <lastmod>2026-01-24T23:31:57.203Z</lastmod>
   </url>
   <url>
-    <loc>https://ionmihai.github.io/genai/index.html</loc>
-    <lastmod>2026-01-24T12:52:20.677Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ionmihai.github.io/genai/fundamentals/key-capabilities.html</loc>
-    <lastmod>2026-01-24T12:52:21.128Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ionmihai.github.io/genai/fundamentals/ecosystem.html</loc>
-    <lastmod>2026-01-24T12:52:21.679Z</lastmod>
+    <loc>https://ionmihai.github.io/genai/fundamentals/04_interfaces.html</loc>
+    <lastmod>2026-01-24T23:31:56.688Z</lastmod>
   </url>
   <url>
     <loc>https://ionmihai.github.io/genai/fundamentals/choosing-tools.html</loc>
-    <lastmod>2026-01-24T12:52:22.191Z</lastmod>
+    <lastmod>2026-01-24T23:31:56.153Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ionmihai.github.io/genai/fundamentals/02_models.html</loc>
+    <lastmod>2026-01-24T23:31:55.448Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ionmihai.github.io/genai/index.html</loc>
+    <lastmod>2026-01-24T23:31:54.814Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ionmihai.github.io/genai/fundamentals/key-capabilities.html</loc>
+    <lastmod>2026-01-24T23:31:55.094Z</lastmod>
   </url>
   <url>
     <loc>https://ionmihai.github.io/genai/fundamentals/how-llms-work.html</loc>
-    <lastmod>2026-01-24T12:52:22.952Z</lastmod>
+    <lastmod>2026-01-24T23:31:55.838Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ionmihai.github.io/genai/fundamentals/03_agents.html</loc>
+    <lastmod>2026-01-24T23:31:56.470Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ionmihai.github.io/genai/fundamentals/01_ecosystem.html</loc>
+    <lastmod>2026-01-24T23:31:56.944Z</lastmod>
   </url>
 </urlset>
