@@ -1,0 +1,92 @@
+---
+title: "Generative AI Agents"
+subtitle: How agentic workflows help address the main shortcoming of GenAI models
+---
+
+
+
+
+## "Thinking" (Planning) Models and Tool Use
+
+### Thinking Models
+
+Standard LLMs generate output token-by-token in a single pass—they don't "stop and think." **Thinking models** (like OpenAI's o1/o3, Claude with extended thinking, or DeepSeek R1) add an explicit reasoning phase before producing their final answer.
+
+How it works:
+
+1. The model receives your prompt
+2. Before answering, it generates a **chain of thought**—a series of reasoning steps that break down the problem
+    - In modern systems, this thinking is visible to you and it's a good idea to inspect it and see if you can spot issues with it
+    - For some producs like ChatGPT Pro Deep Research, you can **pause** the thinking/execution loop if you want to correct some reasoning errors or want to add more context  
+4. The model can reconsider, catch errors, and refine its approach during this phase
+5. Only after thinking does it produce the final response
+
+**Trade-offs:** Thinking models are better at complex reasoning (math, logic, multi-step problems) but are slower and more expensive because they generate many more tokens internally.
+
+### Tool Use
+
+LLMs can only generate tokens—they can't browse the web, run code, or access databases. "Tool use" (also called "function calling") extends models to interact with external systems.
+
+How it works:
+
+1. The system prompt tells the model what tools are available (e.g., "You can search the web" or "You can run Python code")
+2. Instead of generating text, the model can output a structured **tool call** (e.g., `search("current weather in NYC")`, where `search` is a Python function somewhere on an OpenAI server)
+3. The system executes the tool and returns the result to the model
+4. The model incorporates the result into its context and continues generating
+5. This loop can repeat—models can chain multiple tool calls to accomplish complex tasks
+
+**Why it matters:** Tool use lets models access current information (web search), verify calculations (code execution), and take actions in the real world (APIs). It transforms LLMs from text generators into agents that can accomplish tasks.
+
+```{mermaid}
+flowchart LR
+    subgraph Input
+        A["User Prompt"]
+        S["System Prompt\n+ Available Tools"]
+    end
+    
+    subgraph Processing
+        D["Context Window"]
+        E["LLM"]
+    end
+    
+    subgraph "LLM Output"
+        F{"Output\nType?"}
+        T["Thinking\nTokens"]
+        G["Tool Call"]
+        H["Final\nResponse"]
+    end
+    
+    subgraph Tools
+        X["Execute Tool"]
+        R["Tool Result"]
+    end
+    
+    A --> D
+    S --> D
+    D --> E --> F
+    F -->|"Reasoning"| T
+    T -->|"Append"| D
+    F -->|"Tool"| G --> X --> R
+    R -->|"Append"| D
+    F -->|"Done"| H
+    linkStyle 5 stroke-dasharray: 5 5
+    linkStyle 9 stroke-dasharray: 5 5
+```
+
+The key difference from the basic pipeline: thinking models generate reasoning tokens as *output* that gets appended to the context, creating a loop where the model "thinks out loud" before producing its final answer. Tool-enabled models can similarly pause, call external tools, and incorporate results before continuing.
+
+## How Agentic Workflows Address Model Shortcomings
+
+
+### Long-term memory
+
+- Tools to access databases (including vector databases)
+
+### Halucinations
+
+- Web search
+- RAG 
+
+### Ability to act
+
+- Connectors to external systems (e.g. via function calling or MCP servers)

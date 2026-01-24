@@ -12,14 +12,14 @@ website:
         text: Home
       - section: "Fundamentals of GenAI"
         contents:
-          - href: fundamentals/ecosystem.qmd
-            text: The GenAI Ecosystem        
-          - href: fundamentals/how-llms-work.qmd
-            text: How GenAI Models Work
-          - href: fundamentals/key-capabilities.qmd
-            text: Key GenAI Capabilities
-          - href: fundamentals/choosing-tools.qmd
-            text: Choosing the Right Tool
+          - href: fundamentals/01_ecosystem.qmd
+            text: The Ecosystem        
+          - href: fundamentals/02_models.qmd
+            text: Models
+          - href: fundamentals/03_agents.qmd
+            text: Agents
+          - href: fundamentals/04_interfaces.qmd
+            text: Interfaces
       - href: resources.qmd
         text: Resources
   page-footer:
@@ -30,7 +30,7 @@ format:
     theme: cosmo
     fontsize: 1.2em
     grid:
-      sidebar-width: 350px
+      sidebar-width: 300px
     toc: true
     number-sections: true
     link-external-newwindow: true
