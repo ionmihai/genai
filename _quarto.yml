@@ -5,6 +5,7 @@ website:
   title: "GenAI in Academia"
   sidebar:
     style: docked
+    pinned: true
     collapse-level: 2
     contents:
       - href: index.qmd
@@ -26,12 +27,10 @@ website:
 
 format:
   html:
-    theme:
-      light: flatly
-      dark: darkly
+    theme: cosmo
+    fontsize: 1.2em
     grid:
       sidebar-width: 350px
-    css: styles.css
     toc: true
     number-sections: true
     link-external-newwindow: true
