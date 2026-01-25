@@ -14,6 +14,14 @@ title: "Resources"
 - Instructional materials
     - [Generative AI at the University](https://canvas.ou.edu/courses/345590) - OU Canvas login required
 
+
+## AI in Academia 
+
+- [Finding Equilibrium](https://findingequilibriumfuturehighered.substack.com/p/ai-and-universities-strategies-for) - Series of posts on AI in higher ed by Prof. David Hummels and Prof. Jay Akridge
+- [Gen AI For Finance](https://genai4finance.kerryback.com/) - Post by Prof. Kery Back detailing his approach to incorporating AI into teaching 
+    - Also, check his [FMA tutorial](https://genai4finance.kerryback.com/fma2025.pdf)
+
+
 ## Documentation
 
 |  | OpenAI | Anthropic | Google | xAI |
@@ -27,11 +35,6 @@ title: "Resources"
 - [DeepLearning.AI — Generative AI for Everyone](https://www.deeplearning.ai/courses/generative-ai-for-everyone/) — Excellent intro course by Andrew Ng
 - [Prompt Engineering Guide](https://www.promptingguide.ai/) — Community resource for prompting techniques
     - I would recommend looking at the "Cookbook" links in the table above first. All of them have prompting guides specific to those models. Come here if you don't find what you need there.
-
-
-## AI in Academia 
-
-- [Finding Equilibrium](https://findingequilibriumfuturehighered.substack.com/p/ai-and-universities-strategies-for) - Series of posts on AI in higher ed by Prof. David Hummels and Prof. Jay Akridge
 
 
 ## Ethics & Safety
