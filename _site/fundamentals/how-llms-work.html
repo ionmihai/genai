@@ -137,8 +137,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../fundamentals/04_interfaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Interfaces</span></a>
+  <a href="../fundamentals/04_products.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Products</span></a>
   </div>
 </li>
       </ul>
@@ -159,22 +159,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-happens-when-you-prompt" id="toc-what-happens-when-you-prompt" class="nav-link active" data-scroll-target="#what-happens-when-you-prompt"><span class="header-section-number">1</span> What Happens When You Prompt</a></li>
-  <li><a href="#the-model" id="toc-the-model" class="nav-link" data-scroll-target="#the-model"><span class="header-section-number">2</span> The Model</a>
+  <li><a href="#what-happens-when-you-prompt" id="toc-what-happens-when-you-prompt" class="nav-link active" data-scroll-target="#what-happens-when-you-prompt">What Happens When You Prompt</a></li>
+  <li><a href="#the-model" id="toc-the-model" class="nav-link" data-scroll-target="#the-model">The Model</a>
   <ul class="collapse">
-  <li><a href="#how-the-numbers-are-obtained" id="toc-how-the-numbers-are-obtained" class="nav-link" data-scroll-target="#how-the-numbers-are-obtained"><span class="header-section-number">2.1</span> How the Numbers Are Obtained</a></li>
+  <li><a href="#how-the-numbers-are-obtained" id="toc-how-the-numbers-are-obtained" class="nav-link" data-scroll-target="#how-the-numbers-are-obtained">How the Numbers Are Obtained</a></li>
   </ul></li>
-  <li><a href="#the-context-window" id="toc-the-context-window" class="nav-link" data-scroll-target="#the-context-window"><span class="header-section-number">3</span> The Context Window</a>
+  <li><a href="#the-context-window" id="toc-the-context-window" class="nav-link" data-scroll-target="#the-context-window">The Context Window</a>
   <ul class="collapse">
-  <li><a href="#what-providers-may-automatically-include-in-the-context-window-even-if-you-dont-see-it" id="toc-what-providers-may-automatically-include-in-the-context-window-even-if-you-dont-see-it" class="nav-link" data-scroll-target="#what-providers-may-automatically-include-in-the-context-window-even-if-you-dont-see-it"><span class="header-section-number">3.1</span> What providers may automatically include in the context window (even if you don’t see it)</a></li>
-  <li><a href="#uploading-files-with-your-prompt" id="toc-uploading-files-with-your-prompt" class="nav-link" data-scroll-target="#uploading-files-with-your-prompt"><span class="header-section-number">3.2</span> Uploading files with your prompt</a></li>
-  <li><a href="#what-happens-when-you-near-the-limit-of-the-context-window" id="toc-what-happens-when-you-near-the-limit-of-the-context-window" class="nav-link" data-scroll-target="#what-happens-when-you-near-the-limit-of-the-context-window"><span class="header-section-number">3.3</span> What happens when you near the limit of the context window</a></li>
-  <li><a href="#output-limits" id="toc-output-limits" class="nav-link" data-scroll-target="#output-limits"><span class="header-section-number">3.4</span> Output limits</a></li>
+  <li><a href="#what-providers-may-automatically-include-in-the-context-window-even-if-you-dont-see-it" id="toc-what-providers-may-automatically-include-in-the-context-window-even-if-you-dont-see-it" class="nav-link" data-scroll-target="#what-providers-may-automatically-include-in-the-context-window-even-if-you-dont-see-it">What providers may automatically include in the context window (even if you don’t see it)</a></li>
+  <li><a href="#uploading-files-with-your-prompt" id="toc-uploading-files-with-your-prompt" class="nav-link" data-scroll-target="#uploading-files-with-your-prompt">Uploading files with your prompt</a></li>
+  <li><a href="#what-happens-when-you-near-the-limit-of-the-context-window" id="toc-what-happens-when-you-near-the-limit-of-the-context-window" class="nav-link" data-scroll-target="#what-happens-when-you-near-the-limit-of-the-context-window">What happens when you near the limit of the context window</a></li>
+  <li><a href="#output-limits" id="toc-output-limits" class="nav-link" data-scroll-target="#output-limits">Output limits</a></li>
   </ul></li>
-  <li><a href="#thinking-planning-models-and-tool-use" id="toc-thinking-planning-models-and-tool-use" class="nav-link" data-scroll-target="#thinking-planning-models-and-tool-use"><span class="header-section-number">4</span> “Thinking” (Planning) Models and Tool Use</a>
+  <li><a href="#thinking-planning-models-and-tool-use" id="toc-thinking-planning-models-and-tool-use" class="nav-link" data-scroll-target="#thinking-planning-models-and-tool-use">“Thinking” (Planning) Models and Tool Use</a>
   <ul class="collapse">
-  <li><a href="#thinking-models" id="toc-thinking-models" class="nav-link" data-scroll-target="#thinking-models"><span class="header-section-number">4.1</span> Thinking Models</a></li>
-  <li><a href="#tool-use" id="toc-tool-use" class="nav-link" data-scroll-target="#tool-use"><span class="header-section-number">4.2</span> Tool Use</a></li>
+  <li><a href="#thinking-models" id="toc-thinking-models" class="nav-link" data-scroll-target="#thinking-models">Thinking Models</a></li>
+  <li><a href="#tool-use" id="toc-tool-use" class="nav-link" data-scroll-target="#tool-use">Tool Use</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -200,8 +200,8 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="what-happens-when-you-prompt" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="what-happens-when-you-prompt"><span class="header-section-number">1</span> What Happens When You Prompt</h2>
+<section id="what-happens-when-you-prompt" class="level2">
+<h2 class="anchored" data-anchor-id="what-happens-when-you-prompt">What Happens When You Prompt</h2>
 <p>When you type a question into ChatGPT or Claude, here’s what actually happens:</p>
 <ol type="1">
 <li><p><strong>Tokenization:</strong> Your prompt is converted into a sequence of numbers. Text is split into “tokens”—not exactly words, but chunks. Common words are single tokens; rare words get split into pieces. Each token maps to a number (ID) the model can process. Each model has its own vocabulary of tokens.</p></li>
@@ -259,13 +259,13 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="the-model" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="the-model"><span class="header-section-number">2</span> The Model</h2>
+<section id="the-model" class="level2">
+<h2 class="anchored" data-anchor-id="the-model">The Model</h2>
 <p><strong>A large language model is just a file full of numbers.</strong></p>
 <p>When companies like OpenAI, Anthropic, or Google train a model, they’re creating a very large file—hundreds of gigabytes for frontier models—that contains billions of numerical parameters. These parameters encode patterns learned from reading enormous amounts of text.</p>
 <p>That is what the model “knows”—statistical patterns about how language works and what tends to follow what.</p>
-<section id="how-the-numbers-are-obtained" class="level3" data-number="2.1">
-<h3 data-number="2.1" class="anchored" data-anchor-id="how-the-numbers-are-obtained"><span class="header-section-number">2.1</span> How the Numbers Are Obtained</h3>
+<section id="how-the-numbers-are-obtained" class="level3">
+<h3 class="anchored" data-anchor-id="how-the-numbers-are-obtained">How the Numbers Are Obtained</h3>
 <p>The training process happens in stages:</p>
 <p><strong>Pre-training:</strong> The model reads massive amounts of text from the internet, books, code repositories, academic papers—essentially a substantial portion of human written output. During this phase, it learns to predict “what word comes next?” billions of times. The parameters adjust to get better at prediction. This takes months and costs tens to hundreds of millions of dollars in compute.</p>
 <p><strong>Post-training (Fine-tuning):</strong> The base model is then adjusted using:</p>
@@ -279,8 +279,8 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 </section>
-<section id="the-context-window" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="the-context-window"><span class="header-section-number">3</span> The Context Window</h2>
+<section id="the-context-window" class="level2">
+<h2 class="anchored" data-anchor-id="the-context-window">The Context Window</h2>
 <p>The context window is the maximum amount of text (and other inputs) the model can consider at once:<br>
 <strong>(system instructions + your prompt + chat history + retrieved snippets + tool outputs + file excerpts) + the model’s output.</strong></p>
 <p>If the total exceeds the limit:</p>
@@ -288,8 +288,8 @@ ul.task-list li input[type="checkbox"] {
 <li>the system must drop, summarize, or “compact” something,</li>
 <li>or it returns an error (depending on provider).</li>
 </ul>
-<section id="what-providers-may-automatically-include-in-the-context-window-even-if-you-dont-see-it" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="what-providers-may-automatically-include-in-the-context-window-even-if-you-dont-see-it"><span class="header-section-number">3.1</span> What providers may automatically include in the context window (even if you don’t see it)</h3>
+<section id="what-providers-may-automatically-include-in-the-context-window-even-if-you-dont-see-it" class="level3">
+<h3 class="anchored" data-anchor-id="what-providers-may-automatically-include-in-the-context-window-even-if-you-dont-see-it">What providers may automatically include in the context window (even if you don’t see it)</h3>
 <p>Many modern assistants can add extra context such as:</p>
 <ul>
 <li>system safety instructions,</li>
@@ -300,8 +300,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>This is why two people can ask the “same prompt” and get slightly different results.</p>
 </section>
-<section id="uploading-files-with-your-prompt" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="uploading-files-with-your-prompt"><span class="header-section-number">3.2</span> Uploading files with your prompt</h3>
+<section id="uploading-files-with-your-prompt" class="level3">
+<h3 class="anchored" data-anchor-id="uploading-files-with-your-prompt">Uploading files with your prompt</h3>
 <p>In most systems, uploading a file does <strong>not</strong> mean the entire file is placed into the context window verbatim.</p>
 <p>A common approach is <strong>retrieval</strong>:</p>
 <ul>
@@ -310,8 +310,8 @@ ul.task-list li input[type="checkbox"] {
 <li>and only relevant chunks are pulled into the context window when needed (based on what you asked about the file)</li>
 </ul>
 </section>
-<section id="what-happens-when-you-near-the-limit-of-the-context-window" class="level3" data-number="3.3">
-<h3 data-number="3.3" class="anchored" data-anchor-id="what-happens-when-you-near-the-limit-of-the-context-window"><span class="header-section-number">3.3</span> What happens when you near the limit of the context window</h3>
+<section id="what-happens-when-you-near-the-limit-of-the-context-window" class="level3">
+<h3 class="anchored" data-anchor-id="what-happens-when-you-near-the-limit-of-the-context-window">What happens when you near the limit of the context window</h3>
 <p>Different providers handle this differently:</p>
 <ul>
 <li>Some UIs summarize older messages.</li>
@@ -319,8 +319,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Some run a compaction step to preserve key details.</li>
 </ul>
 </section>
-<section id="output-limits" class="level3" data-number="3.4">
-<h3 data-number="3.4" class="anchored" data-anchor-id="output-limits"><span class="header-section-number">3.4</span> Output limits</h3>
+<section id="output-limits" class="level3">
+<h3 class="anchored" data-anchor-id="output-limits">Output limits</h3>
 <p>Even with a very large <strong>input</strong> window, models have <strong>output caps</strong>. When you ask for “write 30 pages,” you usually get:</p>
 <ul>
 <li>a truncated response,</li>
@@ -332,10 +332,10 @@ For long outputs, ask the model to 1) write an outline, 2) draft section 1, 3) d
 This yields better control and fewer errors.</p>
 </section>
 </section>
-<section id="thinking-planning-models-and-tool-use" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="thinking-planning-models-and-tool-use"><span class="header-section-number">4</span> “Thinking” (Planning) Models and Tool Use</h2>
-<section id="thinking-models" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="thinking-models"><span class="header-section-number">4.1</span> Thinking Models</h3>
+<section id="thinking-planning-models-and-tool-use" class="level2">
+<h2 class="anchored" data-anchor-id="thinking-planning-models-and-tool-use">“Thinking” (Planning) Models and Tool Use</h2>
+<section id="thinking-models" class="level3">
+<h3 class="anchored" data-anchor-id="thinking-models">Thinking Models</h3>
 <p>Standard LLMs generate output token-by-token in a single pass—they don’t “stop and think.” <strong>Thinking models</strong> (like OpenAI’s o1/o3, Claude with extended thinking, or DeepSeek R1) add an explicit reasoning phase before producing their final answer.</p>
 <p>How it works:</p>
 <ol type="1">
@@ -351,8 +351,8 @@ This yields better control and fewer errors.</p>
 </ol>
 <p><strong>Trade-offs:</strong> Thinking models are better at complex reasoning (math, logic, multi-step problems) but are slower and more expensive because they generate many more tokens internally.</p>
 </section>
-<section id="tool-use" class="level3" data-number="4.2">
-<h3 data-number="4.2" class="anchored" data-anchor-id="tool-use"><span class="header-section-number">4.2</span> Tool Use</h3>
+<section id="tool-use" class="level3">
+<h3 class="anchored" data-anchor-id="tool-use">Tool Use</h3>
 <p>LLMs can only generate tokens—they can’t browse the web, run code, or access databases. “Tool use” (also called “function calling”) extends models to interact with external systems.</p>
 <p>How it works:</p>
 <ol type="1">
@@ -665,7 +665,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       &nbsp;
     </div>   
-    <div class="nav-footer-center">GenAI For Teaching and Research | 2026</div>
+    <div class="nav-footer-center">GenAI in Academia | 2026</div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
