@@ -131,8 +131,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../fundamentals/04_interfaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Interfaces</span></a>
+  <a href="../fundamentals/04_products.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Products</span></a>
   </div>
 </li>
       </ul>
@@ -153,8 +153,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#framing-what-i-mean-by-genai" id="toc-framing-what-i-mean-by-genai" class="nav-link active" data-scroll-target="#framing-what-i-mean-by-genai"><span class="header-section-number">1</span> Framing: what I mean by “GenAI”</a></li>
-  <li><a href="#why-the-genai-as-a-stack-framing-matters" id="toc-why-the-genai-as-a-stack-framing-matters" class="nav-link" data-scroll-target="#why-the-genai-as-a-stack-framing-matters"><span class="header-section-number">2</span> Why the “GenAI as a stack” framing matters</a></li>
+  <li><a href="#framing-what-i-mean-by-genai" id="toc-framing-what-i-mean-by-genai" class="nav-link active" data-scroll-target="#framing-what-i-mean-by-genai">Framing: what I mean by “GenAI”</a></li>
+  <li><a href="#why-the-genai-as-a-stack-framing-matters" id="toc-why-the-genai-as-a-stack-framing-matters" class="nav-link" data-scroll-target="#why-the-genai-as-a-stack-framing-matters">Why the “GenAI as a stack” framing matters</a></li>
   </ul>
 </nav>
     </div>
@@ -178,8 +178,8 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="framing-what-i-mean-by-genai" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="framing-what-i-mean-by-genai"><span class="header-section-number">1</span> Framing: what I mean by “GenAI”</h2>
+<section id="framing-what-i-mean-by-genai" class="level2">
+<h2 class="anchored" data-anchor-id="framing-what-i-mean-by-genai">Framing: what I mean by “GenAI”</h2>
 <p>When people say “AI,” or “GenAI,” they often mean “ChatGPT” or a similar chat interface. <strong>It’s more useful to think of GenAI in layers:</strong></p>
 <ol type="1">
 <li><strong>Models</strong> -&gt; the “brains”:
@@ -192,25 +192,22 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><strong>Tools</strong> -&gt; capabilities around the model:
 <ul>
-<li>web search</li>
-<li>Python interpreter</li>
-<li>file analysis</li>
-<li>spreadsheet/slides generation</li>
-<li>connectors to other software/platforms like Outlook, Gmail, Dropbox, Google Drive, GitHub, etc.</li>
+<li>Web search</li>
+<li>Code execution</li>
+<li>Database queries</li>
+<li>Connectors to other software/platforms like file systems, email clients, browsers, IDEs, CRMs, messaging apps etc
+<ul>
+<li>Facilitated through APIs (application programming interfaces), and MCP (model context protocol) servers</li>
+</ul></li>
 </ul></li>
 <li><strong>Products</strong> (interfaces):
 <ul>
-<li>Web: ChatGPT, Claude, Gemini, Grok</li>
+<li>Web, desktop, and mobile apps from model providers: ChatGPT, Claude, Gemini, Grok</li>
 <li>Coding agents: Codex, Claude Code, Gemini Code Assist, GitHub Copilot</li>
-<li>Apps: Perplexity, Replit, Cursor, NotebookLM
-<ul>
-<li>Many of these products use <strong>agents</strong> in the background (workflows orchestrated by a model)
-<ul>
-<li>The model plans steps, uses tools, analyzes the output of those tools, and iterates until it produces the requested output</li>
-</ul></li>
-</ul></li>
+<li>Third-party apps: Perplexity, Replit, Cursor</li>
 </ul></li>
 </ol>
+<p>Many of these products use agentic workflows (<strong>agents</strong>) in the background (workflows orchestrated by a model) - The model plans steps, uses tools, analyzes the output of those tools, and iterates until it produces the requested output</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../artifacts/ecosystem_diagram_new.png" class="img-fluid figure-img"></p>
@@ -218,8 +215,8 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </section>
-<section id="why-the-genai-as-a-stack-framing-matters" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="why-the-genai-as-a-stack-framing-matters"><span class="header-section-number">2</span> Why the “GenAI as a stack” framing matters</h2>
+<section id="why-the-genai-as-a-stack-framing-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-the-genai-as-a-stack-framing-matters">Why the “GenAI as a stack” framing matters</h2>
 <p>It reminds us that:</p>
 <ul>
 <li>Jumps in capability are not just about better models, but <strong>better models + better tools + better agentic workflows</strong>.</li>
@@ -487,7 +484,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       &nbsp;
     </div>   
-    <div class="nav-footer-center">GenAI For Teaching and Research | 2026</div>
+    <div class="nav-footer-center">GenAI in Academia | 2026</div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

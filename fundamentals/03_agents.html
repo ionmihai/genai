@@ -135,8 +135,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../fundamentals/04_interfaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Interfaces</span></a>
+  <a href="../fundamentals/04_products.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Products</span></a>
   </div>
 </li>
       </ul>
@@ -157,16 +157,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#thinking-planning-models-and-tool-use" id="toc-thinking-planning-models-and-tool-use" class="nav-link active" data-scroll-target="#thinking-planning-models-and-tool-use"><span class="header-section-number">1</span> “Thinking” (Planning) Models and Tool Use</a>
+  <li><a href="#what-are-ai-agents" id="toc-what-are-ai-agents" class="nav-link active" data-scroll-target="#what-are-ai-agents">What Are AI Agents?</a></li>
+  <li><a href="#thinking-models" id="toc-thinking-models" class="nav-link" data-scroll-target="#thinking-models">Thinking Models</a></li>
+  <li><a href="#tool-use" id="toc-tool-use" class="nav-link" data-scroll-target="#tool-use">Tool Use</a></li>
+  <li><a href="#how-agentic-workflows-address-model-shortcomings" id="toc-how-agentic-workflows-address-model-shortcomings" class="nav-link" data-scroll-target="#how-agentic-workflows-address-model-shortcomings">How Agentic Workflows Address Model Shortcomings</a>
   <ul class="collapse">
-  <li><a href="#thinking-models" id="toc-thinking-models" class="nav-link" data-scroll-target="#thinking-models"><span class="header-section-number">1.1</span> Thinking Models</a></li>
-  <li><a href="#tool-use" id="toc-tool-use" class="nav-link" data-scroll-target="#tool-use"><span class="header-section-number">1.2</span> Tool Use</a></li>
-  </ul></li>
-  <li><a href="#how-agentic-workflows-address-model-shortcomings" id="toc-how-agentic-workflows-address-model-shortcomings" class="nav-link" data-scroll-target="#how-agentic-workflows-address-model-shortcomings"><span class="header-section-number">2</span> How Agentic Workflows Address Model Shortcomings</a>
-  <ul class="collapse">
-  <li><a href="#long-term-memory" id="toc-long-term-memory" class="nav-link" data-scroll-target="#long-term-memory"><span class="header-section-number">2.1</span> Long-term memory</a></li>
-  <li><a href="#halucinations" id="toc-halucinations" class="nav-link" data-scroll-target="#halucinations"><span class="header-section-number">2.2</span> Halucinations</a></li>
-  <li><a href="#ability-to-act" id="toc-ability-to-act" class="nav-link" data-scroll-target="#ability-to-act"><span class="header-section-number">2.3</span> Ability to act</a></li>
+  <li><a href="#knowledge-cutoff" id="toc-knowledge-cutoff" class="nav-link" data-scroll-target="#knowledge-cutoff">Knowledge cutoff</a></li>
+  <li><a href="#long-term-memory" id="toc-long-term-memory" class="nav-link" data-scroll-target="#long-term-memory">Long-term memory</a></li>
+  <li><a href="#hallucinations" id="toc-hallucinations" class="nav-link" data-scroll-target="#hallucinations">Hallucinations</a></li>
+  <li><a href="#ability-to-act" id="toc-ability-to-act" class="nav-link" data-scroll-target="#ability-to-act">Ability to act</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -192,15 +191,24 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="thinking-planning-models-and-tool-use" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="thinking-planning-models-and-tool-use"><span class="header-section-number">1</span> “Thinking” (Planning) Models and Tool Use</h2>
-<section id="thinking-models" class="level3" data-number="1.1">
-<h3 data-number="1.1" class="anchored" data-anchor-id="thinking-models"><span class="header-section-number">1.1</span> Thinking Models</h3>
-<p>Standard LLMs generate output token-by-token in a single pass—they don’t “stop and think.” <strong>Thinking models</strong> (like OpenAI’s o1/o3, Claude with extended thinking, or DeepSeek R1) add an explicit reasoning phase before producing their final answer.</p>
+<section id="what-are-ai-agents" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-ai-agents">What Are AI Agents?</h2>
+<p>An <strong>AI agent</strong> is an LLM that can reason through problems, use tools, and take actions autonomously to accomplish goals. While a basic LLM simply generates a response to your prompt, an agent can:</p>
+<ul>
+<li><strong>Think</strong> through multi-step problems before answering</li>
+<li><strong>Use tools</strong> like web search, code execution, or database queries</li>
+<li><strong>Take actions</strong> in external systems (send emails, update files, call APIs)</li>
+<li><strong>Iterate</strong> based on results—adjusting its approach when something doesn’t work</li>
+</ul>
+<p>The term “agentic” describes any workflow where the model operates with some degree of autonomy, making decisions about <em>what</em> to do next rather than just responding to a single prompt. This ranges from simple tool-calling (the model decides when to search the web) to fully autonomous agents that can complete complex multi-step tasks with minimal human oversight.</p>
+</section>
+<section id="thinking-models" class="level2">
+<h2 class="anchored" data-anchor-id="thinking-models">Thinking Models</h2>
+<p>Standard LLMs generate output token-by-token in a single pass—they don’t “stop and think.” Thinking models (like GPT 5.2, Gemini 3.0 Pro, Claude Opus 4.5) <strong>add an explicit reasoning phase before producing their final answer</strong>.</p>
 <p>How it works:</p>
 <ol type="1">
 <li>The model receives your prompt</li>
-<li>Before answering, it generates a <strong>chain of thought</strong>—a series of reasoning steps that break down the problem
+<li>Before answering, it generates a <strong>chain of thought (CoT)</strong>—a series of reasoning steps that break down the problem
 <ul>
 <li>In modern systems, this thinking is visible to you and it’s a good idea to inspect it and see if you can spot issues with it</li>
 <li>For some producs like ChatGPT Pro Deep Research, you can <strong>pause</strong> the thinking/execution loop if you want to correct some reasoning errors or want to add more context<br>
@@ -211,8 +219,8 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p><strong>Trade-offs:</strong> Thinking models are better at complex reasoning (math, logic, multi-step problems) but are slower and more expensive because they generate many more tokens internally.</p>
 </section>
-<section id="tool-use" class="level3" data-number="1.2">
-<h3 data-number="1.2" class="anchored" data-anchor-id="tool-use"><span class="header-section-number">1.2</span> Tool Use</h3>
+<section id="tool-use" class="level2">
+<h2 class="anchored" data-anchor-id="tool-use">Tool Use</h2>
 <p>LLMs can only generate tokens—they can’t browse the web, run code, or access databases. “Tool use” (also called “function calling”) extends models to interact with external systems.</p>
 <p>How it works:</p>
 <ol type="1">
@@ -267,26 +275,61 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>The key difference from the basic pipeline: thinking models generate reasoning tokens as <em>output</em> that gets appended to the context, creating a loop where the model “thinks out loud” before producing its final answer. Tool-enabled models can similarly pause, call external tools, and incorporate results before continuing.</p>
 </section>
+<section id="how-agentic-workflows-address-model-shortcomings" class="level2">
+<h2 class="anchored" data-anchor-id="how-agentic-workflows-address-model-shortcomings">How Agentic Workflows Address Model Shortcomings</h2>
+<p>LLMs on their own have fundamental limitations: they only know what was in their training data, they can confidently generate false information, they can’t remember past conversations, and they can’t take actions in the world. Agentic workflows—combining thinking, tool use, and orchestration—go a long way towards addressing these limitations.</p>
+<section id="knowledge-cutoff" class="level3">
+<h3 class="anchored" data-anchor-id="knowledge-cutoff">Knowledge cutoff</h3>
+<p>LLMs are trained on data up to a certain date. They don’t know about recent events, updated policies, or new research.</p>
+<p><strong>Web search tools</strong> allow models to retrieve current information in real-time. When you ask ChatGPT about today’s news, it searches the web and incorporates fresh results into its response. This is called <strong>grounding</strong>—anchoring the model’s output in factual, up-to-date sources.</p>
 </section>
-<section id="how-agentic-workflows-address-model-shortcomings" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="how-agentic-workflows-address-model-shortcomings"><span class="header-section-number">2</span> How Agentic Workflows Address Model Shortcomings</h2>
-<section id="long-term-memory" class="level3" data-number="2.1">
-<h3 data-number="2.1" class="anchored" data-anchor-id="long-term-memory"><span class="header-section-number">2.1</span> Long-term memory</h3>
+<section id="long-term-memory" class="level3">
+<h3 class="anchored" data-anchor-id="long-term-memory">Long-term memory</h3>
+<p>The context window is the model’s only “memory”—once a conversation exceeds it, earlier content is forgotten. Models also can’t remember anything from previous sessions.</p>
+<p><strong>External memory systems</strong> give models persistent storage:</p>
 <ul>
-<li>Tools to access databases (including vector databases)</li>
+<li><strong>Conversation memory:</strong> Systems can store summaries or key facts from past sessions and inject them into future conversations</li>
+<li><strong>Structured databases:</strong> Tools can query SQL databases, spreadsheets, or CRMs to retrieve specific records</li>
+<li><strong>Vector databases and RAG:</strong> For unstructured knowledge (documents, policies, research papers), we use <em>Retrieval-Augmented Generation (RAG)</em></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="What is RAG?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What is RAG?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Retrieval-Augmented Generation (RAG)</strong> is a technique that lets models answer questions using your own documents:</p>
+<ol type="1">
+<li><strong>Indexing:</strong> Documents are split into chunks and converted into numerical vectors (embeddings) that capture semantic meaning. These are stored in a vector database.</li>
+<li><strong>Retrieval:</strong> When you ask a question, your query is also converted to a vector. The system finds document chunks with similar vectors (i.e., related content).</li>
+<li><strong>Generation:</strong> The retrieved chunks are inserted into the prompt as context, and the model generates an answer grounded in your documents.</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="hallucinations" class="level3">
+<h3 class="anchored" data-anchor-id="hallucinations">Hallucinations</h3>
+<p>Models sometimes generate plausible-sounding but factually incorrect information. This happens because LLMs are pattern-completion machines—they predict likely text, not truthful text.</p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li><strong>Web search grounding:</strong> You can ask models to cite sources, so you can verify claims. Many systems now include inline citations.</li>
+<li><strong>RAG with citations:</strong> Answers grounded in retrieved documents can point to specific sources, making verification easy.</li>
+<li><strong>Code execution:</strong> For math and logic, models can write and run code rather than “reasoning” their way to an answer.</li>
+<li><strong>Verification loops:</strong> Agentic systems can include explicit fact-checking steps where the model (or a separate model) reviews output for consistency and flags uncertain claims.</li>
 </ul>
 </section>
-<section id="halucinations" class="level3" data-number="2.2">
-<h3 data-number="2.2" class="anchored" data-anchor-id="halucinations"><span class="header-section-number">2.2</span> Halucinations</h3>
+<section id="ability-to-act" class="level3">
+<h3 class="anchored" data-anchor-id="ability-to-act">Ability to act</h3>
+<p>LLMs can only generate text. To actually <em>do</em> things—send emails, update databases, control software—they need to interact with external systems.</p>
+<p><strong>Solutions:</strong></p>
 <ul>
-<li>Web search</li>
-<li>RAG</li>
-</ul>
-</section>
-<section id="ability-to-act" class="level3" data-number="2.3">
-<h3 data-number="2.3" class="anchored" data-anchor-id="ability-to-act"><span class="header-section-number">2.3</span> Ability to act</h3>
-<ul>
-<li>Connectors to external systems (e.g.&nbsp;via function calling or MCP servers)</li>
+<li><p><strong>APIs (Application Programming Interfaces):</strong> APIs are standardized ways for software systems to communicate. A model might request a call to a calendar API to schedule meetings, a Slack API to post messages, or a payment API to process transactions. The model generates the appropriate API call, the system executes it, and results flow back.</p></li>
+<li><p><strong>MCP (Model Context Protocol):</strong> MCP is an emerging open standard (developed by Anthropic) that provides a uniform way to connect AI models to external tools and data sources. Instead of building custom integrations for each tool, developers can create MCP “servers” that any MCP-compatible model can use.</p></li>
+<li><p><strong>Browser automation:</strong> Agentic browsers (like OpenAI Atlas or Perplexity Comet) let models navigate websites, fill forms, click buttons, and extract information—essentially using the web like a human would.</p></li>
 </ul>
 
 
@@ -547,7 +590,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       &nbsp;
     </div>   
-    <div class="nav-footer-center">GenAI For Teaching and Research | 2026</div>
+    <div class="nav-footer-center">GenAI in Academia | 2026</div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
