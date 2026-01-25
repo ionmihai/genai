@@ -157,11 +157,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-happens-when-you-prompt" id="toc-what-happens-when-you-prompt" class="nav-link active" data-scroll-target="#what-happens-when-you-prompt">What Happens When You Prompt</a></li>
-  <li><a href="#what-is-an-llm" id="toc-what-is-an-llm" class="nav-link" data-scroll-target="#what-is-an-llm">What is an LLM?</a>
+  <li><a href="#what-is-an-llm" id="toc-what-is-an-llm" class="nav-link active" data-scroll-target="#what-is-an-llm">What is an LLM?</a>
   <ul class="collapse">
   <li><a href="#how-the-numbers-are-obtained" id="toc-how-the-numbers-are-obtained" class="nav-link" data-scroll-target="#how-the-numbers-are-obtained">How the Numbers Are Obtained</a></li>
   </ul></li>
+  <li><a href="#what-happens-when-you-prompt" id="toc-what-happens-when-you-prompt" class="nav-link" data-scroll-target="#what-happens-when-you-prompt">What Happens When You Prompt</a></li>
   <li><a href="#the-context-window" id="toc-the-context-window" class="nav-link" data-scroll-target="#the-context-window">The Context Window</a>
   <ul class="collapse">
   <li><a href="#what-may-be-automatically-include-in-the-context-window" id="toc-what-may-be-automatically-include-in-the-context-window" class="nav-link" data-scroll-target="#what-may-be-automatically-include-in-the-context-window">What may be automatically include in the context window</a></li>
@@ -169,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#what-happens-when-you-near-the-limit-of-the-context-window" id="toc-what-happens-when-you-near-the-limit-of-the-context-window" class="nav-link" data-scroll-target="#what-happens-when-you-near-the-limit-of-the-context-window">What happens when you near the limit of the context window</a></li>
   <li><a href="#output-limits" id="toc-output-limits" class="nav-link" data-scroll-target="#output-limits">Output limits</a></li>
   </ul></li>
-  <li><a href="#frontier-genai-models-are-multimodal" id="toc-frontier-genai-models-are-multimodal" class="nav-link" data-scroll-target="#frontier-genai-models-are-multimodal">Frontier GenAI Models are Multimodal</a>
+  <li><a href="#multimodality" id="toc-multimodality" class="nav-link" data-scroll-target="#multimodality">Multimodality</a>
   <ul class="collapse">
   <li><a href="#its-still-tokens-in-tokens-out" id="toc-its-still-tokens-in-tokens-out" class="nav-link" data-scroll-target="#its-still-tokens-in-tokens-out">It’s still tokens in, tokens out</a></li>
   <li><a href="#specialized-model-orchestration" id="toc-specialized-model-orchestration" class="nav-link" data-scroll-target="#specialized-model-orchestration">Specialized model orchestration</a></li>
@@ -205,6 +205,55 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="what-is-an-llm" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-an-llm">What is an LLM?</h2>
+<p><strong>A large language model is just a file full of numbers.</strong></p>
+<p>When companies like OpenAI, Anthropic, or Google train a model, they’re creating a very large file—hundreds of gigabytes for frontier models—that contains billions of numerical parameters. These parameters encode patterns learned from reading enormous amounts of text.</p>
+<p>That is what the model “knows”—statistical patterns about how language works and what tends to follow what.</p>
+<section id="how-the-numbers-are-obtained" class="level3">
+<h3 class="anchored" data-anchor-id="how-the-numbers-are-obtained">How the Numbers Are Obtained</h3>
+<p>Modern frontier models like GPT 5.2 and Claude Opus 4.5 are built through a multi-stage training pipeline. Each stage shapes the model’s capabilities in different ways.</p>
+<section id="stage-1-pre-training" class="level4">
+<h4 class="anchored" data-anchor-id="stage-1-pre-training">Stage 1: Pre-training</h4>
+<p>The foundation of every LLM is <strong>next-token prediction</strong> on massive text datasets. The model reads text from the internet, books, code repositories, academic papers, and other sources—a substantial portion of human written output. For each position in the text, it tries to predict what token comes next. When it guesses wrong, the parameters adjust slightly (via <strong>stochastic gradient descent</strong>) to make a better prediction next time. This process repeats trillions of times.</p>
+<p>Pre-training is expensive—months of compute time on thousands of GPUs, costing hundreds of millions of dollars. But the result is a “base model” that has absorbed vast knowledge about language, facts, reasoning patterns, and code.</p>
+</section>
+<section id="stage-2-post-training" class="level4">
+<h4 class="anchored" data-anchor-id="stage-2-post-training">Stage 2: Post-training</h4>
+<p>The base model can complete text, but it doesn’t know how to be a helpful assistant. Post-training shapes the model’s behavior:</p>
+<p><strong>Supervised fine-tuning (SFT):</strong> Humans write thousands of example conversations demonstrating ideal assistant behavior—how to respond to questions, handle ambiguity, refuse harmful requests, and maintain a helpful tone. The model learns to imitate these examples.</p>
+<p><strong>Reinforcement learning from human feedback (RLHF):</strong> Humans compare pairs of model responses and indicate which is better. These preferences train a “reward model” that can score any response. The LLM then optimizes to produce responses that score highly—learning to be more helpful, accurate, and aligned with human values.</p>
+</section>
+<section id="stage-3-reasoning-enhancement-for-thinking-models" class="level4">
+<h4 class="anchored" data-anchor-id="stage-3-reasoning-enhancement-for-thinking-models">Stage 3: Reasoning Enhancement (for Thinking Models)</h4>
+<p>Standard post-training produces capable assistants, but they still struggle with complex reasoning. Models like GPT 5.2 and Claude Opus 4.5 undergo additional training specifically for multi-step reasoning:</p>
+<p><strong>Reinforcement learning on reasoning tasks:</strong> The model is given problems with verifiable answers (math, logic, coding challenges). It generates chain-of-thought reasoning, and the training process rewards chains that lead to correct answers. Over many iterations, the model learns <em>how to think</em>—which reasoning strategies work, when to reconsider, and how to break down complex problems.</p>
+<p><strong>Process reward models:</strong> Rather than just rewarding correct final answers, these models learn to evaluate each step of the reasoning process. This teaches the model to build sound arguments step-by-step, not just pattern-match to answers.</p>
+<p><strong>Synthetic data and self-play:</strong> Models generate their own training data—producing reasoning traces, solutions, and even new problems. The best outputs become training examples, creating a flywheel of improvement.</p>
+</section>
+<section id="continuous-refinement" class="level4">
+<h4 class="anchored" data-anchor-id="continuous-refinement">Continuous Refinement</h4>
+<p>Deployed models continue to improve through ongoing fine-tuning, bug fixes, and capability additions. The model you use today may be subtly different from last month’s version.</p>
+<!--
+OLD VERSION:
+
+The training process happens in stages:
+
+**Pre-training:** The model reads massive amounts of text from the internet, books, code repositories, academic papers—essentially a substantial portion of human written output. During this phase, it learns to predict "what word comes next?" billions of times. The parameters adjust to get better at prediction. This takes months and costs hundreds of millions of dollars in compute.
+
+**Post-training (Fine-tuning):** The base model is then adjusted using:
+
+- **Supervised fine-tuning (SFT):** Humans write example conversations showing how the model should respond
+- **Reinforcement learning from human feedback (RLHF):** Humans rate model outputs, and the model learns to generate outputs that get higher ratings
+- **Constitutional AI (CAI):** Used by Anthropic, where the model learns to critique and revise its own outputs based on principles
+
+**Continuous refinement:** Models are updated regularly to improve performance, fix issues, and add capabilities.
+
+Key terms you might hear: "transformer architecture" (the mathematical structure these models use), "attention mechanism" (how the model decides what parts of the input to focus on), "parameters" or "weights" (the numbers in the file).
+-->
+</section>
+</section>
+</section>
 <section id="what-happens-when-you-prompt" class="level2">
 <h2 class="anchored" data-anchor-id="what-happens-when-you-prompt">What Happens When You Prompt</h2>
 <p>When you type a question into ChatGPT or Claude, here’s what actually happens:</p>
@@ -264,30 +313,18 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="what-is-an-llm" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-an-llm">What is an LLM?</h2>
-<p><strong>A large language model is just a file full of numbers.</strong></p>
-<p>When companies like OpenAI, Anthropic, or Google train a model, they’re creating a very large file—hundreds of gigabytes for frontier models—that contains billions of numerical parameters. These parameters encode patterns learned from reading enormous amounts of text.</p>
-<p>That is what the model “knows”—statistical patterns about how language works and what tends to follow what.</p>
-<section id="how-the-numbers-are-obtained" class="level3">
-<h3 class="anchored" data-anchor-id="how-the-numbers-are-obtained">How the Numbers Are Obtained</h3>
-<p>The training process happens in stages:</p>
-<p><strong>Pre-training:</strong> The model reads massive amounts of text from the internet, books, code repositories, academic papers—essentially a substantial portion of human written output. During this phase, it learns to predict “what word comes next?” billions of times. The parameters adjust to get better at prediction. This takes months and costs tens to hundreds of millions of dollars in compute.</p>
-<p><strong>Post-training (Fine-tuning):</strong> The base model is then adjusted using:</p>
-<ul>
-<li><strong>Supervised fine-tuning (SFT):</strong> Humans write example conversations showing how the model should respond</li>
-<li><strong>Reinforcement learning from human feedback (RLHF):</strong> Humans rate model outputs, and the model learns to generate outputs that get higher ratings</li>
-<li><strong>Constitutional AI (CAI):</strong> Used by Anthropic, where the model learns to critique and revise its own outputs based on principles</li>
-</ul>
-<p><strong>Continuous refinement:</strong> Models are updated regularly to improve performance, fix issues, and add capabilities.</p>
-<p>Key terms you might hear: “transformer architecture” (the mathematical structure these models use), “attention mechanism” (how the model decides what parts of the input to focus on), “parameters” or “weights” (the numbers in the file).</p>
-<hr>
-</section>
-</section>
 <section id="the-context-window" class="level2">
 <h2 class="anchored" data-anchor-id="the-context-window">The Context Window</h2>
-<p>The context window is the maximum amount of text (and other inputs) the model can consider at once:<br>
-<strong>(system instructions + your prompt + chat history + retrieved snippets + tool outputs + file excerpts) + the model’s output.</strong></p>
+<p>The context window is the maximum amount of text (and other inputs) the model can consider at once. This includes more than just your prompt:</p>
+<ul>
+<li>system instructions</li>
+<li>your prompt</li>
+<li>chat history</li>
+<li>retrieved snippets</li>
+<li>tool outputs</li>
+<li>file excerpts</li>
+<li>the model’s output</li>
+</ul>
 <p>If the total exceeds the limit:</p>
 <ul>
 <li>the system must drop, summarize, or “compact” something,</li>
@@ -297,18 +334,18 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="what-may-be-automatically-include-in-the-context-window">What may be automatically include in the context window</h3>
 <p>Many modern assistants can add extra context such as:</p>
 <ul>
-<li>system safety instructions,</li>
-<li>your custom instructions,</li>
-<li>project instructions,</li>
-<li>“memory” items (facts it saved about your preferences),</li>
-<li>snippets retrieved from uploaded files or connected tools.</li>
+<li>system safety instructions</li>
+<li>your custom instructions</li>
+<li>project instructions</li>
+<li>“memory” items (facts it saved about your preferences)</li>
+<li>snippets retrieved from uploaded files or connected tools</li>
 </ul>
 <p>This is why two people can ask the “same prompt” and get slightly different results.</p>
 </section>
 <section id="uploading-files-with-your-prompt" class="level3">
 <h3 class="anchored" data-anchor-id="uploading-files-with-your-prompt">Uploading files with your prompt</h3>
 <p>In most systems, uploading a file does <strong>not</strong> mean the entire file is placed into the context window verbatim.</p>
-<p>A common approach is <strong>retrieval</strong>:</p>
+<p>A common approach is <strong>retrieval</strong> (see “RAG” on <a href="../fundamentals/03_agents.html">Agents</a> page):</p>
 <ul>
 <li>the file is chunked,</li>
 <li>the system builds embeddings (a searchable representation) from each chunk</li>
@@ -319,9 +356,9 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="what-happens-when-you-near-the-limit-of-the-context-window">What happens when you near the limit of the context window</h3>
 <p>Different providers handle this differently:</p>
 <ul>
-<li>Some UIs summarize older messages.</li>
-<li>Some drop the earliest conversation turns (“truncation”).</li>
-<li>Some run a compaction step to preserve key details.</li>
+<li>Some UIs summarize older messages</li>
+<li>Some drop the earliest conversation turns (“truncation”)</li>
+<li>Some run a compaction step to preserve key details</li>
 </ul>
 </section>
 <section id="output-limits" class="level3">
@@ -330,9 +367,9 @@ ul.task-list li input[type="checkbox"] {
 <p>For long outputs, ask the model to 1) write an outline, 2) draft section 1, 3) draft section 2 etc. This yields better control and fewer errors.</p>
 </section>
 </section>
-<section id="frontier-genai-models-are-multimodal" class="level2">
-<h2 class="anchored" data-anchor-id="frontier-genai-models-are-multimodal">Frontier GenAI Models are Multimodal</h2>
-<p>Models like GPT 5.2 and Gemini 3.0 are multimodal: they can input and output text, audio, images, and videos.</p>
+<section id="multimodality" class="level2">
+<h2 class="anchored" data-anchor-id="multimodality">Multimodality</h2>
+<p>Frontier models like GPT 5.2 and Gemini 3.0 are multimodal: <strong>they can process text, audio, images, and videos.</strong></p>
 <section id="its-still-tokens-in-tokens-out" class="level3">
 <h3 class="anchored" data-anchor-id="its-still-tokens-in-tokens-out">It’s still tokens in, tokens out</h3>
 <p>Even when processing images, audio, or video, these models still work with tokens—just not word tokens. Different modalities get converted into numerical representations:</p>
