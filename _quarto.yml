@@ -18,12 +18,12 @@ website:
             text: Models
           - href: fundamentals/03_agents.qmd
             text: Agents
-          - href: fundamentals/04_interfaces.qmd
-            text: Interfaces
+          - href: fundamentals/04_products.qmd
+            text: Products
       - href: resources.qmd
         text: Resources
   page-footer:
-    center: "GenAI For Teaching and Research | 2026"
+    center: "GenAI in Academia | 2026"
 
 format:
   html:
@@ -32,7 +32,8 @@ format:
     grid:
       sidebar-width: 300px
     toc: true
-    number-sections: true
+    toc-depth: 3
+    number-sections: false
     link-external-newwindow: true
     mermaid:
       theme: neutral

@@ -14,12 +14,8 @@ This website is designed to provide an introduction to Generative AI (GenAI) tec
 
 ## Safety and privacy 
 
-Before we talk about capabilities, we need shared norms. The biggest risks of GenAI in education and research are not “the models are too powerful,” but rather **misplaced trust** and **unsafe data handling**.
+Before we talk about capabilities, we need shared norms. Some of the biggest risks of GenAI in education and research are **misplaced trust** and **unsafe data handling**.
 
 - **Don’t upload sensitive data** into consumer tools unless your institution has an approved, protected environment ("Enterprise" level subscriptions usually offer this).
   - Examples of sensitive data: identifiable student info (FERPA), unpublished manuscripts, reviewer comments, proprietary datasets, IRB-protected data, confidential employer partner data.
-- **Verification is a skill, not an afterthought.** 
-    - Treat the model like a smart research/teaching assistant: helpful, fast, and occasionally wrong.
-- **We will not debate whether students “should” use AI.** They already are. The more productive conversation revolves around questions like:
-  - What learning outcomes do we want, in a world where GenAI can perform many of the **tasks** we traditionally teach our students?
-  - How do we design assessments that reward thinking/understanding?
+- Tools like **agentic browsers** and **conding agents** may automatically parse the environment you give them access to (e.g. an open browser window, or a folder on your computer). It is your responsibility to ensure that these environments do not contain sensitive data.

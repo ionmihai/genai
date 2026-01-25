@@ -71,7 +71,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../fundamentals/01_ecosystem.html">Fundamentals of GenAI</a></li><li class="breadcrumb-item"><a href="../fundamentals/key-capabilities.html">Key GenAI Capabilities</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      GenAI in Academia
+      </li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -114,25 +116,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../fundamentals/01_ecosystem.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The GenAI Ecosystem</span></a>
+ <span class="menu-text">The Ecosystem</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../fundamentals/how-llms-work.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How GenAI Models Work</span></a>
+  <a href="../fundamentals/02_models.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../fundamentals/key-capabilities.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Key GenAI Capabilities</span></a>
+  <a href="../fundamentals/03_agents.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Agents</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../fundamentals/choosing-tools.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Choosing the Right Tool</span></a>
+  <a href="../fundamentals/04_interfaces.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interfaces</span></a>
   </div>
 </li>
       </ul>
@@ -505,7 +507,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/ionmihai\.github\.io\/genai\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }

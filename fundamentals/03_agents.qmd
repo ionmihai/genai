@@ -3,19 +3,25 @@ title: "Generative AI Agents"
 subtitle: How agentic workflows help address the main shortcoming of GenAI models
 ---
 
+## What Are AI Agents?
 
+An **AI agent** is an LLM that can reason through problems, use tools, and take actions autonomously to accomplish goals. While a basic LLM simply generates a response to your prompt, an agent can:
 
+- **Think** through multi-step problems before answering
+- **Use tools** like web search, code execution, or database queries
+- **Take actions** in external systems (send emails, update files, call APIs)
+- **Iterate** based on results—adjusting its approach when something doesn't work
 
-## "Thinking" (Planning) Models and Tool Use
+The term "agentic" describes any workflow where the model operates with some degree of autonomy, making decisions about *what* to do next rather than just responding to a single prompt. This ranges from simple tool-calling (the model decides when to search the web) to fully autonomous agents that can complete complex multi-step tasks with minimal human oversight.
 
-### Thinking Models
+## Thinking Models
 
-Standard LLMs generate output token-by-token in a single pass—they don't "stop and think." **Thinking models** (like OpenAI's o1/o3, Claude with extended thinking, or DeepSeek R1) add an explicit reasoning phase before producing their final answer.
+Standard LLMs generate output token-by-token in a single pass—they don't "stop and think." Thinking models (like GPT 5.2, Gemini 3.0 Pro, Claude Opus 4.5) **add an explicit reasoning phase before producing their final answer**.
 
 How it works:
 
 1. The model receives your prompt
-2. Before answering, it generates a **chain of thought**—a series of reasoning steps that break down the problem
+2. Before answering, it generates a **chain of thought (CoT)**—a series of reasoning steps that break down the problem
     - In modern systems, this thinking is visible to you and it's a good idea to inspect it and see if you can spot issues with it
     - For some producs like ChatGPT Pro Deep Research, you can **pause** the thinking/execution loop if you want to correct some reasoning errors or want to add more context  
 4. The model can reconsider, catch errors, and refine its approach during this phase
@@ -23,7 +29,7 @@ How it works:
 
 **Trade-offs:** Thinking models are better at complex reasoning (math, logic, multi-step problems) but are slower and more expensive because they generate many more tokens internally.
 
-### Tool Use
+## Tool Use
 
 LLMs can only generate tokens—they can't browse the web, run code, or access databases. "Tool use" (also called "function calling") extends models to interact with external systems.
 
@@ -77,16 +83,51 @@ The key difference from the basic pipeline: thinking models generate reasoning t
 
 ## How Agentic Workflows Address Model Shortcomings
 
+LLMs on their own have fundamental limitations: they only know what was in their training data, they can confidently generate false information, they can't remember past conversations, and they can't take actions in the world. Agentic workflows—combining thinking, tool use, and orchestration—go a long way towards addressing these limitations.
+
+### Knowledge cutoff
+
+LLMs are trained on data up to a certain date. They don't know about recent events, updated policies, or new research.
+
+**Web search tools** allow models to retrieve current information in real-time. When you ask ChatGPT about today's news, it searches the web and incorporates fresh results into its response. This is called **grounding**—anchoring the model's output in factual, up-to-date sources.
 
 ### Long-term memory
 
-- Tools to access databases (including vector databases)
+The context window is the model's only "memory"—once a conversation exceeds it, earlier content is forgotten. Models also can't remember anything from previous sessions.
 
-### Halucinations
+**External memory systems** give models persistent storage:
 
-- Web search
-- RAG 
+- **Conversation memory:** Systems can store summaries or key facts from past sessions and inject them into future conversations
+- **Structured databases:** Tools can query SQL databases, spreadsheets, or CRMs to retrieve specific records
+- **Vector databases and RAG:** For unstructured knowledge (documents, policies, research papers), we use *Retrieval-Augmented Generation (RAG)*
+
+::: {.callout-note title="What is RAG?"}
+**Retrieval-Augmented Generation (RAG)** is a technique that lets models answer questions using your own documents:
+
+1. **Indexing:** Documents are split into chunks and converted into numerical vectors (embeddings) that capture semantic meaning. These are stored in a vector database.
+2. **Retrieval:** When you ask a question, your query is also converted to a vector. The system finds document chunks with similar vectors (i.e., related content).
+3. **Generation:** The retrieved chunks are inserted into the prompt as context, and the model generates an answer grounded in your documents.
+:::
+
+### Hallucinations
+
+Models sometimes generate plausible-sounding but factually incorrect information. This happens because LLMs are pattern-completion machines—they predict likely text, not truthful text.
+
+**Solutions:**
+
+- **Web search grounding:** You can ask models to cite sources, so you can verify claims. Many systems now include inline citations.
+- **RAG with citations:** Answers grounded in retrieved documents can point to specific sources, making verification easy.
+- **Code execution:** For math and logic, models can write and run code rather than "reasoning" their way to an answer.
+- **Verification loops:** Agentic systems can include explicit fact-checking steps where the model (or a separate model) reviews output for consistency and flags uncertain claims.
 
 ### Ability to act
 
-- Connectors to external systems (e.g. via function calling or MCP servers)
+LLMs can only generate text. To actually *do* things—send emails, update databases, control software—they need to interact with external systems.
+
+**Solutions:**
+
+- **APIs (Application Programming Interfaces):** APIs are standardized ways for software systems to communicate. A model might request a call to a calendar API to schedule meetings, a Slack API to post messages, or a payment API to process transactions. The model generates the appropriate API call, the system executes it, and results flow back.
+
+- **MCP (Model Context Protocol):** MCP is an emerging open standard (developed by Anthropic) that provides a uniform way to connect AI models to external tools and data sources. Instead of building custom integrations for each tool, developers can create MCP "servers" that any MCP-compatible model can use. 
+
+- **Browser automation:** Agentic browsers (like OpenAI Atlas or Perplexity Comet) let models navigate websites, fill forms, click buttons, and extract information—essentially using the web like a human would.

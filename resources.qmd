@@ -2,13 +2,57 @@
 title: "Resources"
 ---
 
-## Learning Resources
 
-### Courses & Tutorials
+## AI at University of Oklahoma
+
+- [Main website](https://www.ou.edu/ai)
+- [AI Tools and Applications](https://www.ou.edu/ai/resources)
+- OU AI Policies
+    - [AI Governance Principles](https://oupolicy.policystat.com/policy/18775652/latest/) - OU Login required
+    - [AI Teaching Guidance](https://oupolicy.policystat.com/policy/18775646/latest/) - OU Login required
+    - [AI Research Guidance](https://oupolicy.policystat.com/policy/18775654/latest/) - OU Login required
+- Instructional materials
+    - [Generative AI at the University](https://canvas.ou.edu/courses/345590) - OU Canvas login required
+
+## Documentation
+
+|  | OpenAI | Anthropic | Google | xAI |
+|---|---|---|---|---|
+| GUI (Web, Mobile, Desktop) App Documentation | [📖](https://chatgpt.com/overview) | [📖](https://support.claude.com/en/collections/4078531-claude) | [📖](https://support.google.com/gemini/?hl=en&utm_source=chatgpt.com#topic=15280100)  | [📖](https://help.x.com/en/using-x/about-grok?utm_source=chatgpt.com)  |
+| API Documentation | [📖](https://platform.openai.com/docs/overview) | [📖](https://platform.claude.com/docs/en/home) | [📖](https://ai.google.dev/gemini-api/docs) | [📖](https://docs.x.ai/docs/overview) |
+| Cookbook | [🍳](https://cookbook.openai.com/) | [🍳](https://platform.claude.com/cookbook/) | [🍳](https://ai.google.dev/gemini-api/cookbook) | [🍳](https://docs.x.ai/cookbook) |
+
+## Courses & Tutorials
 
 - [DeepLearning.AI — Generative AI for Everyone](https://www.deeplearning.ai/courses/generative-ai-for-everyone/) — Excellent intro course by Andrew Ng
-- [Google — Generative AI Learning Path](https://cloud.google.com/training/machinelearning-ai) — Comprehensive Google Cloud training
 - [Prompt Engineering Guide](https://www.promptingguide.ai/) — Community resource for prompting techniques
+    - I would recommend looking at the "Cookbook" links in the table above first. All of them have prompting guides specific to those models. Come here if you don't find what you need there.
+
+
+## AI in Academia 
+
+- [Finding Equilibrium](https://findingequilibriumfuturehighered.substack.com/p/ai-and-universities-strategies-for) - Series of posts on AI in higher ed by Prof. David Hummels and Prof. Jay Akridge
+
+
+## Ethics & Safety
+
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [EU AI Act Overview](https://artificialintelligenceact.eu/)
+
+
+
+## Stay Updated
+
+- [The Batch](https://www.deeplearning.ai/the-batch/) - Weekly AI newsletter by DeepLearning.AI
+- [AI News](https://news.smol.ai/) - Daily AI news digest
+- [The Innermost Loop](https://theinnermostloop.substack.com/) - Daily tech news curated by Dr. Alex Wissner-Gross 
+
+
+
+<!--
+
+## Learning Resources
+
 
 ### Documentation
 
@@ -42,11 +86,6 @@ title: "Resources"
 
 ## Research & News
 
-### Stay Updated
-
-- [The Batch](https://www.deeplearning.ai/the-batch/) — Weekly AI newsletter by DeepLearning.AI
-- [Import AI](https://jack-clark.net/) — Weekly AI developments newsletter
-- [AI News](https://buttondown.email/ainews) — Daily AI news digest
 
 ### Research
 
@@ -55,10 +94,5 @@ title: "Resources"
 - [Hugging Face](https://huggingface.co/) — Models, datasets, and community
 
 
-## Ethics & Safety
 
-### Guidelines & Frameworks
-
-- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
-- [EU AI Act Overview](https://artificialintelligenceact.eu/)
-- [Responsible AI Practices](https://ai.google/responsibility/responsible-ai-practices/)
+-->

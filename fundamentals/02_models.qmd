@@ -88,7 +88,7 @@ If the total exceeds the limit:
 - the system must drop, summarize, or “compact” something,
 - or it returns an error (depending on provider).
 
-### What providers may automatically include in the context window (even if you don’t see it)
+### What may be automatically include in the context window
 
 Many modern assistants can add extra context such as:
 
@@ -119,29 +119,62 @@ Different providers handle this differently:
 - Some run a compaction step to preserve key details.
 
 ### Output limits
-Even with a very large **input** window, models have **output caps**. When you ask for “write 30 pages,” you usually get:
+Even with a very large **input** window, models have **output caps**. When you ask for “write 30 pages,” you usually get a truncated response, a refusal, or something like “here is an outline; ask me to expand section by section.”
 
-- a truncated response,
-- or a refusal,
-- or “here is an outline; ask me to expand section by section.”
-
-**Recommendation:**  
-For long outputs, ask the model to 1) write an outline, 2) draft section 1, 3) draft section 2…  
-This yields better control and fewer errors.
+For long outputs, ask the model to 1) write an outline, 2) draft section 1, 3) draft section 2 etc. This yields better control and fewer errors.
 
 ## Frontier GenAI Models are Multimodal 
 
 Models like GPT 5.2 and Gemini 3.0 are multimodal: they can input and output text, audio, images, and videos.
 
-TODO:
 
-- explain that they still input and output tokens (just with a different representation)
-- mention names of specialized models like Nano Banana Pro, and Sora (anything for speach?) and how they are integrated with the main models (GPT 5.2, Gemini 3.0 etc.) 
+### It's still tokens in, tokens out
+
+Even when processing images, audio, or video, these models still work with tokens—just not word tokens. Different modalities get converted into numerical representations:
+
+- **Images** are divided into patches (small grid sections), and each patch becomes one or more tokens
+- **Audio** is converted into spectrograms or waveform segments, then tokenized
+- **Video** combines image tokens (frames) with temporal information
+
+The model processes all these token types through the same transformer architecture. This is why you can ask questions about an image in natural language—the image tokens and text tokens flow through the same neural network.
+
+### Specialized model orchestration
+
+The frontier models you interact with often orchestrate multiple specialized models behind the scenes:
+
+- image generation
+    - GPT Image 1.5, Nano Banana Pro 
+- video generation
+    - Sora 2, Veo 3.1 
+- speach generation (text-to-speach)
+    - GPT-4o Mini TTS, Gemini 2.5 Pro Preview TTS 
+
+When you ask GPT 5.2 to "generate an image of a sunset over mountains," the language model interprets your request, formulates a detailed prompt, and hands it off to GPT Image 1.5. The result is passed back and presented as part of the conversation.
+
+This modular architecture allows each component to be optimized for its specific task while providing a unified conversational interface.
 
 ## Main Shortcomings 
 
-- Long-term memory (context window is short-term memory)
-- Halucinations
-- Inability to act (exert change on external systems)
+Despite their impressive capabilities, current LLMs have fundamental limitations:
 
-The "Agents" pages describes modern advances in addressing these shortcomings.
+### Knowledge Cutoff
+
+LLMs are trained on data up to a certain date. They don't know about recent events, updated policies, or new research.
+
+### Limited long-term memory
+
+As we discussed above, models have limited context windows (short-term memory). Some systems like ChatGPT implement "memory" features that save key facts about your conversations to a database and inject them into future prompts. But this is bolted-on storage, not true learning—the model's parameters don't change based on your interactions.
+
+### Hallucinations
+
+LLMs can generate confident, fluent text that is factually incorrect. Models don't "know" things. They are optimized for producing probable sounding text, not verified truth. This means they can:
+
+- Invent citations that don't exist
+- State incorrect facts with complete confidence
+- Mix accurate and inaccurate information seamlessly
+
+### Inability to act 
+
+GenAI models ingest tokens and output tokens. The can not exert change on external systems ("act"). They cannot send emails, execute code, query databases, browse the web, modify files. The model can *describe* how to do these things, but it cannot actually perform them without external systems.
+
+**This is where agents come in:** By connecting LLMs to tools (APIs, code interpreters, file systems), we can create systems that can take real-world actions. The [Agents](03_agents.qmd) section describes how modern frameworks address these limitations by giving models the ability to plan, use tools, and affect external systems.

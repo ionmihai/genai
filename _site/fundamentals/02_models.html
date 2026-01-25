@@ -135,8 +135,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../fundamentals/04_interfaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Interfaces</span></a>
+  <a href="../fundamentals/04_products.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Products</span></a>
   </div>
 </li>
       </ul>
@@ -157,20 +157,30 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-happens-when-you-prompt" id="toc-what-happens-when-you-prompt" class="nav-link active" data-scroll-target="#what-happens-when-you-prompt"><span class="header-section-number">1</span> What Happens When You Prompt</a></li>
-  <li><a href="#what-is-an-llm" id="toc-what-is-an-llm" class="nav-link" data-scroll-target="#what-is-an-llm"><span class="header-section-number">2</span> What is an LLM?</a>
+  <li><a href="#what-happens-when-you-prompt" id="toc-what-happens-when-you-prompt" class="nav-link active" data-scroll-target="#what-happens-when-you-prompt">What Happens When You Prompt</a></li>
+  <li><a href="#what-is-an-llm" id="toc-what-is-an-llm" class="nav-link" data-scroll-target="#what-is-an-llm">What is an LLM?</a>
   <ul class="collapse">
-  <li><a href="#how-the-numbers-are-obtained" id="toc-how-the-numbers-are-obtained" class="nav-link" data-scroll-target="#how-the-numbers-are-obtained"><span class="header-section-number">2.1</span> How the Numbers Are Obtained</a></li>
+  <li><a href="#how-the-numbers-are-obtained" id="toc-how-the-numbers-are-obtained" class="nav-link" data-scroll-target="#how-the-numbers-are-obtained">How the Numbers Are Obtained</a></li>
   </ul></li>
-  <li><a href="#the-context-window" id="toc-the-context-window" class="nav-link" data-scroll-target="#the-context-window"><span class="header-section-number">3</span> The Context Window</a>
+  <li><a href="#the-context-window" id="toc-the-context-window" class="nav-link" data-scroll-target="#the-context-window">The Context Window</a>
   <ul class="collapse">
-  <li><a href="#what-providers-may-automatically-include-in-the-context-window-even-if-you-dont-see-it" id="toc-what-providers-may-automatically-include-in-the-context-window-even-if-you-dont-see-it" class="nav-link" data-scroll-target="#what-providers-may-automatically-include-in-the-context-window-even-if-you-dont-see-it"><span class="header-section-number">3.1</span> What providers may automatically include in the context window (even if you don’t see it)</a></li>
-  <li><a href="#uploading-files-with-your-prompt" id="toc-uploading-files-with-your-prompt" class="nav-link" data-scroll-target="#uploading-files-with-your-prompt"><span class="header-section-number">3.2</span> Uploading files with your prompt</a></li>
-  <li><a href="#what-happens-when-you-near-the-limit-of-the-context-window" id="toc-what-happens-when-you-near-the-limit-of-the-context-window" class="nav-link" data-scroll-target="#what-happens-when-you-near-the-limit-of-the-context-window"><span class="header-section-number">3.3</span> What happens when you near the limit of the context window</a></li>
-  <li><a href="#output-limits" id="toc-output-limits" class="nav-link" data-scroll-target="#output-limits"><span class="header-section-number">3.4</span> Output limits</a></li>
+  <li><a href="#what-may-be-automatically-include-in-the-context-window" id="toc-what-may-be-automatically-include-in-the-context-window" class="nav-link" data-scroll-target="#what-may-be-automatically-include-in-the-context-window">What may be automatically include in the context window</a></li>
+  <li><a href="#uploading-files-with-your-prompt" id="toc-uploading-files-with-your-prompt" class="nav-link" data-scroll-target="#uploading-files-with-your-prompt">Uploading files with your prompt</a></li>
+  <li><a href="#what-happens-when-you-near-the-limit-of-the-context-window" id="toc-what-happens-when-you-near-the-limit-of-the-context-window" class="nav-link" data-scroll-target="#what-happens-when-you-near-the-limit-of-the-context-window">What happens when you near the limit of the context window</a></li>
+  <li><a href="#output-limits" id="toc-output-limits" class="nav-link" data-scroll-target="#output-limits">Output limits</a></li>
   </ul></li>
-  <li><a href="#frontier-genai-models-are-multimodal" id="toc-frontier-genai-models-are-multimodal" class="nav-link" data-scroll-target="#frontier-genai-models-are-multimodal"><span class="header-section-number">4</span> Frontier GenAI Models are Multimodal</a></li>
-  <li><a href="#main-shortcomings" id="toc-main-shortcomings" class="nav-link" data-scroll-target="#main-shortcomings"><span class="header-section-number">5</span> Main Shortcomings</a></li>
+  <li><a href="#frontier-genai-models-are-multimodal" id="toc-frontier-genai-models-are-multimodal" class="nav-link" data-scroll-target="#frontier-genai-models-are-multimodal">Frontier GenAI Models are Multimodal</a>
+  <ul class="collapse">
+  <li><a href="#its-still-tokens-in-tokens-out" id="toc-its-still-tokens-in-tokens-out" class="nav-link" data-scroll-target="#its-still-tokens-in-tokens-out">It’s still tokens in, tokens out</a></li>
+  <li><a href="#specialized-model-orchestration" id="toc-specialized-model-orchestration" class="nav-link" data-scroll-target="#specialized-model-orchestration">Specialized model orchestration</a></li>
+  </ul></li>
+  <li><a href="#main-shortcomings" id="toc-main-shortcomings" class="nav-link" data-scroll-target="#main-shortcomings">Main Shortcomings</a>
+  <ul class="collapse">
+  <li><a href="#knowledge-cutoff" id="toc-knowledge-cutoff" class="nav-link" data-scroll-target="#knowledge-cutoff">Knowledge Cutoff</a></li>
+  <li><a href="#limited-long-term-memory" id="toc-limited-long-term-memory" class="nav-link" data-scroll-target="#limited-long-term-memory">Limited long-term memory</a></li>
+  <li><a href="#hallucinations" id="toc-hallucinations" class="nav-link" data-scroll-target="#hallucinations">Hallucinations</a></li>
+  <li><a href="#inability-to-act" id="toc-inability-to-act" class="nav-link" data-scroll-target="#inability-to-act">Inability to act</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -195,8 +205,8 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="what-happens-when-you-prompt" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="what-happens-when-you-prompt"><span class="header-section-number">1</span> What Happens When You Prompt</h2>
+<section id="what-happens-when-you-prompt" class="level2">
+<h2 class="anchored" data-anchor-id="what-happens-when-you-prompt">What Happens When You Prompt</h2>
 <p>When you type a question into ChatGPT or Claude, here’s what actually happens:</p>
 <ol type="1">
 <li><p><strong>Tokenization:</strong> Your prompt is converted into a sequence of numbers. Text is split into “tokens”—not exactly words, but chunks. Common words are single tokens; rare words get split into pieces. Each token maps to a number (ID) the model can process. Each model has its own vocabulary of tokens.</p></li>
@@ -254,13 +264,13 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="what-is-an-llm" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="what-is-an-llm"><span class="header-section-number">2</span> What is an LLM?</h2>
+<section id="what-is-an-llm" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-an-llm">What is an LLM?</h2>
 <p><strong>A large language model is just a file full of numbers.</strong></p>
 <p>When companies like OpenAI, Anthropic, or Google train a model, they’re creating a very large file—hundreds of gigabytes for frontier models—that contains billions of numerical parameters. These parameters encode patterns learned from reading enormous amounts of text.</p>
 <p>That is what the model “knows”—statistical patterns about how language works and what tends to follow what.</p>
-<section id="how-the-numbers-are-obtained" class="level3" data-number="2.1">
-<h3 data-number="2.1" class="anchored" data-anchor-id="how-the-numbers-are-obtained"><span class="header-section-number">2.1</span> How the Numbers Are Obtained</h3>
+<section id="how-the-numbers-are-obtained" class="level3">
+<h3 class="anchored" data-anchor-id="how-the-numbers-are-obtained">How the Numbers Are Obtained</h3>
 <p>The training process happens in stages:</p>
 <p><strong>Pre-training:</strong> The model reads massive amounts of text from the internet, books, code repositories, academic papers—essentially a substantial portion of human written output. During this phase, it learns to predict “what word comes next?” billions of times. The parameters adjust to get better at prediction. This takes months and costs tens to hundreds of millions of dollars in compute.</p>
 <p><strong>Post-training (Fine-tuning):</strong> The base model is then adjusted using:</p>
@@ -274,8 +284,8 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 </section>
-<section id="the-context-window" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="the-context-window"><span class="header-section-number">3</span> The Context Window</h2>
+<section id="the-context-window" class="level2">
+<h2 class="anchored" data-anchor-id="the-context-window">The Context Window</h2>
 <p>The context window is the maximum amount of text (and other inputs) the model can consider at once:<br>
 <strong>(system instructions + your prompt + chat history + retrieved snippets + tool outputs + file excerpts) + the model’s output.</strong></p>
 <p>If the total exceeds the limit:</p>
@@ -283,8 +293,8 @@ ul.task-list li input[type="checkbox"] {
 <li>the system must drop, summarize, or “compact” something,</li>
 <li>or it returns an error (depending on provider).</li>
 </ul>
-<section id="what-providers-may-automatically-include-in-the-context-window-even-if-you-dont-see-it" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="what-providers-may-automatically-include-in-the-context-window-even-if-you-dont-see-it"><span class="header-section-number">3.1</span> What providers may automatically include in the context window (even if you don’t see it)</h3>
+<section id="what-may-be-automatically-include-in-the-context-window" class="level3">
+<h3 class="anchored" data-anchor-id="what-may-be-automatically-include-in-the-context-window">What may be automatically include in the context window</h3>
 <p>Many modern assistants can add extra context such as:</p>
 <ul>
 <li>system safety instructions,</li>
@@ -295,8 +305,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>This is why two people can ask the “same prompt” and get slightly different results.</p>
 </section>
-<section id="uploading-files-with-your-prompt" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="uploading-files-with-your-prompt"><span class="header-section-number">3.2</span> Uploading files with your prompt</h3>
+<section id="uploading-files-with-your-prompt" class="level3">
+<h3 class="anchored" data-anchor-id="uploading-files-with-your-prompt">Uploading files with your prompt</h3>
 <p>In most systems, uploading a file does <strong>not</strong> mean the entire file is placed into the context window verbatim.</p>
 <p>A common approach is <strong>retrieval</strong>:</p>
 <ul>
@@ -305,8 +315,8 @@ ul.task-list li input[type="checkbox"] {
 <li>and only relevant chunks are pulled into the context window when needed (based on what you asked about the file)</li>
 </ul>
 </section>
-<section id="what-happens-when-you-near-the-limit-of-the-context-window" class="level3" data-number="3.3">
-<h3 data-number="3.3" class="anchored" data-anchor-id="what-happens-when-you-near-the-limit-of-the-context-window"><span class="header-section-number">3.3</span> What happens when you near the limit of the context window</h3>
+<section id="what-happens-when-you-near-the-limit-of-the-context-window" class="level3">
+<h3 class="anchored" data-anchor-id="what-happens-when-you-near-the-limit-of-the-context-window">What happens when you near the limit of the context window</h3>
 <p>Different providers handle this differently:</p>
 <ul>
 <li>Some UIs summarize older messages.</li>
@@ -314,38 +324,73 @@ ul.task-list li input[type="checkbox"] {
 <li>Some run a compaction step to preserve key details.</li>
 </ul>
 </section>
-<section id="output-limits" class="level3" data-number="3.4">
-<h3 data-number="3.4" class="anchored" data-anchor-id="output-limits"><span class="header-section-number">3.4</span> Output limits</h3>
-<p>Even with a very large <strong>input</strong> window, models have <strong>output caps</strong>. When you ask for “write 30 pages,” you usually get:</p>
-<ul>
-<li>a truncated response,</li>
-<li>or a refusal,</li>
-<li>or “here is an outline; ask me to expand section by section.”</li>
-</ul>
-<p><strong>Recommendation:</strong><br>
-For long outputs, ask the model to 1) write an outline, 2) draft section 1, 3) draft section 2…<br>
-This yields better control and fewer errors.</p>
+<section id="output-limits" class="level3">
+<h3 class="anchored" data-anchor-id="output-limits">Output limits</h3>
+<p>Even with a very large <strong>input</strong> window, models have <strong>output caps</strong>. When you ask for “write 30 pages,” you usually get a truncated response, a refusal, or something like “here is an outline; ask me to expand section by section.”</p>
+<p>For long outputs, ask the model to 1) write an outline, 2) draft section 1, 3) draft section 2 etc. This yields better control and fewer errors.</p>
 </section>
 </section>
-<section id="frontier-genai-models-are-multimodal" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="frontier-genai-models-are-multimodal"><span class="header-section-number">4</span> Frontier GenAI Models are Multimodal</h2>
+<section id="frontier-genai-models-are-multimodal" class="level2">
+<h2 class="anchored" data-anchor-id="frontier-genai-models-are-multimodal">Frontier GenAI Models are Multimodal</h2>
 <p>Models like GPT 5.2 and Gemini 3.0 are multimodal: they can input and output text, audio, images, and videos.</p>
-<p>TODO:</p>
+<section id="its-still-tokens-in-tokens-out" class="level3">
+<h3 class="anchored" data-anchor-id="its-still-tokens-in-tokens-out">It’s still tokens in, tokens out</h3>
+<p>Even when processing images, audio, or video, these models still work with tokens—just not word tokens. Different modalities get converted into numerical representations:</p>
 <ul>
-<li>explain that they still input and output tokens (just with a different representation)</li>
-<li>mention names of specialized models like Nano Banana Pro, and Sora (anything for speach?) and how they are integrated with the main models (GPT 5.2, Gemini 3.0 etc.)</li>
+<li><strong>Images</strong> are divided into patches (small grid sections), and each patch becomes one or more tokens</li>
+<li><strong>Audio</strong> is converted into spectrograms or waveform segments, then tokenized</li>
+<li><strong>Video</strong> combines image tokens (frames) with temporal information</li>
+</ul>
+<p>The model processes all these token types through the same transformer architecture. This is why you can ask questions about an image in natural language—the image tokens and text tokens flow through the same neural network.</p>
+</section>
+<section id="specialized-model-orchestration" class="level3">
+<h3 class="anchored" data-anchor-id="specialized-model-orchestration">Specialized model orchestration</h3>
+<p>The frontier models you interact with often orchestrate multiple specialized models behind the scenes:</p>
+<ul>
+<li>image generation
+<ul>
+<li>GPT Image 1.5, Nano Banana Pro</li>
+</ul></li>
+<li>video generation
+<ul>
+<li>Sora 2, Veo 3.1</li>
+</ul></li>
+<li>speach generation (text-to-speach)
+<ul>
+<li>GPT-4o Mini TTS, Gemini 2.5 Pro Preview TTS</li>
+</ul></li>
+</ul>
+<p>When you ask GPT 5.2 to “generate an image of a sunset over mountains,” the language model interprets your request, formulates a detailed prompt, and hands it off to GPT Image 1.5. The result is passed back and presented as part of the conversation.</p>
+<p>This modular architecture allows each component to be optimized for its specific task while providing a unified conversational interface.</p>
+</section>
+</section>
+<section id="main-shortcomings" class="level2">
+<h2 class="anchored" data-anchor-id="main-shortcomings">Main Shortcomings</h2>
+<p>Despite their impressive capabilities, current LLMs have fundamental limitations:</p>
+<section id="knowledge-cutoff" class="level3">
+<h3 class="anchored" data-anchor-id="knowledge-cutoff">Knowledge Cutoff</h3>
+<p>LLMs are trained on data up to a certain date. They don’t know about recent events, updated policies, or new research.</p>
+</section>
+<section id="limited-long-term-memory" class="level3">
+<h3 class="anchored" data-anchor-id="limited-long-term-memory">Limited long-term memory</h3>
+<p>As we discussed above, models have limited context windows (short-term memory). Some systems like ChatGPT implement “memory” features that save key facts about your conversations to a database and inject them into future prompts. But this is bolted-on storage, not true learning—the model’s parameters don’t change based on your interactions.</p>
+</section>
+<section id="hallucinations" class="level3">
+<h3 class="anchored" data-anchor-id="hallucinations">Hallucinations</h3>
+<p>LLMs can generate confident, fluent text that is factually incorrect. Models don’t “know” things. They are optimized for producing probable sounding text, not verified truth. This means they can:</p>
+<ul>
+<li>Invent citations that don’t exist</li>
+<li>State incorrect facts with complete confidence</li>
+<li>Mix accurate and inaccurate information seamlessly</li>
 </ul>
 </section>
-<section id="main-shortcomings" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="main-shortcomings"><span class="header-section-number">5</span> Main Shortcomings</h2>
-<ul>
-<li>Long-term memory (context window is short-term memory)</li>
-<li>Halucinations</li>
-<li>Inability to act (exert change on external systems)</li>
-</ul>
-<p>The “Agents” pages describes modern advances in addressing these shortcomings.</p>
+<section id="inability-to-act" class="level3">
+<h3 class="anchored" data-anchor-id="inability-to-act">Inability to act</h3>
+<p>GenAI models ingest tokens and output tokens. The can not exert change on external systems (“act”). They cannot send emails, execute code, query databases, browse the web, modify files. The model can <em>describe</em> how to do these things, but it cannot actually perform them without external systems.</p>
+<p><strong>This is where agents come in:</strong> By connecting LLMs to tools (APIs, code interpreters, file systems), we can create systems that can take real-world actions. The <a href="../fundamentals/03_agents.html">Agents</a> section describes how modern frameworks address these limitations by giving models the ability to plan, use tools, and affect external systems.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -602,7 +647,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       &nbsp;
     </div>   
-    <div class="nav-footer-center">GenAI For Teaching and Research | 2026</div>
+    <div class="nav-footer-center">GenAI in Academia | 2026</div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
