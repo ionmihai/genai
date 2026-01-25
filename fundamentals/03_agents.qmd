@@ -55,7 +55,7 @@ flowchart LR
         E["LLM"]
     end
     
-    subgraph "LLM Output"
+    subgraph "Orchestration"
         F{"Output\nType?"}
         T["Thinking\nTokens"]
         G["Tool Call"]

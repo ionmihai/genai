@@ -14,6 +14,13 @@
     "text": "Main website\nAI Tools and Applications\nOU AI Policies\n\nAI Governance Principles - OU Login required\nAI Teaching Guidance - OU Login required\nAI Research Guidance - OU Login required\n\nInstructional materials\n\nGenerative AI at the University - OU Canvas login required"
   },
   {
+    "objectID": "resources.html#ai-in-academia",
+    "href": "resources.html#ai-in-academia",
+    "title": "Resources",
+    "section": "AI in Academia",
+    "text": "AI in Academia\n\nFinding Equilibrium - Series of posts on AI in higher ed by Prof. David Hummels and Prof. Jay Akridge\nGen AI For Finance - Post by Prof. Kery Back detailing his approach to incorporating AI into teaching\n\nAlso, check his FMA tutorial"
+  },
+  {
     "objectID": "resources.html#documentation",
     "href": "resources.html#documentation",
     "title": "Resources",
@@ -26,13 +33,6 @@
     "title": "Resources",
     "section": "Courses & Tutorials",
     "text": "Courses & Tutorials\n\nDeepLearning.AI — Generative AI for Everyone — Excellent intro course by Andrew Ng\nPrompt Engineering Guide — Community resource for prompting techniques\n\nI would recommend looking at the “Cookbook” links in the table above first. All of them have prompting guides specific to those models. Come here if you don’t find what you need there."
-  },
-  {
-    "objectID": "resources.html#ai-in-academia",
-    "href": "resources.html#ai-in-academia",
-    "title": "Resources",
-    "section": "AI in Academia",
-    "text": "AI in Academia\n\nFinding Equilibrium - Series of posts on AI in higher ed by Prof. David Hummels and Prof. Jay Akridge\nGen AI For Finance - Post by Prof. Kery Back detailing his approach to incorporating AI into teaching\n\nAlso, check his FMA tutorial"
   },
   {
     "objectID": "resources.html#ethics-safety",
@@ -74,7 +74,7 @@
     "href": "fundamentals/03_agents.html#tool-use",
     "title": "Generative AI Agents",
     "section": "Tool Use",
-    "text": "Tool Use\nLLMs can only generate tokens—they can’t browse the web, run code, or access databases. “Tool use” (also called “function calling”) extends models to interact with external systems.\nHow it works:\n\nThe system prompt tells the model what tools are available (e.g., “You can search the web” or “You can run Python code”)\nInstead of generating text, the model can output a structured tool call (e.g., search(\"current weather in NYC\"), where search is a Python function somewhere on an OpenAI server)\nThe system executes the tool and returns the result to the model\nThe model incorporates the result into its context and continues generating\nThis loop can repeat—models can chain multiple tool calls to accomplish complex tasks\n\nWhy it matters: Tool use lets models access current information (web search), verify calculations (code execution), and take actions in the real world (APIs). It transforms LLMs from text generators into agents that can accomplish tasks.\n\n\n\n\nflowchart LR\n    subgraph Input\n        A[\"User Prompt\"]\n        S[\"System Prompt\\n+ Available Tools\"]\n    end\n    \n    subgraph Processing\n        D[\"Context Window\"]\n        E[\"LLM\"]\n    end\n    \n    subgraph \"LLM Output\"\n        F{\"Output\\nType?\"}\n        T[\"Thinking\\nTokens\"]\n        G[\"Tool Call\"]\n        H[\"Final\\nResponse\"]\n    end\n    \n    subgraph Tools\n        X[\"Execute Tool\"]\n        R[\"Tool Result\"]\n    end\n    \n    A --&gt; D\n    S --&gt; D\n    D --&gt; E --&gt; F\n    F --&gt;|\"Reasoning\"| T\n    T --&gt;|\"Append\"| D\n    F --&gt;|\"Tool\"| G --&gt; X --&gt; R\n    R --&gt;|\"Append\"| D\n    F --&gt;|\"Done\"| H\n    linkStyle 5 stroke-dasharray: 5 5\n    linkStyle 9 stroke-dasharray: 5 5\n\n\n\n\n\nThe key difference from the basic pipeline: thinking models generate reasoning tokens as output that gets appended to the context, creating a loop where the model “thinks out loud” before producing its final answer. Tool-enabled models can similarly pause, call external tools, and incorporate results before continuing."
+    "text": "Tool Use\nLLMs can only generate tokens—they can’t browse the web, run code, or access databases. “Tool use” (also called “function calling”) extends models to interact with external systems.\nHow it works:\n\nThe system prompt tells the model what tools are available (e.g., “You can search the web” or “You can run Python code”)\nInstead of generating text, the model can output a structured tool call (e.g., search(\"current weather in NYC\"), where search is a Python function somewhere on an OpenAI server)\nThe system executes the tool and returns the result to the model\nThe model incorporates the result into its context and continues generating\nThis loop can repeat—models can chain multiple tool calls to accomplish complex tasks\n\nWhy it matters: Tool use lets models access current information (web search), verify calculations (code execution), and take actions in the real world (APIs). It transforms LLMs from text generators into agents that can accomplish tasks.\n\n\n\n\nflowchart LR\n    subgraph Input\n        A[\"User Prompt\"]\n        S[\"System Prompt\\n+ Available Tools\"]\n    end\n    \n    subgraph Processing\n        D[\"Context Window\"]\n        E[\"LLM\"]\n    end\n    \n    subgraph \"Orchestration\"\n        F{\"Output\\nType?\"}\n        T[\"Thinking\\nTokens\"]\n        G[\"Tool Call\"]\n        H[\"Final\\nResponse\"]\n    end\n    \n    subgraph Tools\n        X[\"Execute Tool\"]\n        R[\"Tool Result\"]\n    end\n    \n    A --&gt; D\n    S --&gt; D\n    D --&gt; E --&gt; F\n    F --&gt;|\"Reasoning\"| T\n    T --&gt;|\"Append\"| D\n    F --&gt;|\"Tool\"| G --&gt; X --&gt; R\n    R --&gt;|\"Append\"| D\n    F --&gt;|\"Done\"| H\n    linkStyle 5 stroke-dasharray: 5 5\n    linkStyle 9 stroke-dasharray: 5 5\n\n\n\n\n\nThe key difference from the basic pipeline: thinking models generate reasoning tokens as output that gets appended to the context, creating a loop where the model “thinks out loud” before producing its final answer. Tool-enabled models can similarly pause, call external tools, and incorporate results before continuing."
   },
   {
     "objectID": "fundamentals/03_agents.html#how-agentic-workflows-address-model-shortcomings",
