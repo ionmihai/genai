@@ -2,38 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ionmihai.github.io/genai/resources.html</loc>
-    <lastmod>2026-01-25T23:52:58.796Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ionmihai.github.io/genai/fundamentals/03_agents.html</loc>
-    <lastmod>2026-01-25T23:52:58.274Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ionmihai.github.io/genai/fundamentals/04_products.html</loc>
-    <lastmod>2026-01-25T23:52:57.655Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ionmihai.github.io/genai/fundamentals/02_models.html</loc>
-    <lastmod>2026-01-25T23:52:57.037Z</lastmod>
+    <lastmod>2026-01-30T03:06:11.817Z</lastmod>
   </url>
   <url>
     <loc>https://ionmihai.github.io/genai/index.html</loc>
-    <lastmod>2026-01-25T23:52:56.348Z</lastmod>
+    <lastmod>2026-01-30T03:06:12.215Z</lastmod>
   </url>
   <url>
-    <loc>https://ionmihai.github.io/genai/fundamentals/key-capabilities.html</loc>
-    <lastmod>2026-01-25T23:52:56.624Z</lastmod>
+    <loc>https://ionmihai.github.io/genai/teaching/tools.html</loc>
+    <lastmod>2026-01-30T03:06:12.751Z</lastmod>
   </url>
   <url>
-    <loc>https://ionmihai.github.io/genai/fundamentals/how-llms-work.html</loc>
-    <lastmod>2026-01-25T23:52:57.386Z</lastmod>
+    <loc>https://ionmihai.github.io/genai/teaching/discussion.html</loc>
+    <lastmod>2026-01-30T03:06:13.279Z</lastmod>
   </url>
   <url>
-    <loc>https://ionmihai.github.io/genai/fundamentals/choosing-tools.html</loc>
-    <lastmod>2026-01-25T23:52:57.920Z</lastmod>
+    <loc>https://ionmihai.github.io/genai/research/tools.html</loc>
+    <lastmod>2026-01-30T03:06:13.719Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ionmihai.github.io/genai/research/discussion.html</loc>
+    <lastmod>2026-01-30T03:06:14.173Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ionmihai.github.io/genai/artifacts/ai_universities_strategies.html</loc>
+    <lastmod>2026-01-30T03:06:14.718Z</lastmod>
   </url>
   <url>
     <loc>https://ionmihai.github.io/genai/fundamentals/01_ecosystem.html</loc>
-    <lastmod>2026-01-25T23:52:58.526Z</lastmod>
+    <lastmod>2026-01-30T03:06:15.155Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ionmihai.github.io/genai/fundamentals/key-capabilities.html</loc>
+    <lastmod>2026-01-30T03:06:15.633Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ionmihai.github.io/genai/fundamentals/02_models.html</loc>
+    <lastmod>2026-01-30T03:06:16.365Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ionmihai.github.io/genai/fundamentals/04_products.html</loc>
+    <lastmod>2026-01-30T03:06:16.839Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ionmihai.github.io/genai/fundamentals/choosing-tools.html</loc>
+    <lastmod>2026-01-30T03:06:17.310Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ionmihai.github.io/genai/fundamentals/03_agents.html</loc>
+    <lastmod>2026-01-30T03:06:17.971Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ionmihai.github.io/genai/fundamentals/how-llms-work.html</loc>
+    <lastmod>2026-01-30T03:06:18.605Z</lastmod>
   </url>
 </urlset>

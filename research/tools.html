@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>GenAI in Academia - The GenAI Ecosystem</title>
+<title>GenAI in Academia - GenAI Tools for Research</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../fundamentals/01_ecosystem.html">Fundamentals of GenAI</a></li><li class="breadcrumb-item"><a href="../fundamentals/01_ecosystem.html">The Ecosystem</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../research/discussion.html">GenAI and Research</a></li><li class="breadcrumb-item"><a href="../research/tools.html">Tools</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -113,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../fundamentals/01_ecosystem.html" class="sidebar-item-text sidebar-link active">
+  <a href="../fundamentals/01_ecosystem.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The Ecosystem</span></a>
   </div>
 </li>
@@ -177,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research/tools.html" class="sidebar-item-text sidebar-link">
+  <a href="../research/tools.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Tools</span></a>
   </div>
 </li>
@@ -199,8 +199,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#framing-what-i-mean-by-genai" id="toc-framing-what-i-mean-by-genai" class="nav-link active" data-scroll-target="#framing-what-i-mean-by-genai">Framing: what I mean by “GenAI”</a></li>
-  <li><a href="#why-the-genai-as-a-stack-framing-matters" id="toc-why-the-genai-as-a-stack-framing-matters" class="nav-link" data-scroll-target="#why-the-genai-as-a-stack-framing-matters">Why the “GenAI as a stack” framing matters</a></li>
+  <li><a href="#deepresearch" id="toc-deepresearch" class="nav-link active" data-scroll-target="#deepresearch">DeepResearch</a></li>
+  <li><a href="#openai-prism" id="toc-openai-prism" class="nav-link" data-scroll-target="#openai-prism">OpenAI Prism</a></li>
+  <li><a href="#vs-code-codex-extension" id="toc-vs-code-codex-extension" class="nav-link" data-scroll-target="#vs-code-codex-extension">VS Code + Codex Extension</a></li>
+  <li><a href="#anaconda" id="toc-anaconda" class="nav-link" data-scroll-target="#anaconda">Anaconda</a></li>
+  <li><a href="#api-credits" id="toc-api-credits" class="nav-link" data-scroll-target="#api-credits">API Credits</a></li>
   </ul>
 </nav>
     </div>
@@ -209,7 +212,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">The GenAI Ecosystem</h1>
+<h1 class="title">GenAI Tools for Research</h1>
 </div>
 
 
@@ -224,54 +227,30 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="framing-what-i-mean-by-genai" class="level2">
-<h2 class="anchored" data-anchor-id="framing-what-i-mean-by-genai">Framing: what I mean by “GenAI”</h2>
-<p>When people say “AI,” or “GenAI,” they often mean “ChatGPT” or a similar chat interface. <strong>It’s more useful to think of GenAI in layers:</strong></p>
-<ol type="1">
-<li><strong>Models</strong> -&gt; the “brains”:
-<ul>
-<li>GPT‑5.2, Claude Opus 4.5, Gemini 3.0 Pro, Grok 4.1, etc.
-<ul>
-<li>These models are frequently referred to as <strong>LLMs</strong> (large language models). This is somewhat of a misnomer these days since the latest iterations of these models can handle more than just language (text) as an input. They can also process audio, image, and video inputs.<br>
-</li>
-</ul></li>
-</ul></li>
-<li><strong>Tools</strong> -&gt; capabilities around the model:
-<ul>
-<li>Web search</li>
-<li>Code execution</li>
-<li>Database queries</li>
-<li>Connectors to other software/platforms like file systems, email clients, browsers, IDEs, CRMs, messaging apps etc
-<ul>
-<li>Facilitated through APIs (application programming interfaces), and MCP (model context protocol) servers</li>
-</ul></li>
-</ul></li>
-<li><strong>Products</strong> (interfaces):
-<ul>
-<li>Web, desktop, and mobile apps from model providers: ChatGPT, Claude, Gemini, Grok</li>
-<li>Coding agents: Codex, Claude Code, Gemini Code Assist, GitHub Copilot</li>
-<li>Third-party apps: Perplexity, Replit, Cursor</li>
-</ul></li>
-</ol>
-<p>Many of these products use agentic workflows (<strong>agents</strong>) in the background (workflows orchestrated by a model) - The model plans steps, uses tools, analyzes the output of those tools, and iterates until it produces the requested output</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../artifacts/ecosystem_diagram_new.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Image generated with Nano Banana Pro</figcaption>
-</figure>
-</div>
+<section id="deepresearch" class="level2">
+<h2 class="anchored" data-anchor-id="deepresearch">DeepResearch</h2>
+<p>DeepResearch tools are AI-powered research agents that automate complex literature review workflows. Available from multiple providers including OpenAI, Google Gemini, and Perplexity. These tools can interpret research questions, semantically search millions of papers, evaluate sources for relevance and quality, extract data, and synthesize findings into fully-cited reports.</p>
+<p><em>Research use cases</em>: Literature reviews, copy editing, double-checking proofs, and creating referee reports on your own papers before submission. Current limitations: though hallucinations are a lot less common, human oversight remains essential.</p>
 </section>
-<section id="why-the-genai-as-a-stack-framing-matters" class="level2">
-<h2 class="anchored" data-anchor-id="why-the-genai-as-a-stack-framing-matters">Why the “GenAI as a stack” framing matters</h2>
-<p>It reminds us that:</p>
-<ul>
-<li>Jumps in capability are not just about better models, but <strong>better models + better tools + better agentic workflows</strong>.</li>
-<li>Different products may be better at different tasks (sometimes in a way that is not necessarily related to the models they use underneath)
-<ul>
-<li>For example, Claude (product) may be better than ChatGPT (product) at generating Excel sheets because of better integration with Microsoft Office (tool), not because Claude Opus 4.5 (model) is better than GPT 5.2 (model)</li>
-</ul></li>
-<li>You should not be judging the current capabilities of “GenAI” based on your experiences with a single product (ChatGPT for most people)</li>
-</ul>
+<section id="openai-prism" class="level2">
+<h2 class="anchored" data-anchor-id="openai-prism">OpenAI Prism</h2>
+<p><a href="https://openai.com/prism">OpenAI Prism</a> is a free, LaTeX-native AI workspace for scientific writing (think Overleaf with ChatGPT embedded in it). Powered by GPT-5.2, Prism provides AI-assisted drafting and revision with full document context (equations, citations, figures), real-time collaboration with unlimited co-authors, built-in literature search from sources like arXiv, and voice-based editing. It can convert whiteboard sketches to LaTeX and provides automated proofreading and citation management.</p>
+<p><em>Research use cases</em>: Collaborate with co-authors on manuscripts with AI assistance embedded throughout the writing process. Free for anyone with a ChatGPT personal account; coming soon to Business, Enterprise, and Education plans.</p>
+</section>
+<section id="vs-code-codex-extension" class="level2">
+<h2 class="anchored" data-anchor-id="vs-code-codex-extension">VS Code + Codex Extension</h2>
+<p>OpenAI Codex integrates with VS Code as an AI coding agent that provides real-time code suggestions, autonomous implementation of complex development tasks, natural language interaction with your codebase, and automated code review. Included with ChatGPT Plus, Pro, Business, and Enterprise plans.</p>
+<p><em>Research use cases</em>: Code generation, testing, debugging, and version control for computational research projects. Excellent alternatives include Cursor ($20/month) and Google’s Project Antigravity (included with Gemini Pro subscription, also $20/month).</p>
+</section>
+<section id="anaconda" class="level2">
+<h2 class="anchored" data-anchor-id="anaconda">Anaconda</h2>
+<p>The easiest way to get started with Python programming. <a href="https://www.anaconda.com/docs/getting-started/anaconda/install">Anaconda</a> is a comprehensive Python distribution and environment management system. It provides isolated environments with defined packages and dependencies, ensuring reproducible configurations across different projects without conflicts.</p>
+<p><em>Research use cases</em>: Give you Python and most commonly used packages for data science. The Anaconda Navigator GUI makes it accessible without command-line expertise, while the conda package manager provides access to over 33,000 AI, data science, and ML packages.</p>
+</section>
+<section id="api-credits" class="level2">
+<h2 class="anchored" data-anchor-id="api-credits">API Credits</h2>
+<p>Programmatic access to LLMs allows you to integrate AI capabilities directly into your research workflows, scripts, and applications. Major providers (OpenAI, Anthropic, Google) offer their own APIs with pay-as-you-go pricing. Alternatively, OpenRouter provides a unified API interface to 300+ models from 60+ providers through a single endpoint, compatible with the OpenAI SDK format.</p>
+<p><em>Research use cases</em>: Building custom research tools, automating repetitive tasks (data cleaning, coding, text analysis), running batch experiments, and integrating AI into computational pipelines. Use your favorite model provider directly, or OpenRouter if you want flexibility to switch between models without changing your code.</p>
 
 
 </section>

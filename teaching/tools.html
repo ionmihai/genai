@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>GenAI in Academia - The GenAI Ecosystem</title>
+<title>GenAI in Academia - GenAI Tools for Teaching</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../fundamentals/01_ecosystem.html">Fundamentals of GenAI</a></li><li class="breadcrumb-item"><a href="../fundamentals/01_ecosystem.html">The Ecosystem</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../teaching/discussion.html">GenAI and Teaching</a></li><li class="breadcrumb-item"><a href="../teaching/tools.html">Tools</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -113,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../fundamentals/01_ecosystem.html" class="sidebar-item-text sidebar-link active">
+  <a href="../fundamentals/01_ecosystem.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The Ecosystem</span></a>
   </div>
 </li>
@@ -154,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/tools.html" class="sidebar-item-text sidebar-link">
+  <a href="../teaching/tools.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Tools</span></a>
   </div>
 </li>
@@ -199,8 +199,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#framing-what-i-mean-by-genai" id="toc-framing-what-i-mean-by-genai" class="nav-link active" data-scroll-target="#framing-what-i-mean-by-genai">Framing: what I mean by “GenAI”</a></li>
-  <li><a href="#why-the-genai-as-a-stack-framing-matters" id="toc-why-the-genai-as-a-stack-framing-matters" class="nav-link" data-scroll-target="#why-the-genai-as-a-stack-framing-matters">Why the “GenAI as a stack” framing matters</a></li>
+  <li><a href="#notebooklm" id="toc-notebooklm" class="nav-link active" data-scroll-target="#notebooklm">NotebookLM</a></li>
+  <li><a href="#chatgpt-projects" id="toc-chatgpt-projects" class="nav-link" data-scroll-target="#chatgpt-projects">ChatGPT Projects</a></li>
+  <li><a href="#gemini-in-chrome" id="toc-gemini-in-chrome" class="nav-link" data-scroll-target="#gemini-in-chrome">Gemini in Chrome</a></li>
+  <li><a href="#claude-in-excel" id="toc-claude-in-excel" class="nav-link" data-scroll-target="#claude-in-excel">Claude in Excel</a></li>
+  <li><a href="#openai-prism" id="toc-openai-prism" class="nav-link" data-scroll-target="#openai-prism">OpenAI Prism</a></li>
+  <li><a href="#vs-code-codex-extension" id="toc-vs-code-codex-extension" class="nav-link" data-scroll-target="#vs-code-codex-extension">VS Code + Codex Extension</a></li>
   </ul>
 </nav>
     </div>
@@ -209,7 +213,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">The GenAI Ecosystem</h1>
+<h1 class="title">GenAI Tools for Teaching</h1>
 </div>
 
 
@@ -224,54 +228,71 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="framing-what-i-mean-by-genai" class="level2">
-<h2 class="anchored" data-anchor-id="framing-what-i-mean-by-genai">Framing: what I mean by “GenAI”</h2>
-<p>When people say “AI,” or “GenAI,” they often mean “ChatGPT” or a similar chat interface. <strong>It’s more useful to think of GenAI in layers:</strong></p>
-<ol type="1">
-<li><strong>Models</strong> -&gt; the “brains”:
+<section id="notebooklm" class="level2">
+<h2 class="anchored" data-anchor-id="notebooklm">NotebookLM</h2>
+<p><a href="https://notebooklm.google.com/">NotebookLM</a> is Google’s AI-powered research and note-taking tool. Upload your course materials (PDFs, docs, slides, websites) and NotebookLM can generate:</p>
 <ul>
-<li>GPT‑5.2, Claude Opus 4.5, Gemini 3.0 Pro, Grok 4.1, etc.
-<ul>
-<li>These models are frequently referred to as <strong>LLMs</strong> (large language models). This is somewhat of a misnomer these days since the latest iterations of these models can handle more than just language (text) as an input. They can also process audio, image, and video inputs.<br>
-</li>
-</ul></li>
-</ul></li>
-<li><strong>Tools</strong> -&gt; capabilities around the model:
-<ul>
-<li>Web search</li>
-<li>Code execution</li>
-<li>Database queries</li>
-<li>Connectors to other software/platforms like file systems, email clients, browsers, IDEs, CRMs, messaging apps etc
-<ul>
-<li>Facilitated through APIs (application programming interfaces), and MCP (model context protocol) servers</li>
-</ul></li>
-</ul></li>
-<li><strong>Products</strong> (interfaces):
-<ul>
-<li>Web, desktop, and mobile apps from model providers: ChatGPT, Claude, Gemini, Grok</li>
-<li>Coding agents: Codex, Claude Code, Gemini Code Assist, GitHub Copilot</li>
-<li>Third-party apps: Perplexity, Replit, Cursor</li>
-</ul></li>
-</ol>
-<p>Many of these products use agentic workflows (<strong>agents</strong>) in the background (workflows orchestrated by a model) - The model plans steps, uses tools, analyzes the output of those tools, and iterates until it produces the requested output</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../artifacts/ecosystem_diagram_new.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Image generated with Nano Banana Pro</figcaption>
-</figure>
-</div>
-</section>
-<section id="why-the-genai-as-a-stack-framing-matters" class="level2">
-<h2 class="anchored" data-anchor-id="why-the-genai-as-a-stack-framing-matters">Why the “GenAI as a stack” framing matters</h2>
-<p>It reminds us that:</p>
-<ul>
-<li>Jumps in capability are not just about better models, but <strong>better models + better tools + better agentic workflows</strong>.</li>
-<li>Different products may be better at different tasks (sometimes in a way that is not necessarily related to the models they use underneath)
-<ul>
-<li>For example, Claude (product) may be better than ChatGPT (product) at generating Excel sheets because of better integration with Microsoft Office (tool), not because Claude Opus 4.5 (model) is better than GPT 5.2 (model)</li>
-</ul></li>
-<li>You should not be judging the current capabilities of “GenAI” based on your experiences with a single product (ChatGPT for most people)</li>
+<li><strong>Audio Overviews (“Podcasts”)</strong>: Two AI hosts discuss your content in a conversational style. Choose from Deep Dive, Brief (1-2 min), Critique, or Debate formats.</li>
+<li><strong>Flashcards</strong>: Customizable study cards for key terms, dates, and concepts with adjustable difficulty levels.</li>
+<li><strong>Quizzes</strong>: Multiple-choice questions with optional hints and explanations.</li>
 </ul>
+<p><em>Teaching use</em>: Convert dense lecture notes or readings into engaging podcast-style summaries students can listen to on the go, or auto-generate study aids for exam prep.</p>
+</section>
+<section id="chatgpt-projects" class="level2">
+<h2 class="anchored" data-anchor-id="chatgpt-projects">ChatGPT Projects</h2>
+<p><a href="https://chatgpt.com/">ChatGPT Projects</a> are smart workspaces that organize chats, files, and custom instructions together. Upload up to 20-40 files (depending on plan) including PDFs, spreadsheets, images, and documents—ChatGPT references these across all conversations in the project.</p>
+<ul>
+<li>Supports files up to 512MB and 2M tokens</li>
+<li>Built-in memory retains context across sessions</li>
+<li>Can synthesize, transform, and extract information from complex documents</li>
+</ul>
+<p><em>Teaching use</em>: Upload teaching materials into a “Project” and ChatGPT can then answer questions with citations, explain derivations, or (for teachers) help you identify gaps in your materials. Particularly strong for STEM content with equations and figures that other tools struggle to parse (NotebookLM is not as good at this).</p>
+</section>
+<section id="gemini-in-chrome" class="level2">
+<h2 class="anchored" data-anchor-id="gemini-in-chrome">Gemini in Chrome</h2>
+<p><a href="https://www.google.com/chrome/">Gemini in Chrome</a> is Google’s new browser-native AI integration (rolling out January 2026). Access Gemini directly from Chrome’s sidebar to interact with web content.</p>
+<ul>
+<li>Ask Gemini to clarify complex information across <strong>up to 10 open tabs simultaneously</strong></li>
+<li>Get key takeaways and summaries from webpages</li>
+<li>Use Gemini Live to have natural voice conversations while browsing</li>
+<li>AI Mode in the address bar for quick questions</li>
+</ul>
+<p><em>Teaching use</em>: If your lecture notes, readings, or course materials are hosted online (Canvas pages, course websites, online textbooks), students can ask Gemini questions directly about the content without copy-pasting. Useful for navigating and understanding multi-page web-based course materials. <strong>Make sure students understand that this should not be used on webpages that contain private information</strong></p>
+</section>
+<section id="claude-in-excel" class="level2">
+<h2 class="anchored" data-anchor-id="claude-in-excel">Claude in Excel</h2>
+<p><a href="https://marketplace.microsoft.com/en-us/product/office/WA200009404">Claude in Excel</a> is Anthropic’s native Excel add-in (currently in beta for Claude Pro, Max, Team, and Enterprise users). Access Claude from a sidebar within Excel or through Microsoft 365 Copilot’s Agent Mode.</p>
+<ul>
+<li>Reads multi-tab spreadsheets with <strong>cell-level citations</strong></li>
+<li>Debugs and fixes formulas while preserving dependencies</li>
+<li>Creates pivot tables and charts</li>
+<li>Builds new spreadsheets from scratch or populates templates</li>
+<li>Tracks and explains all changes with full transparency</li>
+</ul>
+<p><em>Teaching use</em>: For courses involving data analysis, finance, or statistics, Claude can help students understand complex spreadsheet logic, debug formula errors, and learn Excel workflows interactively. Instructors can use it to quickly build example datasets or grade spreadsheet-based assignments.</p>
+</section>
+<section id="openai-prism" class="level2">
+<h2 class="anchored" data-anchor-id="openai-prism">OpenAI Prism</h2>
+<p><a href="https://openai.com/prism">OpenAI Prism</a> is a free AI-native workspace for scientific writing. It’s a <strong>LaTeX-native editor</strong> powered by GPT-5.2 designed for researchers and educators.</p>
+<ul>
+<li>Draft, compile, and collaborate in real-time with unlimited collaborators</li>
+<li>AI-assisted writing with full document context</li>
+<li>Search and incorporate literature from arXiv directly</li>
+<li>Convert whiteboard equations or diagrams into LaTeX</li>
+<li>Automated proofreading, citation management, and equation formatting</li>
+</ul>
+<p><em>Teaching use</em>: Create professional lecture slides and course materials with proper mathematical typesetting. The AI can help refine explanations, suggest relevant literature, and ensure consistent formatting. Free for anyone with a ChatGPT personal account—making it accessible for students writing technical reports or theses.</p>
+</section>
+<section id="vs-code-codex-extension" class="level2">
+<h2 class="anchored" data-anchor-id="vs-code-codex-extension">VS Code + Codex Extension</h2>
+<p><a href="https://marketplace.visualstudio.com/items?itemName=openai.chatgpt">OpenAI Codex</a> is a VS Code extension that functions as an AI coding agent with full access to your workspace files. Included with ChatGPT Plus, Pro, Business, Edu, and Enterprise plans.</p>
+<ul>
+<li><strong>Side-by-side mode</strong>: Chat with Codex in a panel while it reads and edits your files with full context</li>
+<li><strong>Cloud delegation</strong>: Offload larger tasks to run in the background</li>
+<li>Accepts text, screenshots, or diagrams as input</li>
+<li>Generates, debugs, explains, and refactors code</li>
+</ul>
+<p><em>Teaching use</em>: For programming courses, Codex can help instructors prepare code examples, auto-generate starter code for assignments, or create solution files. Students can use it as a tutoring tool that understands their entire project context—useful for debugging or learning how different parts of a codebase connect.</p>
 
 
 </section>
